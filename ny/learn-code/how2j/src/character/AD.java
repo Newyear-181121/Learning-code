@@ -1,0 +1,7 @@
+package character;
+
+public interface AD {
+	 //ŒÔ¿Ì…À∫¶
+    public void physicAttack();
+
+}

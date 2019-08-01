@@ -1,0 +1,15 @@
+package collection_2;
+
+import character.Hero;
+
+public interface Stack1_5 {
+	
+	//把英雄推入到最后位置
+	public void push(Hero h);
+	//把最后一个英雄取出来
+	public void pull();
+	//查看最后一个英雄
+	public Hero peek();	
+	
+
+}
