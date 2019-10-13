@@ -6,19 +6,19 @@ public class ADHero extends Hero implements AD
 {
 	
 	public void physicAttack() {
-        System.out.println("½øĞĞÎïÀí¹¥»÷");
+        System.out.println("è¿›è¡Œç‰©ç†æ”»å‡»");
     }
 	
 	public int getMoveSpeed(){
         return this.moveSpeed;
     }
      
-	//super  ÊÇµ÷ÓÃ¸¸ÀàµÄmoveSpeedÊôĞÔ
+	//super  æ˜¯è°ƒç”¨çˆ¶ç±»çš„moveSpeedå±æ€§
     public int getMoveSpeed2(){
         return super.moveSpeed;
     }
     
- // ÖØĞ´useItem£¬²¢ÔÚÆäÖĞµ÷ÓÃ¸¸ÀàµÄuserItem·½·¨
+ // é‡å†™useItemï¼Œå¹¶åœ¨å…¶ä¸­è°ƒç”¨çˆ¶ç±»çš„userItemæ–¹æ³•
     public void useItem(Item i) {
         System.out.println("adhero use item");
         super.useItem(i);
@@ -26,46 +26,46 @@ public class ADHero extends Hero implements AD
 	
     public void attack() 
     {
-        System.out.println(name + " ½øĞĞÁËÒ»´Î¹¥»÷ £¬µ«ÊÇ²»È·¶¨´òÖĞË­ÁË");
+        System.out.println(name + " è¿›è¡Œäº†ä¸€æ¬¡æ”»å‡» ï¼Œä½†æ˜¯ä¸ç¡®å®šæ‰“ä¸­è°äº†");
     }
  
     public void attack(Hero h1) 
     {
-        System.out.println(name + "¶Ô" + h1.name + "½øĞĞÁËÒ»´Î¹¥»÷ ");
+        System.out.println(name + "å¯¹" + h1.name + "è¿›è¡Œäº†ä¸€æ¬¡æ”»å‡» ");
     }
  
     public void attack(Hero h1, Hero h2) 
     {
-        System.out.println(name + "Í¬Ê±¶Ô" + h1.name + "ºÍ" + h2.name + "½øĞĞÁË¹¥»÷ ");
+        System.out.println(name + "åŒæ—¶å¯¹" + h1.name + "å’Œ" + h2.name + "è¿›è¡Œäº†æ”»å‡» ");
     }
     
- // ¿É±äÊıÁ¿µÄ²ÎÊı
+ // å¯å˜æ•°é‡çš„å‚æ•°
     public void attack(Hero... heros) 
     {
         for (int i = 0; i < heros.length; i++) 
         {
-            System.out.println(name + " ¹¥»÷ÁË " + heros[i].name);
+            System.out.println(name + " æ”»å‡»äº† " + heros[i].name);
  
         }
     }
     
     /*
-    	ÊµÀı»¯Ò»¸öADHero(), Æä¹¹Ôì·½·¨»á±»µ÷ÓÃ 
-		Æä¸¸ÀàµÄ¹¹Ôì·½·¨Ò²»á±»µ÷ÓÃ 
-		²¢ÇÒÊÇ¸¸Àà¹¹Ôì·½·¨ÏÈµ÷ÓÃ 
-		×ÓÀà¹¹Ôì·½·¨»áÄ¬ÈÏµ÷ÓÃ¸¸ÀàµÄ ÎŞ²ÎµÄ¹¹Ôì·½·¨ 
+    	å®ä¾‹åŒ–ä¸€ä¸ªADHero(), å…¶æ„é€ æ–¹æ³•ä¼šè¢«è°ƒç”¨ 
+		å…¶çˆ¶ç±»çš„æ„é€ æ–¹æ³•ä¹Ÿä¼šè¢«è°ƒç”¨ 
+		å¹¶ä¸”æ˜¯çˆ¶ç±»æ„é€ æ–¹æ³•å…ˆè°ƒç”¨ 
+		å­ç±»æ„é€ æ–¹æ³•ä¼šé»˜è®¤è°ƒç”¨çˆ¶ç±»çš„ æ— å‚çš„æ„é€ æ–¹æ³• 
      */
     public ADHero(){
     	System.out.println("====================");
-        System.out.println("AD HeroµÄ¹¹Ôì·½·¨");
-        System.out.println("»áµ÷ÓÃ¸¸ÀàµÄ¹¹Ôì·½·¨");
-        System.out.println("AD HeroµÄ¹¹Ôì·½·¨");
+        System.out.println("AD Heroçš„æ„é€ æ–¹æ³•");
+        System.out.println("ä¼šè°ƒç”¨çˆ¶ç±»çš„æ„é€ æ–¹æ³•");
+        System.out.println("AD Heroçš„æ„é€ æ–¹æ³•");
         System.out.println("===================");
     }
  
     public ADHero(String name){
         super(name);
-        System.out.println("AD HeroµÄ¹¹Ôì·½·¨++++++++");
+        System.out.println("AD Heroçš„æ„é€ æ–¹æ³•++++++++");
     }
     
     
@@ -78,12 +78,12 @@ public class ADHero extends Hero implements AD
         System.out.println(h3.getMoveSpeed2());
     	
         ADHero bh = new ADHero();
-        bh.name = "ÉÍ½ğÁÔÈË";
+        bh.name = "èµé‡‘çŒäºº";
  
         Hero h1 = new Hero();
-        h1.name = "¸ÇÂ×";
+        h1.name = "ç›–ä¼¦";
         Hero h2 = new Hero();
-        h2.name = "ÌáÄª";
+        h2.name = "æè«";
  
         bh.attack(h1);
         bh.attack(h1, h2);
@@ -91,7 +91,7 @@ public class ADHero extends Hero implements AD
         bh.attack(h1);
         bh.attack(h1, h2);
         
-        new ADHero("µÂÀ³ÎÄ");
+        new ADHero("å¾·è±æ–‡");
     }
  
 }

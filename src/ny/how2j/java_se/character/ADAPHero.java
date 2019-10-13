@@ -1,16 +1,16 @@
 package character;
 
-//Í¬Ê±ÄÜ½øĞĞÎïÀíºÍÄ§·¨ÉËº¦µÄÓ¢ĞÛ
+//åŒæ—¶èƒ½è¿›è¡Œç‰©ç†å’Œé­”æ³•ä¼¤å®³çš„è‹±é›„
 public class ADAPHero extends Hero implements AD,AP{
 
   @Override
   public void magicAttack() {
-      System.out.println("½øĞĞÄ§·¨¹¥»÷");
+      System.out.println("è¿›è¡Œé­”æ³•æ”»å‡»");
   }
 
   @Override
   public void physicAttack() {
-      System.out.println("½øĞĞÎïÀí¹¥»÷");
+      System.out.println("è¿›è¡Œç‰©ç†æ”»å‡»");
   }
 
 }

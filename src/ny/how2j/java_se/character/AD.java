@@ -1,7 +1,7 @@
 package character;
 
 public interface AD {
-	 //ÎïÀíÉËº¦
+	 //ç‰©ç†ä¼¤å®³
     public void physicAttack();
 
 }

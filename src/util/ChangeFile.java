@@ -1,11 +1,11 @@
-package ny;
+package util;
 
 import java.io.File;
 
 public class ChangeFile {
 	
-	//Ö»ÒªÉèÖÃÄ¿Â¼¾Í¿ÉÒÔÁË£¬
-    static String filePath = "ÎÄ¼şÂ·¾¶";
+	//åªè¦è®¾ç½®ç›®å½•å°±å¯ä»¥äº†ï¼Œ
+    static String filePath = "æ–‡ä»¶è·¯å¾„";
 
     static String name;
     static String parentName;
@@ -15,7 +15,7 @@ public class ChangeFile {
     static int numa;
     
     /**
-	 * ¿ªÊ¼
+	 * å¼€å§‹
 	 * @param args
 	 */
 	public static void main(String[] args){
@@ -26,17 +26,17 @@ public class ChangeFile {
 	}
 	
 	/**
-	 * ÊäÈëÎÄ¼ş¼ĞµÄ¾ø¶ÔÂ·¾¶
+	 * è¾“å…¥æ–‡ä»¶å¤¹çš„ç»å¯¹è·¯å¾„
 	 * @param path
 	 */
 	public static void start(String path){
 		showFiles(path);
-		System.out.println("³É¹¦¸ü¸ÄÁË " + num + " ¸öÎÄ¼ş¡£");
-		System.out.println("±éÀúÁË" + numa + "¸öÎÄ¼ş¼Ğ");
+		System.out.println("æˆåŠŸæ›´æ”¹äº† " + num + " ä¸ªæ–‡ä»¶ã€‚");
+		System.out.println("éå†äº†" + numa + "ä¸ªæ–‡ä»¶å¤¹");
 	}
     
 	/**
-	 * ±éÀú
+	 * éå†
 	 */
 	private static void showFiles(String filePath){
 		File root = new File(filePath);
@@ -45,16 +45,16 @@ public class ChangeFile {
 	    
 	    	if(file.isDirectory()){
 	    		/*
-	    		 * µİ¹éµ÷ÓÃ
+	    		 * é€’å½’è°ƒç”¨
 	    		 */
 	    		showFiles(file.getAbsolutePath());
 	    		numa++;
 	    		// filelist.add(file.getAbsolutePath());
 	    		changeName(file.getAbsolutePath());
-	    		// System.out.println("ÏÔÊ¾"+filePath+" ÏÂËùÓĞ×ÓÄ¿Â¼¼°ÆäÎÄ¼ş  "+file.getAbsolutePath());
+	    		// System.out.println("æ˜¾ç¤º"+filePath+" ä¸‹æ‰€æœ‰å­ç›®å½•åŠå…¶æ–‡ä»¶  "+file.getAbsolutePath());
 	    	}else{
 	    		changeName(file.getAbsolutePath());
-	    		//System.out.println("ÏÔÊ¾"+filePath+"         ÏÂËùÓĞ×ÓÄ¿Â¼ "+file.getAbsolutePath());
+	    		//System.out.println("æ˜¾ç¤º"+filePath+"         ä¸‹æ‰€æœ‰å­ç›®å½• "+file.getAbsolutePath());
 	    	}   
 	     
 	     
@@ -64,8 +64,8 @@ public class ChangeFile {
 	    
 	}
 	/**
-	 * ¸ü¸Ä
-	 * ÕâÀïÖ»ĞèÒª°Ñµ¥Ç°ÎÄ¼şÃû¸ÄÒ»ÏÂ¾Í¿ÉÒÔÁË
+	 * æ›´æ”¹
+	 * è¿™é‡Œåªéœ€è¦æŠŠå•å‰æ–‡ä»¶åæ”¹ä¸€ä¸‹å°±å¯ä»¥äº†
 	 */
 	private static void changeName(String filePath){
 		
@@ -79,10 +79,10 @@ public class ChangeFile {
 	}
 	private static void ok(boolean b){
 		if(b){
-			System.out.println("³É¹¦");
+			System.out.println("æˆåŠŸ");
 			num++;
 		} else {
-			System.out.println("Ê§°Ü");
+			System.out.println("å¤±è´¥");
 		}
 	}
 	
