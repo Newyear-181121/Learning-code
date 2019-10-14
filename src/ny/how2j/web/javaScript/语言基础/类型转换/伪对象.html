@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪对象</title>
+</head>
+<body>
+<div id="my-body">
+    <div id="my-title-1">
+        <h1>伪对象</h1>
+        伪对象概念：javascript是一门很有意思的语言，即便是基本类型，也是伪对象，所以他们都有属性和方法。
+        变量a的类型是字符串，通过调用其为伪对象的属性length获取其长度
+        <div id="my-script-1">
+            <script>
+                var a="hello javascript";
+                document.write("变量a的类型是:"+(typeof a));
+                document.write("<br>");
+                document.write("变量a的长度是:"+a.length);
+            </script>
+        </div>
+
+
+    </div>
+    <div id="my-script-2">
+        <h1>转换为字符串</h1>
+
+        <script>
+            var a=10;
+            document.write("数字 "+a+" 转换为字符串"+a.toString());
+            document.write("<br>");
+
+            var b=true;
+            document.write("布尔 "+b+" 转换为字符串"+b.toString());
+            document.write("<br>");
+
+            var c="hello javascript";
+            document.write("字符串 "+c+" 转换为字符串 "+c.toString());
+            document.write("<br>");
+
+        </script>
+    </div>
+
+    <div id="my-script-3">
+        <h1>数字转字符串</h1>
+        <p>Number转换为字符串的时候有默认模式和基模式两种</p>
+        <script>
+            var a=10;
+            document.write('默认模式下，数字10转换为十进制的'+a.toString()); //默认模式，即十进制
+            document.write("<br>");
+
+            document.write('基模式下，数字10转换为二进制的'+a.toString(2)); //基模式，二进制
+            document.write("<br>");
+
+            document.write('基模式下，数字10转换为八进制的'+a.toString(8)); //基模式，八进制
+            document.write("<br>");
+
+            document.write('基模式下，数字10转换为十六进制的'+a.toString(16)); //基模式，十六进制
+            document.write("<br>");
+
+        </script>
+    </div>
+
+    <div id="my-script-4">
+        <h1>转换为数字</h1>
+        <p>javascript分别提供内置函数 parseInt()和parseFloat()，转换为数字</p>
+        <p>注：如果被转换的字符串，同时由数字和字符构成，那么parseInt会一直定位数字，直到出现非字符。 所以"10abc" 会被转换为 10
+            <script>
+                document.write("字符串的\"10\"转换为数字的:"+parseInt("10")); //转换整数
+                document.write("<br>");
+                document.write("字符串的\"3.14\"转换为数字的:"+parseFloat("3.14"));//转换浮点数
+                document.write("<br>");
+                document.write("字符串的\"10abc\"转换为数字的:"+parseInt("10abc")); //判断每一位，直到发现不是数字的那一位
+                document.write("<br>");
+
+                document.write("字符串的\"hello javascript\"转换为数字的:"+parseInt("hello javascript")); //如果完全不包含数字，则返回NaN - Not a Number
+                document.write("<br>");
+
+                document.write("字符串\"10abc8\" 又会被转换为多少呢:"+parseInt("10abc8")); //如果完全不包含数字，则返回NaN - Not a Number
+                document.write("<br>");
+
+            </script>
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
