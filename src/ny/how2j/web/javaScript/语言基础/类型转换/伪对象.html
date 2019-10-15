@@ -7,7 +7,7 @@
 <body>
 <div id="my-body">
     <div id="my-title-1">
-        <h1>伪对象</h1>
+        <h1>1.伪对象</h1>
         伪对象概念：javascript是一门很有意思的语言，即便是基本类型，也是伪对象，所以他们都有属性和方法。
         变量a的类型是字符串，通过调用其为伪对象的属性length获取其长度
         <div id="my-script-1">
@@ -22,7 +22,7 @@
 
     </div>
     <div id="my-script-2">
-        <h1>转换为字符串</h1>
+        <h1>2.转换为字符串</h1>
 
         <script>
             var a=10;
@@ -41,7 +41,7 @@
     </div>
 
     <div id="my-script-3">
-        <h1>数字转字符串</h1>
+        <h1>3. 数字转字符串</h1>
         <p>Number转换为字符串的时候有默认模式和基模式两种</p>
         <script>
             var a=10;
@@ -61,7 +61,7 @@
     </div>
 
     <div id="my-script-4">
-        <h1>转换为数字</h1>
+        <h1>4.转换为数字</h1>
         <p>javascript分别提供内置函数 parseInt()和parseFloat()，转换为数字</p>
         <p>注：如果被转换的字符串，同时由数字和字符构成，那么parseInt会一直定位数字，直到出现非字符。 所以"10abc" 会被转换为 10
             <script>
@@ -79,6 +79,23 @@
                 document.write("<br>");
 
             </script>
+
+    </div>
+
+    <div>
+        <h1>5.转换为Boolean</h1>
+        <p>
+            <>
+                使用内置函数Boolean() 转换为Boolean值
+                当转换字符串时：
+                非空即为true
+                当转换数字时：
+                非0即为true
+                当转换对象时：
+                非null即为true
+            </>
+
+        </p>
 
     </div>
 
