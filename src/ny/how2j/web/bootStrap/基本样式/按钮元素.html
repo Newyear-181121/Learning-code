@@ -6,19 +6,30 @@
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
     <title>按钮元素</title>
+
+    <script>
+        function but001(){
+            alert("原始按钮，使用onclick;\n把button标签变成了平面的，一般不使用");
+           // f001()
+        }
+        function f001() {
+            alert("打开另一个按钮");
+        }
+        function but002() {
+            alert("无色按钮；\n也用onclick绑定一个方法");
+        }
+
+
+    </script>
 </head>
 <body>
     <div>
         <div>
-            <h4> 1 : 原始样式按钮</h4>
-            <p>把button标签变成了平面的，一般不使用</p><br>
-            <button type="button" class="btn">原始样式按钮</button>
+            <button type="button" class="btn" onclick="but001()">1 : 原始样式按钮</button>
         </div>
 
         <div>
-            <h4>2 : 默认按钮</h4>
-            <P>无色按钮</P><br>
-            <button type="button" class="btn btn-default">默认按钮</button>
+            <button type="button" class="btn btn-default" onclick="but002()">2 : 默认按钮</button>
         </div>
 
         <div></div>

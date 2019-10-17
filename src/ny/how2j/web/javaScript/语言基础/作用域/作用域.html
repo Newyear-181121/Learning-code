@@ -16,7 +16,7 @@
         <script>
 
             function f1(a){
-                document.write('参数的作用域在函数以内，其值是 '+a);//参数a的作用范围，所以打印出来是5；
+                document.write('参数的作用域在函数以内，其值是 ' + a);//参数a的作用范围，所以打印出来是5；
             }
 
             function f2(){
@@ -34,6 +34,7 @@
         <h1>2 : 全局变量的作用域</h1>
         <script>
             var a = 0; //定义在函数前面，即全局变量，所有函数都可以访问
+            document.write("定义在函数前面，即全局变量，所有函数都可以访问");
 
             function f1(){
                 document.write('通过函数f1 设置全局变量a的值 为 5');
