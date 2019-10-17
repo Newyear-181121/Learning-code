@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点概念</title>
+</head>
+<body>
+<div>
+    <span>
+    DOM把所有的html都转换为节点
+    整个文档 是一个节点
+    元素 是节点
+    元素属性 是节点
+    元素内容 是节点
+    注释 也是节点
+    如本例
+    通过document.getElementById获取了id=d1的div标签对应的元素节点
+    然后通过attributes 获取了该节点对应的属性节点
+    接着通过childNodes获取了内容节点
+    </span>
+    <div>
+
+        <div id="d1">hello HTML DOM</div>
+
+
+
+        <script>
+            function p(s){
+                document.write(s);
+                document.write("<br>");
+            }
+            var  div1 = document.getElementById("d1");
+            p("文档节点:"+document);
+            p("元素:"+div1);
+            p("属性节点:"+div1.attributes[0]);
+            p("内容节点:"+div1.childNodes[0]);
+        </script>
+    </div>
+</div>
+</body>
+</html>
