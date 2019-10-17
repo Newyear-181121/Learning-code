@@ -165,6 +165,23 @@
         </div>
     </div>
 
+    <div>
+        <div>
+            <p>7 : String()和toString()的区别</p>
+            String()和toString()一样都会返回字符串，区别在于对null的处理<<br>
+            String()会返回字符串"null"<br>
+            toString() 就会报错，无法执行<br>
+        </div>
+        <script>
+            var a = null;
+            document.write('String(null) 把空对象转换为字符串：'+String(a));
+            document.write("<br>");
+            document.write('null.toString() 就会报错，所以后面的代码不能执行');
+            document.write(a.toString());
+            document.write("因为第5行报错，所以这一段文字不会显示");
+        </script>
+    </div>
+
 
 
 </div>
