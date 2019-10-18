@@ -2,9 +2,9 @@ package character;
 
 public class APHero extends Hero implements AP{
  
-    @Override		//什么意思？？好像是公开的借口声明	//重写方法，的声明
+    @Override		//浠�涔堟剰鎬濓紵锛熷ソ鍍忔槸鍏紑鐨勫�熷彛澹版槑	//閲嶅啓鏂规硶锛岀殑澹版槑
     public void magicAttack() {
-        System.out.println("进行魔法攻击");
+        System.out.println("杩涜榄旀硶鏀诲嚮");
     }
  
 }

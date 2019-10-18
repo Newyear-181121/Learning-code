@@ -2,16 +2,16 @@ package character;
 
 public class TestGiantDragon00 {
 	public static void main(String[] args) {
-        //Í¨¹ınewÊµÀı»¯»á±¨´í
+        //é€šè¿‡newå®ä¾‹åŒ–ä¼šæŠ¥é”™
 //      GiantDragon00 g = new GiantDragon00();
          
-        //Ö»ÄÜÍ¨¹ıgetInstanceµÃµ½¶ÔÏó
+        //åªèƒ½é€šè¿‡getInstanceå¾—åˆ°å¯¹è±¡
          
         GiantDragon00 g1 = GiantDragon00.getInstance();
         GiantDragon00 g2 = GiantDragon00.getInstance();
         GiantDragon00 g3 = GiantDragon00.getInstance();
          
-        //¶¼ÊÇÍ¬Ò»¸ö¶ÔÏó
+        //éƒ½æ˜¯åŒä¸€ä¸ªå¯¹è±¡
         System.out.println(g1==g2);
         System.out.println(g1==g3);
     }
