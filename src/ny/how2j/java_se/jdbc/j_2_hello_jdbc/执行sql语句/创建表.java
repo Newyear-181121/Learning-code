@@ -21,14 +21,24 @@ public class 创建表 {
                             "root", "root");
 
             Statement s = c.createStatement();
-            String sql = "CREATE TABLE hero (\n" +
+            /*      创建hero表   执行过就不能再执行了。*/
+            String sql_1 = "CREATE TABLE hero (\n" +
                     "                    id int(11) AUTO_INCREMENT,\n" +
                     "                    name varchar(30) ,\n" +
                     "                    hp float ,\n" +
                     "                    damage int(11) ,\n" +
                     "                    PRIMARY KEY (id)\n" +
                     "            )  DEFAULT CHARSET=utf8;";
-            s.execute(sql);
+
+            /*  执行过了。 */
+            String sql_2 = "CREATE TABLE user (\n" +
+                    "  id int(11) AUTO_INCREMENT,\n" +
+                    "  name varchar(30) ,\n" +
+                    "  password varchar(30),\n" +
+                    "  PRIMARY KEY (id)\n" +
+                    ") ;\n" ;
+            String sql_3 = "insert into user values(null,'dashen','thisispassword');";//
+            s.execute(sql_3);
 
             System.out.println("执行创建数据库表成功。");
 

@@ -2,7 +2,7 @@ package lambda;
 
 
 /**
- * for TestLambda class   ´´½¨µÄÀà
+ * for TestLambda class   åˆ›å»ºçš„ç±»
  * @author New year
  *
  */
@@ -21,7 +21,7 @@ public class Hero implements Comparable<Hero> {
 		this.name = name;
 	}
 	
-	//³õÊ¼»¯name,hp,damageµÄ¹¹Ôì·½·¨
+	//åˆå§‹åŒ–name,hp,damageçš„æ„é€ æ–¹æ³•
 	public Hero(String name,float hp,int damage ){
 		this.name = name;
 		this.hp = hp;
@@ -37,7 +37,7 @@ public class Hero implements Comparable<Hero> {
 			return -1;
 	}
 	
-	/*		//ÎªÊ²Ã´ÕâÀïÓÃÊÖ´òµÄcode·½·¨Ãû£¬Êä³ö¾Í»áÓĞ´íÎó£¬ÓÃÏµÍ³Ìí¼Ó¸²¸ÇµÄ·½·¨Ãû¾ÍÃ»ÓĞ´íÎóÁË£¿£¿£¿
+	/*		//ä¸ºä»€ä¹ˆè¿™é‡Œç”¨æ‰‹æ‰“çš„codeæ–¹æ³•åï¼Œè¾“å‡ºå°±ä¼šæœ‰é”™è¯¯ï¼Œç”¨ç³»ç»Ÿæ·»åŠ è¦†ç›–çš„æ–¹æ³•åå°±æ²¡æœ‰é”™è¯¯äº†ï¼Ÿï¼Ÿï¼Ÿ
 	public String ToString(){
 		return "Hero [name=" + name + ", hp=" + hp + ", damage=" + damage + "]  \r\n";
 	}
@@ -48,7 +48,7 @@ public class Hero implements Comparable<Hero> {
 		return "Hero [name=" + name + ", hp=" + hp + ", damage=" + damage + "]  \r\n";
 	}
 	
-	//ÕâÊÇ×Ô¶¯Ìí¼ÓµÄ³éÏó·½·¨µÄÔ­Ê¼Êı¾İ
+	//è¿™æ˜¯è‡ªåŠ¨æ·»åŠ çš„æŠ½è±¡æ–¹æ³•çš„åŸå§‹æ•°æ®
 	/*
 	@Override
 	public int compareTo(Hero o) {
@@ -61,15 +61,15 @@ public class Hero implements Comparable<Hero> {
 
 }
 
-/*   1-1ÊÖ´ò´úÂëÊä³ö        
- ³õÊ¼»¯ºóµÄ¼¯ºÏ£º
+/*   1-1æ‰‹æ‰“ä»£ç è¾“å‡º        
+ åˆå§‹åŒ–åçš„é›†åˆï¼š
 [lambda.Hero@106d69c, lambda.Hero@52e922, lambda.Hero@25154f, lambda.Hero@10dea4e, lambda.Hero@647e05, lambda.Hero@1909752, lambda.Hero@1f96302, lambda.Hero@14eac69, lambda.Hero@a57993, lambda.Hero@1b84c92]
-É¸Ñ¡³ö hp>100 && damange<50µÄÓ¢ĞÛ
+ç­›é€‰å‡º hp>100 && damange<50çš„è‹±é›„
 lambda.Hero@647e05lambda.Hero@1909752lambda.Hero@1f96302lambda.Hero@a57993lambda.Hero@1b84c92 
  */
 
-/*   1-1ÏµÍ³´úÂëÊä³ö	
- ³õÊ¼»¯ºóµÄ¼¯ºÏ£º
+/*   1-1ç³»ç»Ÿä»£ç è¾“å‡º	
+ åˆå§‹åŒ–åçš„é›†åˆï¼š
 [Hero [name=hero 0, hp=5024.0, damage=58]  
 , Hero [name=hero 1, hp=4313.0, damage=96]  
 , Hero [name=hero 2, hp=9027.0, damage=67]  
@@ -81,7 +81,7 @@ lambda.Hero@647e05lambda.Hero@1909752lambda.Hero@1f96302lambda.Hero@a57993lambda
 , Hero [name=hero 8, hp=5382.0, damage=52]  
 , Hero [name=hero 9, hp=3297.0, damage=95]  
 ]
-É¸Ñ¡³ö hp>100 && damange<50µÄÓ¢ĞÛ
+ç­›é€‰å‡º hp>100 && damange<50çš„è‹±é›„
 Hero [name=hero 3, hp=662.0, damage=30]  
 Hero [name=hero 4, hp=6615.0, damage=3]  
 Hero [name=hero 5, hp=8088.0, damage=27]  
