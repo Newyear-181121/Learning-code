@@ -9,18 +9,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- * Êó±ê¼àÌı
+ * é¼ æ ‡ç›‘å¬
  * @author New year
  *
- *MouseListener Êó±ê¼àÌıÆ÷
- *mouseReleased Êó±êÊÍ·Å
- *mousePressed Êó±ê°´ÏÂ
- *mouseExited Êó±êÍË³ö
- *mouseEntered Êó±ê½øÈë
- *mouseClicked Êó±êµã»÷
- *ÔÚ±¾ÀıÖĞ£¬Ê¹ÓÃmouseEntered£¬µ±Êó±ê½øÈëÍ¼Æ¬µÄÊ±ºò£¬Í¼Æ¬¾ÍÒÆ¶¯Î»ÖÃ
+ *MouseListener é¼ æ ‡ç›‘å¬å™¨
+ *mouseReleased é¼ æ ‡é‡Šæ”¾
+ *mousePressed é¼ æ ‡æŒ‰ä¸‹
+ *mouseExited é¼ æ ‡é€€å‡º
+ *mouseEntered é¼ æ ‡è¿›å…¥
+ *mouseClicked é¼ æ ‡ç‚¹å‡»
+ *åœ¨æœ¬ä¾‹ä¸­ï¼Œä½¿ç”¨mouseEnteredï¼Œå½“é¼ æ ‡è¿›å…¥å›¾ç‰‡çš„æ—¶å€™ï¼Œå›¾ç‰‡å°±ç§»åŠ¨ä½ç½®
  */
-public class TestGUI2_03 {
+public class TestGUI2_3_é¼ æ ‡ç›‘å¬ {
 
 	public static void main(String[] args) {
 		
@@ -31,44 +31,44 @@ public class TestGUI2_03 {
 		f.setLayout(null);
 		
 		final JLabel l = new JLabel();
-		ImageIcon i = new ImageIcon("E:/´æ´¢ÎÄ¼ş¼Ğ/×ÀÃæÎÄ¼ş/Java/how2j(Ñ§Ï°×ÊÁÏ£©/how2j£¨Ñ§Ï°´úÂë£©/All/com.how2j.java_SE.study.Test/src/gui_image/shana.png");
-		l.setIcon(i);	//±êÇ©ÉèÖÃÎªÍ¼Æ¬¡£
+		ImageIcon i = new ImageIcon("../gui_image/shana.png");
+		l.setIcon(i);	//æ ‡ç­¾è®¾ç½®ä¸ºå›¾ç‰‡ã€‚
 		l.setBounds(375,275,i.getIconWidth(),i.getIconHeight());
 		
 		f.add(l);
 		
 		
-		//ÕâÀïºÃÏñÊÇÄäÃûÄÚ²¿ÀàµÄµ÷ÓÃ£¬¸ø¶ÔÏóÔö¼ÓÊó±ê¼àÌı¡£
+		//è¿™é‡Œå¥½åƒæ˜¯åŒ¿åå†…éƒ¨ç±»çš„è°ƒç”¨ï¼Œç»™å¯¹è±¡å¢åŠ é¼ æ ‡ç›‘å¬ã€‚
 		
-		//l.addMouseListener(new MouseListener() {	//l.µÄ»°ÊÇÍ¼Æ¬Ôö¼ÓÊó±ê¼àÌı
-		//Ç°Ãæ¸Ä³Éf.¾Í³ÉÎª´°¿ÚÔö¼ÓÊó±ê¼àÌı
+		//l.addMouseListener(new MouseListener() {	//l.çš„è¯æ˜¯å›¾ç‰‡å¢åŠ é¼ æ ‡ç›‘å¬
+		//å‰é¢æ”¹æˆf.å°±æˆä¸ºçª—å£å¢åŠ é¼ æ ‡ç›‘å¬
 		f.addMouseListener(new MouseListener() {
 			
-			//	ÊÍ·ÅÊó±ê
+			//	é‡Šæ”¾é¼ æ ‡
 			public void mouseReleased(MouseEvent e) {
 				
 			}
 			
-			//	°´ÏÂÊó±ê
+			//	æŒ‰ä¸‹é¼ æ ‡
 			public void mousePressed(MouseEvent e) {
 			
 			}
 
 			
 
-			// Êó±ê½øÈë
+			// é¼ æ ‡è¿›å…¥
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				
 			}
 
-			// Êó±êÍË³ö
+			// é¼ æ ‡é€€å‡º
 			@Override
 			public void mouseExited(MouseEvent e) {
 				
 			}
 			
-			// °´ÏÂÊÍ·Å×éºÏ¶¯×÷Îªµã»÷Êó±ê
+			// æŒ‰ä¸‹é‡Šæ”¾ç»„åˆåŠ¨ä½œä¸ºç‚¹å‡»é¼ æ ‡
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				Random r = new Random();

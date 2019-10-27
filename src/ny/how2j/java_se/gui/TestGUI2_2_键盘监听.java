@@ -13,18 +13,18 @@ import javax.swing.JLabel;
 
 
 /**
- * ¼üÅÌ¼àÌı
+ * é”®ç›˜ç›‘å¬
  * @author New year
- *¼üÅÌ¼àÌıÆ÷£º KeyListener
- *keyPressed ´ú±í ¼ü±»°´ÏÂ
- *keyReleased ´ú±í ¼ü±»µ¯Æğ
- *keyTyped ´ú±í Ò»¸ö°´ÏÂµ¯ÆğµÄ×éºÏ¶¯×÷
- *KeyEvent.getKeyCode() ¿ÉÒÔ»ñÈ¡µ±Ç°µãÏÂÁËÄÄ¸ö¼ü
+ *é”®ç›˜ç›‘å¬å™¨ï¼š KeyListener
+ *keyPressed ä»£è¡¨ é”®è¢«æŒ‰ä¸‹
+ *keyReleased ä»£è¡¨ é”®è¢«å¼¹èµ·
+ *keyTyped ä»£è¡¨ ä¸€ä¸ªæŒ‰ä¸‹å¼¹èµ·çš„ç»„åˆåŠ¨ä½œ
+ *KeyEvent.getKeyCode() å¯ä»¥è·å–å½“å‰ç‚¹ä¸‹äº†å“ªä¸ªé”®
  */
-public class TestGUI2_02 {
+public class TestGUI2_2_é”®ç›˜ç›‘å¬ {
 	public static void main(String[] args) {
 	
-	JFrame f = new JFrame("´°¿Ú±êÌâ");//Èç¹ûÃ»ÓĞ¼ÓÖ÷º¯ÊıÈë¿ÚµÄÄÇÒ»¾ä£¬ºóÃæÈıĞĞ¶¼»á³öÏÖÓï·¨´íÎó£¬¶¼ÏÔÊ¾ÔÚ±êµã·ûºÅÉÏ¡£
+	JFrame f = new JFrame("çª—å£æ ‡é¢˜");//å¦‚æœæ²¡æœ‰åŠ ä¸»å‡½æ•°å…¥å£çš„é‚£ä¸€å¥ï¼Œåé¢ä¸‰è¡Œéƒ½ä¼šå‡ºç°è¯­æ³•é”™è¯¯ï¼Œéƒ½æ˜¾ç¤ºåœ¨æ ‡ç‚¹ç¬¦å·ä¸Šã€‚
 	f.setSize(400,300);
 	f.setLocation(580,200);
 	f.setLayout(null);
@@ -33,44 +33,44 @@ public class TestGUI2_02 {
 	
 	final JLabel l = new JLabel();
 	
-	ImageIcon i = new ImageIcon("E:/´æ´¢ÎÄ¼ş¼Ğ/×ÀÃæÎÄ¼ş/Java/how2j(Ñ§Ï°×ÊÁÏ£©/how2j£¨Ñ§Ï°´úÂë£©/All/com.how2j.java_SE.study.Test/src/gui_image/shana.png");
+	ImageIcon i = new ImageIcon("E:/å­˜å‚¨æ–‡ä»¶å¤¹/æ¡Œé¢æ–‡ä»¶/Java/how2j(å­¦ä¹ èµ„æ–™ï¼‰/how2jï¼ˆå­¦ä¹ ä»£ç ï¼‰/All/com.how2j.java_SE.study.Test/src/gui_image/shana.png");
 	l.setIcon(i);
 	l.setBounds(50,50,i.getIconWidth(),i.getIconHeight());
-	//if(i==null)		//ÕâÑù²»ĞĞ£¬Í¼Æ¬µØÖ·¾ÍËãÊÇ´íÁË£¬¶ÔÏóiÒ²²»ÊÇ¿Õ¡£
-	//	extracted();	//Õâ¸öÒì³£Å×³ö·½·¨Ã»ÓĞÓÃ¡£
+	//if(i==null)		//è¿™æ ·ä¸è¡Œï¼Œå›¾ç‰‡åœ°å€å°±ç®—æ˜¯é”™äº†ï¼Œå¯¹è±¡iä¹Ÿä¸æ˜¯ç©ºã€‚
+	//	extracted();	//è¿™ä¸ªå¼‚å¸¸æŠ›å‡ºæ–¹æ³•æ²¡æœ‰ç”¨ã€‚
 	
-	//System.out.println("¼ü±»°´ÏÂÁË");		//ÔËĞĞµ½ÁËÕâÒ»²½¡£
+	//System.out.println("é”®è¢«æŒ‰ä¸‹äº†");		//è¿è¡Œåˆ°äº†è¿™ä¸€æ­¥ã€‚
 	
-	//Ôö¼Ó¼üÅÌ¼àÌı
+	//å¢åŠ é”®ç›˜ç›‘å¬
 	f.addKeyListener(new KeyListener(){
 		
 		
-		//¼ü±»µ¯Æğ
+		//é”®è¢«å¼¹èµ·
 		public void keyReleased(KeyEvent e){
 			System.out.println(e.getKeyCode());
-			System.out.println("³ÌĞòÓĞÃ»ÓĞ¹ıÀ´");
-			//39´ú±í°´ÏÂÁË¡°ÓÒ¼ü¡±
+			System.out.println("ç¨‹åºæœ‰æ²¡æœ‰è¿‡æ¥");
+			//39ä»£è¡¨æŒ‰ä¸‹äº†â€œå³é”®â€
 			if (e.getKeyCode() == 39){
-				//Í¼Æ¬ÏòÓÒÒÆ¶¯ £¨y×ø±ê²»±ä£¬x×ø±êÔö¼Ó£©
+				//å›¾ç‰‡å‘å³ç§»åŠ¨ ï¼ˆyåæ ‡ä¸å˜ï¼Œxåæ ‡å¢åŠ ï¼‰
 				l.setLocation(l.getX() + 10,l.getY());
 							
 			}
 		
 			
-			//37´ú±í°´ÏÂÁË¡°×ó¼ü¡±
+			//37ä»£è¡¨æŒ‰ä¸‹äº†â€œå·¦é”®â€
 			if (e.getKeyCode() == 37){
-				//×óÒÆ
-				//System.out.println(e.getKeyCode());	//Êä³öKeyCode
+				//å·¦ç§»
+				//System.out.println(e.getKeyCode());	//è¾“å‡ºKeyCode
 				l.setLocation(l.getX() - 10,l.getY());
 			}
 			
-			//ÉÏ
+			//ä¸Š
 			if (e.getKeyCode() == 38){
 				l.setLocation(l.getX(),l.getY() - 10);
 			
 			}
 			
-			//ÏÂ
+			//ä¸‹
 			if (e.getKeyCode()==40){
 				l.setLocation(l.getX(), l.getY()+10);
 			}
@@ -79,14 +79,14 @@ public class TestGUI2_02 {
 			
 		
 		
-		//¼ü±»°´ÏÂ
+		//é”®è¢«æŒ‰ä¸‹
 		public void keyPressed(KeyEvent e){
 			
-			//Êä³ö°´¼ü´úÂëµÄ·½·¨¡£
+			//è¾“å‡ºæŒ‰é”®ä»£ç çš„æ–¹æ³•ã€‚
 			//System.out.println(e.getKeyCode());
 		}
 		
-		//Ò»¸ö°´ÏÂµ¯ÆğµÄ×éºÏ¶¯×÷
+		//ä¸€ä¸ªæŒ‰ä¸‹å¼¹èµ·çš„ç»„åˆåŠ¨ä½œ
 		public void keyTyped(KeyEvent e){
 			
 		}
@@ -95,13 +95,13 @@ public class TestGUI2_02 {
 	
 	
 	
-	JButton b = new JButton("Òş²ØÍ¼Æ¬");	//°´Å¥Ãû³Æ
-	b.setBounds(50,200,100,30);		//°´Å¥´óĞ¡
+	JButton b = new JButton("éšè—å›¾ç‰‡");	//æŒ‰é’®åç§°
+	b.setBounds(50,200,100,30);		//æŒ‰é’®å¤§å°
 	
 	
 	
 	
-	//¸ø°´Å¥    Ôö¼Ó     ¼àÌı
+	//ç»™æŒ‰é’®    å¢åŠ      ç›‘å¬
 	class Listener implements ActionListener{
 		
 		JButton b = null;
@@ -114,14 +114,14 @@ public class TestGUI2_02 {
 		public void actionPerformed(ActionEvent e){
 			if(!flag){
 				l.setVisible(false);
-				b.setText("ÏÔÊ¾Í¼Æ¬");
+				b.setText("æ˜¾ç¤ºå›¾ç‰‡");
 				flag = true;
 			} else {
 				l.setVisible(true);
-				b.setText("Òş²ØÍ¼Æ¬");
+				b.setText("éšè—å›¾ç‰‡");
 				flag = false;
 			}
-			f.requestFocus();//»¹ÊÇÒª¼ÓÒ»¸öÕâ¾ä»°£¬°´Å¥ºÍ¼üÅÌ»¹ÊÇÓĞ³åÍ»¡£
+			f.requestFocus();//è¿˜æ˜¯è¦åŠ ä¸€ä¸ªè¿™å¥è¯ï¼ŒæŒ‰é’®å’Œé”®ç›˜è¿˜æ˜¯æœ‰å†²çªã€‚
 		}
 		
 	}
@@ -130,9 +130,9 @@ public class TestGUI2_02 {
 	
 	
 	
-	//f.setFocusable(true);//buttonºÍkeylistener³åÍ»µÄÎÊÌâ
-	//Ò²¿ÉÒÔÊ¹ÓÃf.setFocusable();
-	//ÕâÀï¼ÓÁË¼¸¾ä¾äf.setFocusable(true);
+	//f.setFocusable(true);//buttonå’Œkeylistenerå†²çªçš„é—®é¢˜
+	//ä¹Ÿå¯ä»¥ä½¿ç”¨f.setFocusable();
+	//è¿™é‡ŒåŠ äº†å‡ å¥å¥f.setFocusable(true);
 	
 	f.add(l);
 	f.add(b);
@@ -145,9 +145,9 @@ public class TestGUI2_02 {
 	}
 
 	/**
-	 * Å×³ö×Ô¶¨ÒåÒì³£µÄ·½·¨£¬
+	 * æŠ›å‡ºè‡ªå®šä¹‰å¼‚å¸¸çš„æ–¹æ³•ï¼Œ
 	 * 
-	 * if£¨i==null¡ª£©²»»á³ÉÁ¢£¬Èç¹ûÍ¼Æ¬Â·¾¶´íÎó£¬¶ÔÏói»¹ÊÇÓĞÄÚÈİ£¬²»»áÎª¿Õ¡£
+	 * ifï¼ˆi==nullâ€”ï¼‰ä¸ä¼šæˆç«‹ï¼Œå¦‚æœå›¾ç‰‡è·¯å¾„é”™è¯¯ï¼Œå¯¹è±¡iè¿˜æ˜¯æœ‰å†…å®¹ï¼Œä¸ä¼šä¸ºç©ºã€‚
 	 */
 /*	private static void extracted() {
 		{
@@ -155,7 +155,7 @@ public class TestGUI2_02 {
 				throw new notImageException();
 			} catch (notImageException e1) {
 				// TODO Auto-generated catch block
-				System.out.println("Ã»ÓĞÍ¼Æ¬£¬»òÕßÕÒ²»µ½Í¼Æ¬");
+				System.out.println("æ²¡æœ‰å›¾ç‰‡ï¼Œæˆ–è€…æ‰¾ä¸åˆ°å›¾ç‰‡");
 				e1.printStackTrace();
 				
 			}
@@ -165,9 +165,9 @@ public class TestGUI2_02 {
 }
 
 /**
- * ×Ô¶¨ÒåÒì³£
+ * è‡ªå®šä¹‰å¼‚å¸¸
  * @author New year
- *	´°¿ÚÃ»ÓĞÏÔÊ¾Í¼Æ¬µÄÊ±ºòÅ×³öÕâ¸öÒì³£
+ *	çª—å£æ²¡æœ‰æ˜¾ç¤ºå›¾ç‰‡çš„æ—¶å€™æŠ›å‡ºè¿™ä¸ªå¼‚å¸¸
  */
 	/*
 class notImageException extends Exception{

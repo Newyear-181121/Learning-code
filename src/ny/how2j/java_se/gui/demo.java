@@ -7,26 +7,6 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
-
-/**
- * //¼üÅÌ¼àÌıµÄÀà		
- * @author New year
- * //¶¨Òå¼üÅÌ¼àÌıµÄÄÚ²¿Àà
- */
- class key extends KeyAdapter {
-	
-	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() != 0)
-			System.out.println("°´ÏÂ£º"+e.getKeyCode());
-	}
-		
-	public void keyReleased(KeyEvent e) {		//¼üµÄÌ§Æğ
-		if(e.getKeyCode() != 0)
-			System.out.println("Ì§Æğ"+e.getKeyCode());
-	}
-		
-}
 	
 public class demo extends JFrameClean{	
 	public demo(int a, int b, int c, int d) {
@@ -45,8 +25,11 @@ public class demo extends JFrameClean{
 		new JFrameClean(400,400,300,300);
 		
 		
-		//Ìí¼ÓÒ»¸ö°´Å¥
+		//æ·»åŠ ä¸€ä¸ªæŒ‰é’®
 		JButton b = new JButton("Button");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		f.setVisible(true);
 	}
 
 		
@@ -57,11 +40,30 @@ public class demo extends JFrameClean{
 		
 		
 		/**
-		 * ×ó     		37
+		 * å·¦     		37
 		 * shang 	38
-		 * ÓÒ		39
-		 * ÏÂ		40
+		 * å³		39
+		 * ä¸‹		40
 		 */
+}
+
+/**
+ * //é”®ç›˜ç›‘å¬çš„ç±»
+ * @author New year
+ * //å®šä¹‰é”®ç›˜ç›‘å¬çš„å†…éƒ¨ç±»
+ */
+class key extends KeyAdapter {
+
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode() != 0)
+			System.out.println("æŒ‰ä¸‹ï¼š"+e.getKeyCode());
+	}
+
+	public void keyReleased(KeyEvent e) {		//é”®çš„æŠ¬èµ·
+		if(e.getKeyCode() != 0)
+			System.out.println("æŠ¬èµ·"+e.getKeyCode());
+	}
+
 }
 
 

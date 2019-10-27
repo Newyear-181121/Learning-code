@@ -2,22 +2,22 @@ package reflection;
 
 
 /**
- * »ñÈ¡Àà¶ÔÏó
+ * è·å–ç±»å¯¹è±¡
  * @author New year
  *
- *»ñÈ¡Àà¶ÔÏóÓĞ3ÖÖ·½Ê½
+ *è·å–ç±»å¯¹è±¡æœ‰3ç§æ–¹å¼
  *1. Class.forName
  *2. Hero.class
  *3. new Hero().getClass()
  *
- *ÔÚÒ»¸öJVMÖĞ£¬Ò»ÖÖÀà£¬Ö»»áÓĞÒ»¸öÀà¶ÔÏó´æÔÚ¡£ËùÒÔÒÔÉÏÈıÖÖ·½Ê½È¡³öÀ´µÄÀà¶ÔÏó£¬¶¼ÊÇÒ»ÑùµÄ¡£
+ *åœ¨ä¸€ä¸ªJVMä¸­ï¼Œä¸€ç§ç±»ï¼Œåªä¼šæœ‰ä¸€ä¸ªç±»å¯¹è±¡å­˜åœ¨ã€‚æ‰€ä»¥ä»¥ä¸Šä¸‰ç§æ–¹å¼å–å‡ºæ¥çš„ç±»å¯¹è±¡ï¼Œéƒ½æ˜¯ä¸€æ ·çš„ã€‚
  *
- *×¢£º ×¼È·µÄ½²ÊÇÒ»¸öClassLoaderÏÂ£¬Ò»ÖÖÀà£¬Ö»»áÓĞÒ»¸öÀà¶ÔÏó´æÔÚ¡£Í¨³£Ò»¸öJVMÏÂ£¬Ö»»áÓĞÒ»¸öClassLoader¡£ÒòÎª»¹Ã»ÓĞÒıÈëClassLoader¸ÅÄî£¬ ËùÒÔÔİÊ±²»Õ¹¿ªÁË¡£
+ *æ³¨ï¼š å‡†ç¡®çš„è®²æ˜¯ä¸€ä¸ªClassLoaderä¸‹ï¼Œä¸€ç§ç±»ï¼Œåªä¼šæœ‰ä¸€ä¸ªç±»å¯¹è±¡å­˜åœ¨ã€‚é€šå¸¸ä¸€ä¸ªJVMä¸‹ï¼Œåªä¼šæœ‰ä¸€ä¸ªClassLoaderã€‚å› ä¸ºè¿˜æ²¡æœ‰å¼•å…¥ClassLoaderæ¦‚å¿µï¼Œ æ‰€ä»¥æš‚æ—¶ä¸å±•å¼€äº†ã€‚
  */
 public class TestReflection1_2 {
 
 	public static void main(String[] args) {
-        String className = "reflection.Hero";
+        String className = "reflection.Hero";//å…¨ç±»å
         try {
             Class pClass1=Class.forName(className);
             Class pClass2=Hero.class;
@@ -27,8 +27,8 @@ public class TestReflection1_2 {
             System.out.println(pClass1==pClass3);
             System.out.println(pClass2==pClass3);
             
-            System.out.println(pClass1.getName());//Ö»ÄÜÓÃget·½·¨»ñÈ¡ËûµÄÃû×Ö¡£//´Ó°üÃû¿ªÊ¼´òÓ¡
-            System.out.println(pClass1.getSimpleName());//¼òµ¥Ãû×Ö
+            System.out.println(pClass1.getName());//åªèƒ½ç”¨getæ–¹æ³•è·å–ä»–çš„åå­—ã€‚//ä»åŒ…åå¼€å§‹æ‰“å°
+            System.out.println(pClass1.getSimpleName());//ç®€å•åå­—
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package gui;
+package gui.S2_äº‹ä»¶ç›‘å¬;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,37 +10,37 @@ import javax.swing.JLabel;
 
 
 /**
- * °´Å¥¼àÌı
+ * æŒ‰é’®ç›‘å¬
  * @author New year
  *
  */
-public class TestGUI2_01 {
+public class TestGUI2_1_æŒ‰é’®ç›‘å¬ {
 	
 	public static void main(String[] args){
 		
-		JFrame f = new JFrame("´°¿Ú±êÌâ");
+		JFrame f = new JFrame("çª—å£æ ‡é¢˜");
 		f.setSize(400, 300);
 		f.setLocation(580,200);
 		f.setLayout(null);
 		
 		final JLabel l = new JLabel();
-									//ÕâÑùºÃÏñ²»ĞĞ		//´´½¨ÁËÒ»¸ö°ügui_imageÓÃÀ´´æ·ÅÍ¼Æ¬
-		//ImageIcon i = new ImageIcon("gui_image/shana.png");// set path  //¾ø¶ÔÂ·¾¶      ºÍ  °üÃû¼ÓÎÄ¼şÃû
-		ImageIcon i = new ImageIcon("E:/´æ´¢ÎÄ¼ş¼Ğ/×ÀÃæÎÄ¼ş/Java/how2j(Ñ§Ï°×ÊÁÏ£©/how2j£¨Ñ§Ï°´úÂë£©/All/com.how2j.java_SE.study.Test/src/gui_image/shana.png");
+									//è¿™æ ·å¥½åƒä¸è¡Œ		//åˆ›å»ºäº†ä¸€ä¸ªåŒ…gui_imageç”¨æ¥å­˜æ”¾å›¾ç‰‡
+		//ImageIcon i = new ImageIcon("gui_image/shana.png");// set path  //ç»å¯¹è·¯å¾„      å’Œ  åŒ…ååŠ æ–‡ä»¶å
+		ImageIcon i = new ImageIcon("E:/å­˜å‚¨æ–‡ä»¶å¤¹/æ¡Œé¢æ–‡ä»¶/Java/how2j(å­¦ä¹ èµ„æ–™ï¼‰/how2jï¼ˆå­¦ä¹ ä»£ç ï¼‰/All/com.how2j.java_SE.study.Test/src/gui_image/shana.png");
 		l.setIcon(i);
 		l.setBounds(50,50,i.getIconWidth(),i.getIconHeight());
 		
-		JButton b = new JButton("Òş²ØÍ¼Æ¬");	//°´Å¥Ãû³Æ
-		b.setBounds(50,200,100,30);		//°´Å¥´óĞ¡
+		JButton b = new JButton("éšè—å›¾ç‰‡");	//æŒ‰é’®åç§°
+		b.setBounds(50,200,100,30);		//æŒ‰é’®å¤§å°
 		
-		JButton b2 = new JButton("ÏÔÊ¾Í¼Æ¬");
+		JButton b2 = new JButton("æ˜¾ç¤ºå›¾ç‰‡");
 		b2.setBounds(180,200,100,30);
 		
-		//¸ø°´Å¥    Ôö¼Ó     ¼àÌı
+		//ç»™æŒ‰é’®    å¢åŠ      ç›‘å¬
 		b.addActionListener(new ActionListener(){
 			
-			//µ±°´Å¥±»µã»÷Ê±£¬¾Í»á´¥·¢    ActionEvent ÊÂ¼ş
-			//actionPerformed   ·½·¨¾Í»á±»Ö´ĞĞ
+			//å½“æŒ‰é’®è¢«ç‚¹å‡»æ—¶ï¼Œå°±ä¼šè§¦å‘    ActionEvent äº‹ä»¶
+			//actionPerformed   æ–¹æ³•å°±ä¼šè¢«æ‰§è¡Œ
 			public void actionPerformed(ActionEvent e){
 				l.setVisible(false);
 			}
@@ -49,7 +49,7 @@ public class TestGUI2_01 {
 		b2.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				l.setVisible(true);
-				//l.setBounds(100, 50, i.getIconWidth(), i.getIconHeight());//¿ÉÓÃ
+				//l.setBounds(100, 50, i.getIconWidth(), i.getIconHeight());//å¯ç”¨
 			}
 			
 		});

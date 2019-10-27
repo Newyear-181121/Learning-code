@@ -9,16 +9,16 @@ import javax.imageio.ImageIO;
 
 
 /**
- * ͼƬ���ع����ࡣ
+ * 图片加载工具类。
  * @author New year
  *
  *
- * ��Դ����Ϸ�������ġ�
+ * 来源，游戏类中来的。
  * 
- * ����ָ����·���ļ���ͼƬ����
+ * 返回指定的路径文件的图片对象
  */
 public class ImageUtil {
-		//��������ý����췽��˽�л���
+		//工具类最好将构造方法私有化。//就不会给他创建对象了。
 		private ImageUtil(){
 			
 		}

@@ -3,7 +3,7 @@ package gui;
 import javax.swing.JFrame;
 
 /**
- * ´¿¾»µÄ´°¿ÚÀà
+ * çº¯å‡€çš„çª—å£ç±»
  * @author New year
  *	
  */
@@ -11,16 +11,20 @@ public class JFrameClean extends JFrame{
 
 	/**
 	 * 
-	 * @param f		´°¿Ú¶ÔÏó
-	 * @param a		´°¿Ú´óĞ¡µÄ³¤£¬int
-	 * @param b		´°¿Ú´óĞ¡µÄ¿í£¬int
-	 * @param c		´°¿ÚÎ»ÖÃµÄºá×ø±ê£¬int
-	 * @param d		´°¿ÚÎ»ÖÃµÄ×İ×ø±ê£¬int
+	 * @param f		çª—å£å¯¹è±¡
+	 * @param length		çª—å£å¤§å°çš„é•¿ï¼Œint
+	 * @param width		çª—å£å¤§å°çš„å®½ï¼Œint
+	 * @param x		çª—å£ä½ç½®çš„æ¨ªåæ ‡ï¼Œint
+	 * @param y		çª—å£ä½ç½®çš„çºµåæ ‡ï¼Œint
 	 */
-	public   JFrameClean (int a,int b,int c,int d) {		//ÔõÑù²ÅÄÜÔÚ±ğµÄÀàÖĞÊ¹ÓÃÕâĞ©ÉèÖÃ£¿
+	public JFrameClean (int length,int width,int x,int y) {		//æ€æ ·æ‰èƒ½åœ¨åˆ«çš„ç±»ä¸­ä½¿ç”¨è¿™äº›è®¾ç½®ï¼Ÿ
 		
-		this.setSize(a,b);					// Ö÷´°ÌåÉèÖÃ´óĞ¡
-		this.setLocation(c,d);				// Ö÷´°ÌåÉèÖÃÎ»ÖÃ
-		this.setLayout(null);				// Ö÷´°ÌåÖĞµÄ×é¼şÉèÖÃÎª¾ø¶Ô¶¨Î»
+		this.setSize(length,width);					// ä¸»çª—ä½“è®¾ç½®å¤§å°
+		this.setLocation(x,y);				// ä¸»çª—ä½“è®¾ç½®ä½ç½®
+		this.setLayout(null);				// ä¸»çª—ä½“ä¸­çš„ç»„ä»¶è®¾ç½®ä¸ºç»å¯¹å®šä½
+	}
+
+	public JFrameClean(){
+		this(600,500,300,100);
 	}
 }
