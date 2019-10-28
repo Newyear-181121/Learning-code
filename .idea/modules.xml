@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Learning-code.iml" filepath="$PROJECT_DIR$/.idea/Learning-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_12_springboot/f_12_springboot.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_12_springboot/f_12_springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/f_1_Hibernate.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/f_1_Hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_7_ssh/f_7_ssh.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_7_ssh/f_7_ssh.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_3_java_ee/e_2_Servlet/s_2_动态Web项目/servlet_创建/servlet_创建.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_3_java_ee/e_2_Servlet/s_2_动态Web项目/servlet_创建/servlet_创建.iml" />
