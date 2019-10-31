@@ -5,6 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.classic.Session;
 
+/**
+ * 通过id查询
+ */
 public class TestHibernate4_4_通过ID获取一个对象 {
     public static void main(String[] args) {
         SessionFactory sf = new Configuration().configure().buildSessionFactory();

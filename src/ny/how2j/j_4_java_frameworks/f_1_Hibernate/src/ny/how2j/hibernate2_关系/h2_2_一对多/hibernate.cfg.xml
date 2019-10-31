@@ -16,8 +16,8 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping resource="ny/how2j/hibernate2_关系/h2_1_多对一/pojo/Product.hbm.xml" />
-        <mapping resource="ny/how2j/hibernate2_关系/h2_1_多对一/pojo/Category.hbm.xml" />
+        <mapping resource="ny/how2j/hibernate2_关系/h2_2_一对多/pojo/dao/Category.hbm.xml" />
+        <mapping resource="ny/how2j/hibernate2_关系/h2_2_一对多/pojo/dao/Product.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>

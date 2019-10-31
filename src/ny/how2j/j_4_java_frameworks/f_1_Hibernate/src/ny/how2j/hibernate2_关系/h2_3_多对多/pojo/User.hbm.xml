@@ -3,17 +3,19 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="ny.how2j.hibernate2_关系.h2_1_多对一.pojo">
-    <class name="Product" table="product_">
+<hibernate-mapping package="ny.how2j.hibernate2_关系.h2_3_多对多.pojo">
+    <class name="User" table="user_">
         <id name="id" column="id">
             <generator class="native">
             </generator>
         </id>
-
         <property name="name" />
-        <property name="price" />
-        <!--        为Product增加Category属性-->
-        <many-to-one name="category" class="Category" column="cid" />
+
+        <set name="products" table="user_product" lazy="false">
+            <key column="uid" />
+            <many-to-many column="pid" class="Product" />
+        </set>
+
     </class>
 
 </hibernate-mapping>
