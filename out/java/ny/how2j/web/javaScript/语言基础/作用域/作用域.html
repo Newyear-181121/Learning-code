@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <h1>1 : 参数的作用域</h1>
+            <P>
+            一个参数的作用域就在这个函数内部，超出函数就看不见该参数了
+            </P>
+        </div>
+        <script>
+
+            function f1(a){
+                document.write('参数的作用域在函数以内，其值是 ' + a);//参数a的作用范围，所以打印出来是5；
+            }
+
+            function f2(){
+                document.write('在函数里不能访问其他函数的参数'+a); //不在参数a的作用范围，是一个未声明的变量，无法打印
+            }
+
+            f1(5);
+            f2();
+            document.write('在函数外也不能访问'+a);//也不在参数a的作用范围，是一个未声明的变量，无法打印
+
+        </script>
+    </div>
+
+    <div>
+        <h1>2 : 全局变量的作用域</h1>
+        <script>
+            var a = 0; //定义在函数前面，即全局变量，所有函数都可以访问
+            document.write("定义在函数前面，即全局变量，所有函数都可以访问");
+
+            function f1(){
+                document.write('通过函数f1 设置全局变量a的值 为 5');
+                a = 5; //能够访问
+            }
+
+            function f2(){
+                document.write('通过函数f2 访问并打印全局变量a的值 '+a); //能够访问
+            }
+
+            f1(); //通过f1，设置a的值
+            document.write('<br>');
+            f2(); //通过f2,  打印a的值
+        </script>
+    </div>
+</div>
+</body>
+</html>

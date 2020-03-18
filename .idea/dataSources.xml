@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="ny:how2j:hibernate2_关系:h2_3_多对多:hibernate.cfg.xml/Hibernate" uuid="11a58463-cc69-4c19-ba41-82a5387b05ab">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate2_关系/h2_3_多对多/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=GBK</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate1_基础:hibernate1_2_save:hibernate.cfg.xml/Hibernate" uuid="f23ddc27-7737-4c13-8c62-390e6ece5fed">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate1_基础/hibernate1_2_save/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="a96e34fb-7d92-429a-945f-3e236417c5e4">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate2_关系:h2_2_一对多:hibernate.cfg.xml/Hibernate" uuid="9285f510-938a-48d8-8975-e458427ef1fc">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate2_关系/h2_2_一对多/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=GBK</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="9ea7b204-41e7-4961-9867-72994f33e0d4">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/out/hibernate/ny/how2j/hibernate1_基础/hibernate1_2_save/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="eed9612b-8adc-4ef9-a442-1815277063dc">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/out/hibernate/ny/how2j/hibernate1_基础/hibernate1_1_hello_hibernate/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate1_基础:hibernate1_1_hello_hibernate:hibernate.cfg.xml/Hibernate" uuid="595bc5d5-8453-4c6b-aac2-137d28952178">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate1_基础/hibernate1_1_hello_hibernate/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate2_关系:h2_1_多对一:hibernate.cfg.xml/Hibernate" uuid="12b36e93-3eca-4c77-8efc-1f4f18e68f7c">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate2_关系/h2_1_多对一/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=GBK</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="4805cbd1-28e3-41f1-8a23-7d31dad214c2">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/out/hibernate/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate2_关系:h2_1_多对一:hibernate.cfg.xml/Hibernate" uuid="0dbfa9ae-ee43-41e1-917c-ddc44ff9265b">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate2_关系/h2_1_多对一/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=GBK</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="b9f54494-c3cf-485a-9511-f09e648e0ebe">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate1_基础:hibernate1_1_hello_hibernate:hibernate.cfg.xml/Hibernate" uuid="2d443e9d-0412-419e-9f50-60cfd2e14b2b">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate1_基础/hibernate1_1_hello_hibernate/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="ny:how2j:hibernate1_基础:hibernate1_2_save:hibernate.cfg.xml/Hibernate" uuid="fee75873-d367-4cdc-8799-155f646e17af">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/src/ny/how2j/j_4_java_frameworks/f_1_Hibernate/src/ny/how2j/hibernate1_基础/hibernate1_2_save/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="d39cadb2-76b1-4669-b252-c013df5eda09">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/NewYear/IdeaProjects/Learning-code/out/hibernate/ny/how2j/hibernate2_关系/h2_1_多对一/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?characterEncoding=GBK</jdbc-url>
+    </data-source>
+  </component>
+</project>

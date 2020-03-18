@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+    <style>
+        #my-Comment{
+            color: #27a542;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <div>
+        <h1>1 : 鼠标点击事件</h1>
+        <div>
+            首先定义一个函数 showHello，被调用的时候，弹出一个对话框"Hello JavaScript";<br>
+
+            接着准备一个button元素,在button元素上增加一个属性<br>
+            property是onclick,表示点击的时候触发<br>
+            value是showHello()，调用showHello()函数<br>
+            <script>
+                function showHello(){
+                    alert("Hello JavaScript");
+                }
+            </script>
+
+            <button onclick="showHello()">点击一下</button>
+            <div id="my-Comment">
+                按钮绑定这个方法，弹出窗口。
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

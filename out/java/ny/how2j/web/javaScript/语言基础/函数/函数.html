@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数即一段可以重复使用的代码</title>
+</head>
+<body>
+<div>
+    <biv>
+        <div>
+            <P>1 : 函数</p>
+            function关键字用于定义一个函数
+            print即函数的名称
+            ()表示参数列表，像这样就指没有参数
+            { 表示函数开始
+            } 表示函数结束
+            光有函数的定义，还不够，它不会自动执行，还需要进行第5行的调用
+        </div>
+        <script>
+            function print(){
+                document.write("这一句话是由一个自定义函数打印");
+            }
+            print();
+        </script>
+
+    </biv>
+
+    <div>
+        <div>
+            <p> 2 : 带参数的函数</p>
+            <div>
+                函数可以接受参数
+            </div>
+            <script>
+                function print(message){
+                    document.write(message);
+                }
+                print("第一句话");
+                print("<br>");
+                print("第二句话");
+            </script>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>
+                3 : 带返回值的函数
+            </p>
+            自定义一个calc函数，用于计算两个参数的和，并通过return 返回计算结果
+            <div>
+                <script>
+                    function print(message){
+                        document.write(message);
+                    }
+
+                    function calc(x,y){
+                        return x+y;
+                    }
+
+                    var sum = calc(500,20);
+                    print(sum);
+
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
