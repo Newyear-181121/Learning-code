@@ -2,100 +2,100 @@ package character;
 
 public class TestHero1 extends Hero{
 	
-	 public static void main(String[] args) 				//Ö÷º¯ÊıµÄÈë¿Ú
+	 public static void main(String[] args) 				//ä¸»å‡½æ•°çš„å…¥å£
 	    {
 	    	
-	    	//´´½¨Ò»¸ö¶ÔÏó
+	    	//åˆ›å»ºä¸€ä¸ªå¯¹è±¡
 	        new Hero();
 	         
-	        //Ê¹ÓÃÒ»¸öÒıÓÃÀ´Ö¸ÏòÕâ¸ö¶ÔÏó
+	        //ä½¿ç”¨ä¸€ä¸ªå¼•ç”¨æ¥æŒ‡å‘è¿™ä¸ªå¯¹è±¡
 	        Hero h1 = new Hero();
 	        
 	        
-	        // ¹¹Ôì¶ÔÏóµÄÊ±ºòÒ²µ÷ÓÃÁË¹¹Ôì·½·¨
-	         Hero garen2 =  new Hero("¸ÇÂ×");  
-	         Hero teemo2 =  new Hero("ÌáÄª",383);
+	        // æ„é€ å¯¹è±¡çš„æ—¶å€™ä¹Ÿè°ƒç”¨äº†æ„é€ æ–¹æ³•
+	         Hero garen2 =  new Hero("ç›–ä¼¦");  
+	         Hero teemo2 =  new Hero("æè«",383);
 	         
 	         garen2.keng(garen2,teemo2);
 	        
-	        Hero h2 = h1;  //h2Ö¸Ïòh1ËùÖ¸ÏòµÄ¶ÔÏó
+	        Hero h2 = h1;  //h2æŒ‡å‘h1æ‰€æŒ‡å‘çš„å¯¹è±¡
 
 	         
-	        //h1,h2,h3,h4,h5 Îå¸öÒıÓÃ£¬¶¼Ö¸ÏòÍ¬Ò»¸ö¶ÔÏó
+	        //h1,h2,h3,h4,h5 äº”ä¸ªå¼•ç”¨ï¼Œéƒ½æŒ‡å‘åŒä¸€ä¸ªå¯¹è±¡
 	        
 	        Hero garen =  new Hero();
-	        garen.name = "¸ÇÂ×";
+	        garen.name = "ç›–ä¼¦";
 	        garen.hp = 616.28f;
 	        garen.armor = 27.536f;
 	        garen.moveSpeed = 350;
 	        
 	      
 	         
-	        Hero teemo =  new Hero("ÌáÄª",383);
-	        teemo.name = "ÌáÄª";
+	        Hero teemo =  new Hero("æè«",383);
+	        teemo.name = "æè«";
 	        teemo.hp = 383f;
 	        teemo.armor = 14f;
 	        teemo.moveSpeed = 330;
 	        
 	      //Hero garen =  new Hero();
-	        //garen.name = "¸ÇÂ×";
-	        //Ö±½Ó´òÓ¡¶ÔÏó£¬»áÏÔÊ¾¸Ã¶ÔÏóÔÚÄÚ´æÖĞµÄĞéÄâµØÖ·
-	        //¸ñÊ½£ºHero@c17164 c17164¼´ĞéÄâµØÖ·£¬Ã¿´ÎÖ´ĞĞ£¬µÃµ½µÄµØÖ·²»Ò»¶¨Ò»Ñù
+	        //garen.name = "ç›–ä¼¦";
+	        //ç›´æ¥æ‰“å°å¯¹è±¡ï¼Œä¼šæ˜¾ç¤ºè¯¥å¯¹è±¡åœ¨å†…å­˜ä¸­çš„è™šæ‹Ÿåœ°å€
+	        //æ ¼å¼ï¼šHero@c17164 c17164å³è™šæ‹Ÿåœ°å€ï¼Œæ¯æ¬¡æ‰§è¡Œï¼Œå¾—åˆ°çš„åœ°å€ä¸ä¸€å®šä¸€æ ·
 	 
-	        System.out.println("´òÓ¡¶ÔÏó¿´µ½µÄĞéÄâµØÖ·£º"+garen);
-	        //µ÷ÓÃshowAddressInMemory£¬´òÓ¡¸Ã¶ÔÏóµÄthis£¬ÏÔÊ¾ÏàÍ¬µÄĞéÄâµØÖ·
+	        System.out.println("æ‰“å°å¯¹è±¡çœ‹åˆ°çš„è™šæ‹Ÿåœ°å€ï¼š"+garen);
+	        //è°ƒç”¨showAddressInMemoryï¼Œæ‰“å°è¯¥å¯¹è±¡çš„thisï¼Œæ˜¾ç¤ºç›¸åŒçš„è™šæ‹Ÿåœ°å€
 	        garen.showAddressInMemory();
 	         
 	        //Hero teemo =  new Hero();
-	       // teemo.name = "ÌáÄª";
-	        System.out.println("´òÓ¡¶ÔÏó¿´µ½µÄĞéÄâµØÖ·£º"+teemo);
+	       // teemo.name = "æè«";
+	        System.out.println("æ‰“å°å¯¹è±¡çœ‹åˆ°çš„è™šæ‹Ÿåœ°å€ï¼š"+teemo);
 	        teemo.showAddressInMemory();
 	        
-	       // Hero teemo =  new Hero("ÌáÄª",383);
-	        //ÑªÆ¿£¬ÆäÖµÊÇ100
+	       // Hero teemo =  new Hero("æè«",383);
+	        //è¡€ç“¶ï¼Œå…¶å€¼æ˜¯100
 	        int xueping = 100;
 	         
-	        //ÌáÄªÍ¨¹ıÕâ¸öÑªÆ¿»ØÑª
+	        //æè«é€šè¿‡è¿™ä¸ªè¡€ç“¶å›è¡€
 	         
 	        teemo.huixue(xueping);
 	         
 	        System.out.println(xueping);
 	        
 	        
-	      //ÊÜµ½400ÉËº¦£¬¹ÒÁË
+	      //å—åˆ°400ä¼¤å®³ï¼ŒæŒ‚äº†
 	        teemo.hp = teemo.hp - 400;
 	        
-	      //±ØĞëÓĞÒ»¸ö¶ÔÏó²ÅÄÜµ÷ÓÃ
-	        teemo.die();			//ËÀÍö
+	      //å¿…é¡»æœ‰ä¸€ä¸ªå¯¹è±¡æ‰èƒ½è°ƒç”¨
+	        teemo.die();			//æ­»äº¡
 	         
-	        teemo.revive(teemo);		//¸´»î
+	        teemo.revive(teemo);		//å¤æ´»
 	        
-	      //ÎŞĞè¶ÔÏó£¬Ö±½ÓÍ¨¹ıÀàµ÷ÓÃ
+	      //æ— éœ€å¯¹è±¡ï¼Œç›´æ¥é€šè¿‡ç±»è°ƒç”¨
 	        Hero.battleWin();
 	      
 	         
-	        //ÎÊÌâ£º System.out.println(teemo.hp); Êä³ö¶àÉÙ£¿ ÔõÃ´Àí½â£¿
+	        //é—®é¢˜ï¼š System.out.println(teemo.hp); è¾“å‡ºå¤šå°‘ï¼Ÿ æ€ä¹ˆç†è§£ï¼Ÿ
 	        
-	        Hero.copyright = "°æÈ¨ÓÉRiot Games¹«Ë¾ËùÓĞ";
+	        Hero.copyright = "ç‰ˆæƒç”±Riot Gameså…¬å¸æ‰€æœ‰";
 	        
 	        h2.showAddressInMemory(); 
 	        
 	        
 	  /*      
 	        
-	      //Ö»ÓĞÒ»ÒıÓÃ
+	      //åªæœ‰ä¸€å¼•ç”¨
 	        Hero h;
 	        for (int i = 0; i < 100000; i++) 
 	        {
-	            //²»¶ÏÉú³ÉĞÂµÄ¶ÔÏó
-	            //Ã¿´´½¨Ò»¸ö¶ÔÏó£¬Ç°Ò»¸ö¶ÔÏó£¬¾ÍÃ»ÓĞÒıÓÃÖ¸ÏòÁË
-	            //ÄÇĞ©¶ÔÏó£¬¾ÍÂú×ãÀ¬»ø»ØÊÕµÄÌõ¼ş
-	            //µ±£¬À¬»ø¶Ñ»ıµÄ±È½Ï¶àµÄÊ±ºò£¬¾Í»á´¥·¢À¬»ø»ØÊÕ
-	            //Ò»µ©Õâ¸ö¶ÔÏó±»»ØÊÕ£¬ËüµÄfinalize()·½·¨¾Í»á±»µ÷ÓÃ
+	            //ä¸æ–­ç”Ÿæˆæ–°çš„å¯¹è±¡
+	            //æ¯åˆ›å»ºä¸€ä¸ªå¯¹è±¡ï¼Œå‰ä¸€ä¸ªå¯¹è±¡ï¼Œå°±æ²¡æœ‰å¼•ç”¨æŒ‡å‘äº†
+	            //é‚£äº›å¯¹è±¡ï¼Œå°±æ»¡è¶³åƒåœ¾å›æ”¶çš„æ¡ä»¶
+	            //å½“ï¼Œåƒåœ¾å †ç§¯çš„æ¯”è¾ƒå¤šçš„æ—¶å€™ï¼Œå°±ä¼šè§¦å‘åƒåœ¾å›æ”¶
+	            //ä¸€æ—¦è¿™ä¸ªå¯¹è±¡è¢«å›æ”¶ï¼Œå®ƒçš„finalize()æ–¹æ³•å°±ä¼šè¢«è°ƒç”¨
 	            h = new Hero();
 	            
-	            //¹¹Ôì·½·¨Ì«¶àÁË¡£
-	            //finalize»á×Ô¶¯µ÷ÓÃ
+	            //æ„é€ æ–¹æ³•å¤ªå¤šäº†ã€‚
+	            //finalizeä¼šè‡ªåŠ¨è°ƒç”¨
 	              
 	             
 	            

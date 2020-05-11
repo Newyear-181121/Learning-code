@@ -1,6 +1,6 @@
 package character;
 
-//同时能进行物理和魔法伤害的英雄
+// 单继承，多实现，， 同时是想两个接口方法。
 public class ADAPHero extends Hero implements AD,AP{
 
   @Override

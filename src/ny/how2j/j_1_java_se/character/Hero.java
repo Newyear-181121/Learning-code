@@ -4,8 +4,11 @@ package character;		//在最开始的地方声明该类所处于的包名
 import property.Weapon;
 import property.Item;
 
-public class Hero 
-{
+/**
+ * 基础类。
+ */
+public class Hero {
+
 	public String name;	//名字
     protected float hp; //血量
     float armor; //护甲
