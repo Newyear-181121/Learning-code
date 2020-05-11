@@ -1,5 +1,8 @@
 package collection;
 
+/**
+ * 一个简单的实体类。
+ */
 public class Item4_1 {
 	
 	String name;
@@ -9,12 +12,13 @@ public class Item4_1 {
 		
 	}
 
-	//�ṩһ����ʼ��name�Ĺ��췽��
+	//提供一个初始化name的构造方法
 	public Item4_1(String name){
 		this.name = name;
 	}
-	
+
+	// 影响。
 	public void effect(){
-		System.out.println("��Ʒʹ�ú󣬿�����Ч��");
+		System.out.println("物品使用后，可以有效果");
 	}
 }

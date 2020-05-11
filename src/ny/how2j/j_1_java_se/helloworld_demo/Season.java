@@ -1,7 +1,7 @@
 package helloworld_demo;
 
 /**
- * Ã¶¾Ù
+ * æžšä¸¾
  */
 public enum Season {
 	SPRING,SUMMER,AUTUMN,WINTER;

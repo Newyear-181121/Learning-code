@@ -6,8 +6,8 @@ import java.io.FileNotFoundException;
 
 
 /**
- * Òì³£´¦Àí
- * 		Òì³£´¦Àí³£¼ûÊÖ¶Î£º try catch finally throws
+ * å¼‚å¸¸å¤„ç†
+ * 		å¼‚å¸¸å¤„ç†å¸¸è§æ‰‹æ®µï¼š try catch finally throws
  * @author New year
  *
  */
@@ -15,31 +15,31 @@ public class TestException2_1 {
 	
 	public static void main(String[] args) {
         
-        File f= new File("E:/´æ´¢ÎÄ¼ş¼Ğ/Ò»Ğ©ÎÄ¼ş/×ÀÃæ±ÚÖ½/SogouWP/Net/WallPaper/0000.jpg");//ÕâÀïµÄÎÄ¼şerror  try¿éÖĞ¾Í»áthrow exception
-         																				 //here µÄfile right try¿éÖĞµÄcode¾Í²»»áÖ´ĞĞ		
+        File f= new File("E:/å­˜å‚¨æ–‡ä»¶å¤¹/ä¸€äº›æ–‡ä»¶/æ¡Œé¢å£çº¸/SogouWP/Net/WallPaper/0000.jpg");//è¿™é‡Œçš„æ–‡ä»¶error  tryå—ä¸­å°±ä¼šthrow exception
+         																				 //here çš„file right tryå—ä¸­çš„codeå°±ä¸ä¼šæ‰§è¡Œ		
         /**
-         * ½«¿ÉÄÜÅ×³öÒì³£µÄ´úÂëtryÀï
-         * ½«¿ÉÄÜÅ×³öFileNotFoundException ÎÄ¼ş²»´æÔÚÒì³£µÄ´úÂë·ÅÔÚtryÀï
+         * å°†å¯èƒ½æŠ›å‡ºå¼‚å¸¸çš„ä»£ç tryé‡Œ
+         * å°†å¯èƒ½æŠ›å‡ºFileNotFoundException æ–‡ä»¶ä¸å­˜åœ¨å¼‚å¸¸çš„ä»£ç æ”¾åœ¨tryé‡Œ
          */
-        try{	//try ¿éÖĞ¼ÓÈë¿ÉÄÜ»á³öÏÖÒì³£µÄÓï¾ä
+        try{	//try å—ä¸­åŠ å…¥å¯èƒ½ä¼šå‡ºç°å¼‚å¸¸çš„è¯­å¥
         	
-            System.out.println("ÊÔÍ¼´ò¿ª E:/´æ´¢ÎÄ¼ş¼Ğ/Ò»Ğ©ÎÄ¼ş/×ÀÃæ±ÚÖ½/SogouWP/Net/WallPaper/10298.jpg");
+            System.out.println("è¯•å›¾æ‰“å¼€ E:/å­˜å‚¨æ–‡ä»¶å¤¹/ä¸€äº›æ–‡ä»¶/æ¡Œé¢å£çº¸/SogouWP/Net/WallPaper/10298.jpg");
             
-            new FileInputStream(f);		//³¢ÊÔ´ò¿ªfÖĞµÄÎÄ¼ş£¬Èç¹ûÕÒ²»µ½¾Í»á³öÏÖÒì³£¡£
-            							//³öÏÖÒì³£¾Í»áµ÷ÓÃÏÂÃæµÄcatch·½·¨×¥×¡Òì³££¬²¢Ö´ĞĞcatchÖĞµÄ·½·¨¡£
+            new FileInputStream(f);		//å°è¯•æ‰“å¼€fä¸­çš„æ–‡ä»¶ï¼Œå¦‚æœæ‰¾ä¸åˆ°å°±ä¼šå‡ºç°å¼‚å¸¸ã€‚
+            							//å‡ºç°å¼‚å¸¸å°±ä¼šè°ƒç”¨ä¸‹é¢çš„catchæ–¹æ³•æŠ“ä½å¼‚å¸¸ï¼Œå¹¶æ‰§è¡Œcatchä¸­çš„æ–¹æ³•ã€‚
             
             
-            //((Throwable) f).printStackTrace();//Õâ¸ö´òÓ¡µ÷ÓÃºÛ¼£²»»áÓÃ£¨grin£©Â¶³İ¶øĞ¦      Ğ¦¿Ş£¨laugh cry£©
+            //((Throwable) f).printStackTrace();//è¿™ä¸ªæ‰“å°è°ƒç”¨ç—•è¿¹ä¸ä¼šç”¨ï¼ˆgrinï¼‰éœ²é½¿è€Œç¬‘      ç¬‘å“­ï¼ˆlaugh cryï¼‰
             
-            //Ã»ÓĞ³öÏÖÒì³£¾Í»áÕı³£Ö´ĞĞ£¬²¢ÇÒ²»»áÖ´ĞĞcatchÖĞµÄÓï¾ä¡£
-            System.out.println("³É¹¦´ò¿ª");
+            //æ²¡æœ‰å‡ºç°å¼‚å¸¸å°±ä¼šæ­£å¸¸æ‰§è¡Œï¼Œå¹¶ä¸”ä¸ä¼šæ‰§è¡Œcatchä¸­çš„è¯­å¥ã€‚
+            System.out.println("æˆåŠŸæ‰“å¼€");
         }
         catch(FileNotFoundException e){
-            System.out.println("E:/´æ´¢ÎÄ¼ş¼Ğ/Ò»Ğ©ÎÄ¼ş/×ÀÃæ±ÚÖ½/SogouWP/Net/WallPaper/10298.jpg²»´æÔÚ");
+            System.out.println("E:/å­˜å‚¨æ–‡ä»¶å¤¹/ä¸€äº›æ–‡ä»¶/æ¡Œé¢å£çº¸/SogouWP/Net/WallPaper/10298.jpgä¸å­˜åœ¨");
             
-            //e.printStackTrace(); »á´òÓ¡³ö·½·¨µÄµ÷ÓÃºÛ¼£
+            //e.printStackTrace(); ä¼šæ‰“å°å‡ºæ–¹æ³•çš„è°ƒç”¨ç—•è¿¹
             											/*
-       		ÕâÓ¦¸ÃÊÇµ÷ÓÃÂ·Ïß								 *	at java.io.FileInputStream.open0(Native Method)
+       		è¿™åº”è¯¥æ˜¯è°ƒç”¨è·¯çº¿								 *	at java.io.FileInputStream.open0(Native Method)
 														 *	at java.io.FileInputStream.open(FileInputStream.java:195)
 														 *	at java.io.FileInputStream.<init>(FileInputStream.java:138)
 														 *	at exception.TestException21.main(TestException21.java:28)

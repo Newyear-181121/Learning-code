@@ -4,7 +4,7 @@ import java.io.File;
 
 
 /**
- * ´´½¨Ò»¸öÎÄ¼ş¶ÔÏó
+ * åˆ›å»ºä¸€ä¸ªæ–‡ä»¶å¯¹è±¡
  * @author New year
  *
  */
@@ -14,18 +14,18 @@ public class TestFile1_1 {
 		// TODO Auto-generated method stub
 
 		
-		// ¾ø¶ÔÂ·¾¶
+		// ç»å¯¹è·¯å¾„
         File f1 = new File("d:/LOLFolder");
-        System.out.println("f1µÄ¾ø¶ÔÂ·¾¶£º" + f1.getAbsolutePath());
+        System.out.println("f1çš„ç»å¯¹è·¯å¾„ï¼š" + f1.getAbsolutePath());
         
-     // Ïà¶ÔÂ·¾¶,Ïà¶ÔÓÚ¹¤×÷Ä¿Â¼£¬Èç¹ûÔÚeclipseÖĞ£¬¾ÍÊÇÏîÄ¿Ä¿Â¼
+     // ç›¸å¯¹è·¯å¾„,ç›¸å¯¹äºå·¥ä½œç›®å½•ï¼Œå¦‚æœåœ¨eclipseä¸­ï¼Œå°±æ˜¯é¡¹ç›®ç›®å½•
         File f2 = new File("LOL.exe");
-        System.out.println("f2µÄ¾ø¶ÔÂ·¾¶£º" + f2.getAbsolutePath());
+        System.out.println("f2çš„ç»å¯¹è·¯å¾„ï¼š" + f2.getAbsolutePath());
         
-     // °Ñf1×÷Îª¸¸Ä¿Â¼´´½¨ÎÄ¼ş¶ÔÏó
+     // æŠŠf1ä½œä¸ºçˆ¶ç›®å½•åˆ›å»ºæ–‡ä»¶å¯¹è±¡
         File f3 = new File(f1, "LOL.exe");
   
-        System.out.println("f3µÄ¾ø¶ÔÂ·¾¶£º" + f3.getAbsolutePath());
+        System.out.println("f3çš„ç»å¯¹è·¯å¾„ï¼š" + f3.getAbsolutePath());
         
         
         

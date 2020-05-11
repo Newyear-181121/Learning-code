@@ -5,7 +5,7 @@ import java.io.IOException;
 
 
 /**
- * ÎÄ¼ş³£ÓÃ·½·¨2
+ * æ–‡ä»¶å¸¸ç”¨æ–¹æ³•2
  * @author New year
  *
  */
@@ -15,46 +15,46 @@ public class TestFile1_3 {
 		// TODO Auto-generated method stub
 
 		
-		File f = new File("E:´¢´æÎÄ¼ş¼Ğ/New year/java_demo/LOL.txt");//Ô­À´µÄÎÄ¼şÊıd:/LOLFolder/skin/garen.ski
+		File f = new File("E:å‚¨å­˜æ–‡ä»¶å¤¹/New year/java_demo/LOL.txt");//åŸæ¥çš„æ–‡ä»¶æ•°d:/LOLFolder/skin/garen.ski
 		  
-        // ÒÔ×Ö·û´®Êı×éµÄĞÎÊ½£¬·µ»Øµ±Ç°ÎÄ¼ş¼ĞÏÂµÄËùÓĞÎÄ¼ş£¨²»°üº¬×ÓÎÄ¼ş¼°×ÓÎÄ¼ş¼Ğ£©
+        // ä»¥å­—ç¬¦ä¸²æ•°ç»„çš„å½¢å¼ï¼Œè¿”å›å½“å‰æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶ï¼ˆä¸åŒ…å«å­æ–‡ä»¶åŠå­æ–‡ä»¶å¤¹ï¼‰
         f.list();
-        System.out.println("ÕâÀï001:"+f.list());
+        System.out.println("è¿™é‡Œ001:"+f.list());
         
-        // ÒÔÎÄ¼şÊı×éµÄĞÎÊ½£¬·µ»Øµ±Ç°ÎÄ¼ş¼ĞÏÂµÄËùÓĞÎÄ¼ş£¨²»°üº¬×ÓÎÄ¼ş¼°×ÓÎÄ¼ş¼Ğ£©
+        // ä»¥æ–‡ä»¶æ•°ç»„çš„å½¢å¼ï¼Œè¿”å›å½“å‰æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰æ–‡ä»¶ï¼ˆä¸åŒ…å«å­æ–‡ä»¶åŠå­æ–‡ä»¶å¤¹ï¼‰
         File[] fs= f.listFiles();
-        System.out.println("ÕâÀï002ÊÇ£º"+fs );
+        System.out.println("è¿™é‡Œ002æ˜¯ï¼š"+fs );
   
-        // ÒÔ×Ö·û´®ĞÎÊ½·µ»Ø»ñÈ¡ËùÔÚÎÄ¼ş¼Ğ
+        // ä»¥å­—ç¬¦ä¸²å½¢å¼è¿”å›è·å–æ‰€åœ¨æ–‡ä»¶å¤¹
         f.getParent();
-        System.out.println("ÕâÀï003:"+ f.getParent() );
+        System.out.println("è¿™é‡Œ003:"+ f.getParent() );
   
-        // ÒÔÎÄ¼şĞÎÊ½·µ»Ø»ñÈ¡ËùÔÚÎÄ¼ş¼Ğ
+        // ä»¥æ–‡ä»¶å½¢å¼è¿”å›è·å–æ‰€åœ¨æ–‡ä»¶å¤¹
         f.getParentFile();
-        // ´´½¨ÎÄ¼ş¼Ğ£¬Èç¹û¸¸ÎÄ¼ş¼Ğskin²»´æÔÚ£¬´´½¨¾ÍÎŞĞ§
+        // åˆ›å»ºæ–‡ä»¶å¤¹ï¼Œå¦‚æœçˆ¶æ–‡ä»¶å¤¹skinä¸å­˜åœ¨ï¼Œåˆ›å»ºå°±æ— æ•ˆ
         f.mkdir();
-        System.out.println("ÕâÀï004"+ f.getParentFile() + " + " +f.mkdir());
+        System.out.println("è¿™é‡Œ004"+ f.getParentFile() + " + " +f.mkdir());
   
-        // ´´½¨ÎÄ¼ş¼Ğ£¬Èç¹û¸¸ÎÄ¼ş¼Ğskin²»´æÔÚ£¬¾Í»á´´½¨¸¸ÎÄ¼ş¼Ğ
+        // åˆ›å»ºæ–‡ä»¶å¤¹ï¼Œå¦‚æœçˆ¶æ–‡ä»¶å¤¹skinä¸å­˜åœ¨ï¼Œå°±ä¼šåˆ›å»ºçˆ¶æ–‡ä»¶å¤¹
         f.mkdirs();
-        System.out.println("ÕâÀï005:"+f.mkdirs());
+        System.out.println("è¿™é‡Œ005:"+f.mkdirs());
         
   
-        // ´´½¨Ò»¸ö¿ÕÎÄ¼ş,Èç¹û¸¸ÎÄ¼ş¼Ğskin²»´æÔÚ£¬¾Í»áÅ×³öÒì³£
+        // åˆ›å»ºä¸€ä¸ªç©ºæ–‡ä»¶,å¦‚æœçˆ¶æ–‡ä»¶å¤¹skinä¸å­˜åœ¨ï¼Œå°±ä¼šæŠ›å‡ºå¼‚å¸¸
         f.createNewFile();
-        // ËùÒÔ´´½¨Ò»¸ö¿ÕÎÄ¼şÖ®Ç°£¬Í¨³£¶¼»á´´½¨¸¸Ä¿Â¼
+        // æ‰€ä»¥åˆ›å»ºä¸€ä¸ªç©ºæ–‡ä»¶ä¹‹å‰ï¼Œé€šå¸¸éƒ½ä¼šåˆ›å»ºçˆ¶ç›®å½•
         f.getParentFile().mkdirs();
-        System.out.println("ÕâÀï006:"+f.createNewFile());
+        System.out.println("è¿™é‡Œ006:"+f.createNewFile());
   
-        // ÁĞ³öËùÓĞµÄÅÌ·ûc: d: e: µÈµÈ
+        // åˆ—å‡ºæ‰€æœ‰çš„ç›˜ç¬¦c: d: e: ç­‰ç­‰
         f.listRoots();
-        System.out.println("ÕâÀï001:"+f.list());
+        System.out.println("è¿™é‡Œ001:"+f.list());
   
-        // „h³ıÎÄ¼ş
+        // åˆªé™¤æ–‡ä»¶
         f.delete();
-        System.out.println("ÕâÀï001:"+f.list());
+        System.out.println("è¿™é‡Œ001:"+f.list());
   
-        // JVM½áÊøµÄÊ±ºò£¬„h³ıÎÄ¼ş£¬³£ÓÃÓÚÁÙÊ±ÎÄ¼şµÄÉ¾³ı
+        // JVMç»“æŸçš„æ—¶å€™ï¼Œåˆªé™¤æ–‡ä»¶ï¼Œå¸¸ç”¨äºä¸´æ—¶æ–‡ä»¶çš„åˆ é™¤
         f.deleteOnExit();
   
     

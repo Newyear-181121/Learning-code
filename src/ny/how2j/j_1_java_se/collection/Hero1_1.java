@@ -2,8 +2,8 @@ package collection;
 
 
 /**
- * 	Ê¹ÓÃÊı×éµÄ¾ÖÏŞĞÔ
- * 		¸úÇ°ÃæTsetcollection1_1 	×÷±È½ÏµÄ
+ * 	ä½¿ç”¨æ•°ç»„çš„å±€é™æ€§
+ * 		è·Ÿå‰é¢Tsetcollection1_1 	ä½œæ¯”è¾ƒçš„
  * @author New year
  *
  */
@@ -19,12 +19,12 @@ public class Hero1_1 {
 	}
 	
 	
-	//Ôö¼ÓÒ»¸ö³õÊ¼»¯nameµÄ¹¹Ôì·½·¨
+	//å¢åŠ ä¸€ä¸ªåˆå§‹åŒ–nameçš„æ„é€ æ–¹æ³•
 	public Hero1_1(String name) {
 		this.name = name;
 	}
 
-	// ÖØĞ´toString·½·¨
+	// é‡å†™toStringæ–¹æ³•
 	@Override
     public String toString() {
         return name;

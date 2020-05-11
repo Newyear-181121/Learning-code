@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 
 
 /**
- * ³£¼ûÒì³£
+ * å¸¸è§å¼‚å¸¸
  * @author New year
  *
  */
@@ -14,34 +14,34 @@ public class TestException01 {
 	
 	public static void main(String[] args) throws FileNotFoundException {
         
-        File f= new File("E:/´æ´¢ÎÄ¼ş¼Ğ/Ò»Ğ©ÎÄ¼ş/×ÀÃæ±ÚÖ½/SogouWP/Net/WallPaper/10298.jpg");
+        File f= new File("E:/å­˜å‚¨æ–‡ä»¶å¤¹/ä¸€äº›æ–‡ä»¶/æ¡Œé¢å£çº¸/SogouWP/Net/WallPaper/10298.jpg");
           
-        //ÊÔÍ¼´ò¿ªÎÄ¼şLOL.exe£¬»áÅ×³öFileNotFoundException£¬Èç¹û²»´¦Àí¸ÃÒì³££¬¾Í»áÓĞ±àÒë´íÎó
+        //è¯•å›¾æ‰“å¼€æ–‡ä»¶LOL.exeï¼Œä¼šæŠ›å‡ºFileNotFoundExceptionï¼Œå¦‚æœä¸å¤„ç†è¯¥å¼‚å¸¸ï¼Œå°±ä¼šæœ‰ç¼–è¯‘é”™è¯¯
         new FileInputStream(f);
-        System.out.println("³¢ÊÔ´ò¿ªÎÄ¼ş");
+        System.out.println("å°è¯•æ‰“å¼€æ–‡ä»¶");
           
-        // new FileInputStream(f) ÊÔÍ¼´ò¿ªÄ³ÎÄ¼ş
+        // new FileInputStream(f) è¯•å›¾æ‰“å¼€æŸæ–‡ä»¶
         
         
-        //OutOfIndexException Êı×éÏÂ±êÔ½½çÒì³£
+        //OutOfIndexException æ•°ç»„ä¸‹æ ‡è¶Šç•Œå¼‚å¸¸
         int[] a = new int[3];
         a[5] = 8;
-        System.out.println("OutOfIndexException Êı×éÏÂ±êÔ½½çÒì³£");
+        System.out.println("OutOfIndexException æ•°ç»„ä¸‹æ ‡è¶Šç•Œå¼‚å¸¸");
         
         
-        //NullPointerException ¿ÕÖ¸ÕëÒì³£
+        //NullPointerException ç©ºæŒ‡é’ˆå¼‚å¸¸
         String str = new String();
         str.length();
-        System.out.println("NullPointerException ¿ÕÖ¸ÕëÒì³£");
+        System.out.println("NullPointerException ç©ºæŒ‡é’ˆå¼‚å¸¸");
     }
 
 }
 /*
-ParseException ½âÎöÒì³££¬ÈÕÆÚ×Ö·û´®×ª»»ÎªÈÕÆÚ¶ÔÏóµÄÊ±ºò£¬ÓĞ¿ÉÄÜÅ×³öµÄÒì³£
+ParseException è§£æå¼‚å¸¸ï¼Œæ—¥æœŸå­—ç¬¦ä¸²è½¬æ¢ä¸ºæ—¥æœŸå¯¹è±¡çš„æ—¶å€™ï¼Œæœ‰å¯èƒ½æŠ›å‡ºçš„å¼‚å¸¸
 
-OutOfIndexException Êı×éÏÂ±êÔ½½çÒì³£
-OutOfMemoryError ÄÚ´æ²»×ã				//ÕâÊÇ´íÎó£¬
-ClassCastException ÀàĞÍ×ª»»Òì³£
-ArithmeticException ³ıÊıÎªÁã
-NullPointerException ¿ÕÖ¸ÕëÒì³£			//¶ÔÏóÎª¿ÕÊ±£¬·ÃÎÊËûµÄÊôĞÔ»á³öÏÖÒì³£
+OutOfIndexException æ•°ç»„ä¸‹æ ‡è¶Šç•Œå¼‚å¸¸
+OutOfMemoryError å†…å­˜ä¸è¶³				//è¿™æ˜¯é”™è¯¯ï¼Œ
+ClassCastException ç±»å‹è½¬æ¢å¼‚å¸¸
+ArithmeticException é™¤æ•°ä¸ºé›¶
+NullPointerException ç©ºæŒ‡é’ˆå¼‚å¸¸			//å¯¹è±¡ä¸ºç©ºæ—¶ï¼Œè®¿é—®ä»–çš„å±æ€§ä¼šå‡ºç°å¼‚å¸¸
 */
