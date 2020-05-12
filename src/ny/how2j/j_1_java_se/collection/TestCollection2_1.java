@@ -3,7 +3,7 @@ package collection;
 import java.util.ArrayList;
 
 /**
- * Ôö¼Ó   		add
+ * å¢åŠ    		add
  * @author New year
  *
  */
@@ -14,7 +14,7 @@ public class TestCollection2_1 {
 
 		ArrayList heros = new ArrayList();
 		
-		//°Ñ5¸ö¶ÔÏó¼ÓÈëµ½ArrayListÖĞ
+		//æŠŠ5ä¸ªå¯¹è±¡åŠ å…¥åˆ°ArrayListä¸­
 		for (int i = 0; i < 5; i++){
 			heros.add(new Hero1_1("hero" + i));
 		}
@@ -23,7 +23,7 @@ public class TestCollection2_1 {
 		
 		
 		Hero1_1 specialHero = new Hero1_1("special hero");
-		heros.add(3,specialHero);		//	ÔÚÖ¸¶¨Î»ÖÃÔö¼Ó¶ÔÏó
+		heros.add(3,specialHero);		//	åœ¨æŒ‡å®šä½ç½®å¢åŠ å¯¹è±¡
 		
 		System.out.println(heros.toString());
 	}
@@ -31,14 +31,14 @@ public class TestCollection2_1 {
 }
 
 /**
- * contains	ÅĞ¶ÏÊÇ·ñ´æÔÚ
- * get		»ñÈ¡Ö¸¶¨Î»ÖÃµÄ¶ÔÏó	
- *indexOf	»ñÈ¡¶ÔÏóËù´¦µÄÎ»ÖÃ	
- *remove	É¾³ı	
- *set		Ìæ»»	
- *size		»ñÈ¡´óĞ¡	
- *toArray	×ª»»ÎªÊı×é	
- *addAll	°ÑÁíÒ»¸öÈİÆ÷ËùÓĞ¶ÔÏó¶¼¼Ó½øÀ´	
- *clear		Çå¿Õ	
+ * contains	åˆ¤æ–­æ˜¯å¦å­˜åœ¨
+ * get		è·å–æŒ‡å®šä½ç½®çš„å¯¹è±¡	
+ *indexOf	è·å–å¯¹è±¡æ‰€å¤„çš„ä½ç½®	
+ *remove	åˆ é™¤	
+ *set		æ›¿æ¢	
+ *size		è·å–å¤§å°	
+ *toArray	è½¬æ¢ä¸ºæ•°ç»„	
+ *addAll	æŠŠå¦ä¸€ä¸ªå®¹å™¨æ‰€æœ‰å¯¹è±¡éƒ½åŠ è¿›æ¥	
+ *clear		æ¸…ç©º	
 
  */
