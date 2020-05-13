@@ -1,4 +1,4 @@
-package innerclasses.create;
+package innerclasses.i_1_create;
 
 /**
  * Creating inner classes.
