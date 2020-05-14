@@ -1,31 +1,25 @@
 package dataStructrues.queue;
 
 /**
- * 用数组模拟队列
- *
- * 这个数组值能使用一次。
+ * 实现环形队列
  */
-public class ArrayQueue {
+public class CircleArrayQueue {
+
     private int maxSize; //表示数组的最大容量
     private int front;    //队列头
     private int rear ;      //队列尾
     private int[] arr;      //该数据用于存放数据，模拟队列
 
-    /**
-     * 创建队列的构造器
-     */
-    public ArrayQueue(int arrMaxSize){
+    public CircleArrayQueue(int arrMaxSize){
         maxSize = arrMaxSize;
         arr = new int[maxSize];
-        front = -1;     //初始化，指向队列头部的前一个数
-        rear = -1;      //指向队列尾部的这个数据。
     }
 
     /**
      * 判断队列是否满了
      */
     public boolean isFull(){
-        return rear == (maxSize -1 );
+        return (rear + 1) % maxSize  == front;
     }
 
     /**
@@ -44,8 +38,8 @@ public class ArrayQueue {
             System.out.println("队列满了");
             return;
         }
-        rear++;
         arr[rear] = n;
+        rear = (rear + 1) % maxSize;    //为什么取模就可以直接到前面去？？？原来如此，
     }
 
     /**
@@ -55,10 +49,11 @@ public class ArrayQueue {
         if(isEmpty()){
             throw new RuntimeException("队列空，不能取数据") ;
         }
-        front++;    //队列头后移一个数。
-        return arr[front];
-
+       int value = arr[front];
+        front = (front + 1) % maxSize;
+        return value;
     }
+
 
     /**
      * 显示队列的所有数据
@@ -69,10 +64,18 @@ public class ArrayQueue {
             System.out.println("队列为空，没有数据");
             return;
         }
-        for (int i = 0; i< arr.length;i++){
-            System.out.printf("arr[%d]=%d\n",i,arr[i]);
+        //  i 从队列头开始
+        for (int i = front; i< front + size() ;i++){
+            System.out.printf("arr[%d]=%d\n",i % maxSize ,arr[i % maxSize]);
         }
 
+    }
+
+    /**
+     * 获取单前队列的有效数据个数
+     */
+    public int size(){
+        return (rear + maxSize -front ) % maxSize;
     }
 
     /**
@@ -82,7 +85,7 @@ public class ArrayQueue {
         if(isEmpty()){
             throw new RuntimeException("队列为空，没有数据");
         }
-        return arr[front+1];
+        return arr[front];
     }
 
     /**
@@ -92,7 +95,7 @@ public class ArrayQueue {
         if (isEmpty()){
             throw new RuntimeException("队列为空，没有数据");
         }
-        return arr[rear];
+        return arr[rear + 1];
     }
 
 }

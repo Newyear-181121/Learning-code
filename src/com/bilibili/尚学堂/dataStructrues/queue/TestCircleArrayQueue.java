@@ -2,12 +2,9 @@ package dataStructrues.queue;
 
 import java.util.Scanner;
 
-/**
- * 使用数组模拟一个ArrayQueue类
- */
-public class ArrayQueueDemo {
+public class TestCircleArrayQueue {
     public static void main(String[] args) {
-        ArrayQueue arrayQueue = new ArrayQueue(3);
+        CircleArrayQueue arrayQueue = new CircleArrayQueue(4);
         char key = ' ';
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
@@ -56,7 +53,6 @@ public class ArrayQueueDemo {
                     scanner.close();
                     loop = false;
                     break;
-
                 default:
                     break;
             }
