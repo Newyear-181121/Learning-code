@@ -1,16 +1,19 @@
-package dataStructrues;
+package dataStructrues.稀疏数组;
 
 /**
- * 稀疏数组与二维数组的转化。
+ * 稀疏数组与二维数组的转化。实例
  */
 public class SparseArray {
     public static void main(String[] args) {
-        //1.创建二维数组
 
+        //1.创建二维数组
         int chessArr1[][] = new int[11][11];
         chessArr1[1][2] = 1;
         chessArr1[3][3] = 2;
 
+        System.out.println("二维数组的大小" + chessArr1.length + chessArr1[1].length);
+
+        // 遍历二维数组
         for (int[] row : chessArr1){
             for(int data : row){
                 System.out.printf("%d\t",data);
