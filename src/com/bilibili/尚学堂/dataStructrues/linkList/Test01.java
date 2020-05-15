@@ -25,6 +25,19 @@ public class Test01 {
         System.out.println("输出倒数第2个节点");
         System.out.println(list.findLastIndexNode(list.getHead(),2));
 
+        System.out.println("输出第2个节点");
+        System.out.println(list.findIndexNode(list.getHead(),2));
+        System.out.println("输出所有的链表");
+        list.list();
+
+        System.out.println("测试逆序输出链表");
+        list.reversePrint();
+
+        list.list();
+        System.out.println("此时链表的反转");
+        list.reversetList();
+        list.list();
+
         list.list();
         //测试修改节点代码
         HeroNode newHeroNode = new HeroNode(2,"卢俊义","玉麒麟");

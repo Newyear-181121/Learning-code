@@ -2,6 +2,8 @@ package dataStructrues.linkList;
 
 import character.Hero;
 
+import java.util.Stack;
+
 /**
  * 管理节点
  */
@@ -106,6 +108,7 @@ public class SingleLinkedList {
 
     /**
      * 删除节点
+     * @param no 节点号
      */
     public void del(int no){
         if(head.next == null){
@@ -132,6 +135,9 @@ public class SingleLinkedList {
         }
     }
 
+    /**
+     * 遍历单链表
+     */
     public void list(){
         //如果头节点为空，则链表为空。
         if(head.next == null){
@@ -150,7 +156,7 @@ public class SingleLinkedList {
     }
 
     /**
-     *  方法：获取单链表的节点的个数（头节点不统计）
+     *  方法：获取单链表的有效节点的个数（头节点不统计）
      * @param head 链表的头节点
      * @return  返回有效节点的个数
      */
@@ -188,6 +194,91 @@ public class SingleLinkedList {
         }
         return temp;
     }
+    public HeroNode findLastIndexNode(int index){
+        return findIndexNode(getHead(),index);
+    }
 
+    /**
+     * 查找链表的第k个节点
+     * @param head 链表的头节点
+     * @param index 查找的位置
+     * @return
+     */
+    public HeroNode findIndexNode(HeroNode head,int index){
+        if(head.next == null){
+            return null;
+        }
+        //判断index是否有效
+        int size = getLength(head);
+        if(index <= 0 || index > size){
+            return null;
+        }
+        HeroNode temp = head;
+        for(int i = 0 ; i < index ; i++){
+            temp = temp.next;
+        }
+        return temp;
+    }
+    public HeroNode findIndexNode(int index){
+        return findIndexNode(getHead(),index);
+    }
+
+    /**
+     * 反转单链表
+     *  新建一个空链表，
+     *  每次都插入新链表的第一个位置。
+     * @param head 链表的头节点。
+     */
+    public void reversetList(HeroNode head){
+        //如果没有节点或只有一个节点，就不需要处理
+        if (head.next == null || head.next == null){
+            return ;
+        }
+
+        //这个是辅助指针用来遍历的
+        HeroNode cur = head.next;
+        //这个用来保存下一个节点的引用。
+        HeroNode next = null;
+        HeroNode reverseHead = new HeroNode(0,"","");
+
+        // 指针指向空的时候，遍历结束了。
+        while(cur != null ){
+            next = cur.next;        //保存下个节点的位置
+            // 这两部就是从头节点插入。
+            cur.next = reverseHead.next;  //把指针节点的下个节点指向，新链表 头节点的下个节点
+
+            reverseHead.next = cur; // 把新链表的头节点指向，这个指针的节点。
+            cur = next; //把当前指针后移一位。
+        }
+        head.next = reverseHead.next;
+    }
+
+    public void reversetList(){
+        reversetList(getHead());
+    }
+
+
+    /**
+     * 借住栈结构逆序打印
+     * @param head
+     */
+    public void reversePrint(HeroNode head){
+        if (head.next == null){
+            return  ;
+        }
+        Stack<HeroNode> stack = new Stack<>();
+        HeroNode cur = head.next;
+
+        while(cur != null){
+            stack.push(cur);
+            cur = cur.next;
+        }
+        while (stack.size() > 0 ){
+            System.out.println(stack.pop());
+        }
+    }
+    public void reversePrint(){
+        reversePrint(getHead());
+    }
 
 }
