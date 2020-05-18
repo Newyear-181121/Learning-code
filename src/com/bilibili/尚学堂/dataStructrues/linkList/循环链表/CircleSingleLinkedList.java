@@ -13,7 +13,7 @@ public class CircleSingleLinkedList {
 
     /**
      * 增加节点数，要增加多少个节点。构建成一个环形链表
-     * @param nums
+     * @param nums 节点个数
      */
     public void addBoy(int nums){
         //输入数据校验
@@ -26,7 +26,7 @@ public class CircleSingleLinkedList {
         for(int i = 1; i <=nums ; i++){
             //根据输入的编号创建环形链表 的节点
             Boy boy = new Boy(i);   //boy ： 循环变量节点。
-            if (i == 1){
+            if (i == 1){ //赋初值
                 first = boy;
                 first.setNext(first);//闭环，，自己的下一个还是自己。
                 curBoy = first;//临时变量也指向第一个节点。
