@@ -2,30 +2,37 @@ package com.licode;
 
 public class Demo_152 {
     int result = 0 ;
+    boolean flag = false;
     public int maxProduct(int[] nums) {
-        return max(son(nums));
+        return son(nums);
     }
 
-    public int max(int[] nums){
-        int max = 0;
-        for(int i = 0 ; i < nums.length-1 ;i++){
-            if(nums[i] > nums[i+1]){
-                max = nums[i];
-            }
+
+    public int son(int[] nums){
+        if (nums.length == 1){
+            return nums[0];
         }
-        return max;
-    }
-
-    public int[] son(int[] nums){
         int[] count = new int[nums.length];
 
         for(int i = 0; i < nums.length -1 ; i++)
             if ( nums[i+1] == nums[i] +1 ){
-                result = nums[i] * nums[i+1];
+
+                int temp = nums[i] * nums[i+1];
                 son(nums,i+1);
-                count[i] = result;
+                if (flag){
+                    if (result < temp){
+                        result = temp;
+                    }
+
+                }
+                if (!flag){
+                    result = temp;
+                    flag = true;
+                }
+
+
             }
-        return count;
+        return result;
     }
 
 
