@@ -8,6 +8,6 @@ public class Test_152{
     public void test(){
         Demo_152 demo = new Demo_152();
         int[] nums = {2,3,-2,-4};
-        demo.maxProduct(nums);
+        //demo.maxProduct(nums);
     }
 }
