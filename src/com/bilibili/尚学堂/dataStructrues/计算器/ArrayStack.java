@@ -9,7 +9,7 @@ public class ArrayStack {
     private int top = -1;
 
     /**
-     * 构造器
+     * 构造器 新建一个大小是多少的栈顶元素。
      */
     public ArrayStack(int maxSize){
         this.maxSize = maxSize;
@@ -33,6 +33,7 @@ public class ArrayStack {
     }
 
     /**
+     * 窥视  栈顶元素
      * 查看栈顶的数据，但是不出栈。
       * @return 栈顶中的数
      */
@@ -42,7 +43,7 @@ public class ArrayStack {
 
     /**
      * 入栈
-     * @param value
+     * @param value 入栈元素
      */
     public void push(int value){
         if (isfull()){
@@ -55,7 +56,7 @@ public class ArrayStack {
 
     /**
      * 出栈
-     * @return
+     * @return 栈顶元素
      */
     public int pop(){
         if (isEmpty()){
@@ -81,7 +82,8 @@ public class ArrayStack {
     }
 
     /**
-     * 返回运算付的优先级，优先级可以自定义，，优先级用数字表示
+     *      返回运算付的优先级
+     * ，优先级可以自定义，，优先级用数字表示
      * 数字越大，则优先级越高，
      * @param oper 运算符
      * @return  运算符的优先级

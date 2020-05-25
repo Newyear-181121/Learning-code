@@ -15,7 +15,39 @@ public class PolandNotation {
 
     }
 
+
+    public static List<String> toInfixExpressionList(String s){
+        // 定义一个List ，用于存放中缀表达式
+        List<String> ls = new ArrayList<String>();
+        int i = 0; //定义一个指针，用于遍历
+        String str; // 用于存放，拼接的字符
+        char c; // 临时变量，存放遍历到的字符
+        do{
+            // 如果c是一个非数字，就放到数组中。
+            if ((c=s.charAt(i)) < 48 || (c=s.charAt(i)) > 57 ){
+                ls.add("" + c);
+                i++;
+            } else { //如果是一个数，就要考虑多位数
+                str = ""; // 先初始化存放变量
+                // 如果是，就拼接，并后移。
+                while(i < s.length() && (c=s.charAt(i)) >= 48 && (c=s.charAt(i)) <= 57){
+                    str += c;
+                    i++;
+                }
+                ls.add(str);//把多位数字放到列表中去。
+            }
+
+        } while (i < s.length());
+        return ls;
+    }
+
+    /**
+     *  把逆波兰表达式，中的数据和运算符放到 ArrayList 中
+     * @param suffixExpression
+     * @return
+     */
     private static List<String> getlistString(String suffixExpression) {
+        // 将 表达式分割
         String[] split = suffixExpression.split(" ");
         List<String> list = new ArrayList<String>();
         for (String ele : split) {
@@ -24,8 +56,13 @@ public class PolandNotation {
         return list;
     }
 
+    /**
+     *  逆波兰表达式的运算
+     * @param ls
+     * @return
+     */
     public static int calculate(List<String> ls) {
-        //创建给栈，只需要一个找即可
+        //创建栈，只需要一个找即可
         Stack<String> stack = new Stack<String>();
         //遍历ls
         for (String item : ls) {
@@ -52,6 +89,7 @@ public class PolandNotation {
                 stack.push("" + res);
             }
         }
+        // 最后的运算结果出栈
         return Integer.parseInt(stack.pop());
     }
 }
