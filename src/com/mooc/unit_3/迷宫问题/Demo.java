@@ -5,6 +5,15 @@ package com.mooc.unit_3.迷宫问题;
  */
 public class Demo {
     int[][] maze = {{1,1,0,0},{1,1,1,0},{1,0,0,0},{1,1,1,1}};
+    int[][] maze2 ={{0,0,1,0,0,0,1,0},
+                    {0,0,1,0,0,0,1,0},
+                    {0,0,0,0,1,1,0,1},
+                    {0,1,1,1,0,0,1,0},
+                    {0,0,0,1,0,0,0,0},
+                    {0,1,0,0,0,1,0,1},
+                    {0,1,1,1,1,0,0,1},
+                    {1,1,0,0,0,1,0,1},
+                    {1,1,0,0,0,0,0,0}};
     /**
      * 判断方向是否能走，
      * 能则入栈。当发现所有方向都不可行时，实现退栈并且找到新的路。
@@ -80,16 +89,16 @@ public class Demo {
 
     /**
      * 根据方向获取，坐标变化
-     * @param x
+     * @param direction
      * @return
      */
-    public int gety(int x){
+    public int gety(int direction){
         int a[]={1,0,-1,0};
-        return a[x];
+        return a[direction];
     }
 
-    public int getx(int x){
+    public int getx(int direction){
         int a[] = {0,1,0,-1};
-        return a[x];
+        return a[direction];
     }
 }

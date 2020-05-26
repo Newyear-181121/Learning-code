@@ -50,12 +50,12 @@ public class MiGong {
      * @return 如果找到，则返回 true。
      */
     public static boolean setWay(int[][] map , int i,int j){
-        if (map[6][5] == 2){
+        if (map[6][5] == 2){ // 是否是终点位置。
             return true;
         }else{
             if (map[i][j] == 0){
                 map[i][j] = 2;
-                if (setWay(map,i+1,j)){
+                if (setWay(map,i+1,j)){  //判断右边是否可以走。
                     return true;
                 } else if (setWay(map,i,j+1)){
                     return true;

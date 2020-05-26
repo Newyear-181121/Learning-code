@@ -9,5 +9,12 @@ public class StackNode {
     public int id;
     public int x;
     public int y;
-    public int direction;
+    public int direction; // 方向， 1,2,3,4，-->
+
+    public StackNode() {
+    }
+
+    public StackNode(int id) {
+        this.id = id;
+    }
 }
