@@ -6,7 +6,7 @@ import java.util.Random;
 
 
 /**
- * ÄäÃûÀà·½Ê½
+ * åŒ¿åç±»æ–¹å¼
  * @author New year
  *
  */
@@ -21,12 +21,12 @@ public class TestLambda1_2 {
 			heros.add(new Hero("hero " + i, r.nextInt(1000),r.nextInt(100)));
 			
 		}
-		System.out.println("³õÊ¼»¯ºóµÄ¼¯ºÏ£º");
+		System.out.println("åˆå§‹åŒ–åŽçš„é›†åˆï¼š");
 		System.out.println(heros);
-		System.out.println("Ê¹ÓÃÄäÃûÀàµÄ·½Ê½£¬É¸Ñ¡³ö");
+		System.out.println("ä½¿ç”¨åŒ¿åç±»çš„æ–¹å¼ï¼Œç­›é€‰å‡º");
 		HeroChecker checker = new HeroChecker() {
 			@Override
-			public boolean test(Hero h) {		//ÖØÐ´½Ó¿ÚÄÚÈÝ
+			public boolean test(Hero h) {		//é‡å†™æŽ¥å£å†…å®¹
 				return (h.hp>100 && h.damage<50);
 			}
 		};
@@ -45,8 +45,8 @@ public class TestLambda1_2 {
 }
 
 /*
- * Ê×ÏÈ×¼±¸Ò»¸ö½Ó¿ÚHeroChecker£¬Ìá¹©Ò»¸ötest(Hero)·½·¨
-È»ºóÍ¨¹ýÄäÃûÀàµÄ·½Ê½£¬ÊµÏÖÕâ¸ö½Ó¿Ú
+ * é¦–å…ˆå‡†å¤‡ä¸€ä¸ªæŽ¥å£HeroCheckerï¼Œæä¾›ä¸€ä¸ªtest(Hero)æ–¹æ³•
+ç„¶åŽé€šè¿‡åŒ¿åç±»çš„æ–¹å¼ï¼Œå®žçŽ°è¿™ä¸ªæŽ¥å£
  
 HeroChecker checker = new HeroChecker() {
 	public boolean test(Hero h) {
@@ -55,5 +55,5 @@ HeroChecker checker = new HeroChecker() {
 };
  
 
-½Ó×Åµ÷ÓÃfilter£¬´«µÝÕâ¸öchecker½øÈ¥½øÐÐÅÐ¶Ï£¬ÕâÖÖ·½Ê½¾ÍºÜÏñÍ¨¹ýCollections.sortÔÚ¶ÔÒ»¸öHero¼¯ºÏÅÅÐò£¬ÐèÒª´«Ò»¸öComparatorµÄÄäÃûÀà¶ÔÏó½øÈ¥Ò»Ñù¡£
+æŽ¥ç€è°ƒç”¨filterï¼Œä¼ é€’è¿™ä¸ªcheckerè¿›åŽ»è¿›è¡Œåˆ¤æ–­ï¼Œè¿™ç§æ–¹å¼å°±å¾ˆåƒé€šè¿‡Collections.sortåœ¨å¯¹ä¸€ä¸ªHeroé›†åˆæŽ’åºï¼Œéœ€è¦ä¼ ä¸€ä¸ªComparatorçš„åŒ¿åç±»å¯¹è±¡è¿›åŽ»ä¸€æ ·ã€‚
 */

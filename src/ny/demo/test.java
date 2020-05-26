@@ -17,4 +17,6 @@ public class test {
         System.out.println("收到udp消息");
         System.out.println("客户端发送udp端口为" + dp_receive.getPort());
     }
+
+    String s = "";
 }
