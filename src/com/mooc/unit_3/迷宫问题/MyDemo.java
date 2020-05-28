@@ -21,7 +21,27 @@ public class MyDemo {
             {1,1,0,0,0,1,0,1},
             {1,1,0,0,0,0,0,0}};
 
-    public void isAble(){
-        while ()
+    /**
+     * 判断，当前节点，能否继续走。
+     *      方向从 右边开始，顺时针判断， 右，下，左，上， 对应 1,2,3,4。
+     *      对应方向的下个节点，的坐标，用另一个方法提供。
+     */
+    public void isAble(StackNode node){
+        if ( node.x == 7 && node.y == 8){ // 判断是不是终点。
+            return ;
+        } else{
+
+        }
     }
+
+
+    /**
+     *
+     * @param node  当前节点
+     */
+    public int getx(StackNode node){
+        return 0;
+    }
+
+
 }

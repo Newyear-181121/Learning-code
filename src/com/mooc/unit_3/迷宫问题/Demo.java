@@ -14,15 +14,17 @@ public class Demo {
                     {0,1,1,1,1,0,0,1},
                     {1,1,0,0,0,1,0,1},
                     {1,1,0,0,0,0,0,0}};
+    StackNode top = new StackNode(0);
     /**
      * 判断方向是否能走，
      * 能则入栈。当发现所有方向都不可行时，实现退栈并且找到新的路。
      * @param s  栈
      */
-    public void advance(LinkStack s){
+    public void advance(Demo s){
         StackNode p = s.top;
         int i = 0;
         while (true) {
+            // 取反是判断该方向来的方向，是否已经走过的，不能再走了。
             if (li(p.direction) != i && maze[p.y + gety(i)][p.x + getx(i)] == 1) {
                 push(s, (p.x + getx(i)), p.y + gety(i), i);
                 break;
@@ -44,7 +46,7 @@ public class Demo {
      * @param y
      * @param direction
      */
-    public void push(LinkStack s,int x,int y,int direction){
+    public void push(Demo s,int x,int y,int direction){
         StackNode p = new StackNode();
         p.x = x;
         p.y = y;
@@ -61,7 +63,7 @@ public class Demo {
      * 用来转换下一个方向，判断下一个可走的方向并且存入栈中。
      * @param s
      */
-    public void back(LinkStack s){
+    public void back(Demo s){
         StackNode p = s.top;
        // int i=
     }
@@ -70,7 +72,7 @@ public class Demo {
      * 如果当前方向不可行就删除栈顶元素。
      * @param s
      */
-    public void pop(LinkStack s){
+    public void pop(Demo s){
         StackNode p = s.top;
         if (p != null){
             s.top= p.next;
@@ -89,8 +91,8 @@ public class Demo {
 
     /**
      * 根据方向获取，坐标变化
-     * @param direction
-     * @return
+     * @param direction  方向
+     * @return  返回增量
      */
     public int gety(int direction){
         int a[]={1,0,-1,0};
@@ -100,5 +102,11 @@ public class Demo {
     public int getx(int direction){
         int a[] = {0,1,0,-1};
         return a[direction];
+    }
+
+
+    public static void main(String[] args){
+        StackNode node = null;
+        //advance();
     }
 }

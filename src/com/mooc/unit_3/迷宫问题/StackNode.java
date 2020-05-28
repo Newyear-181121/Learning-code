@@ -17,4 +17,14 @@ public class StackNode {
     public StackNode(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "StackNode{" +
+                "id=" + id +
+                ", x=" + x +
+                ", y=" + y +
+                ", direction=" + direction +
+                '}';
+    }
 }
