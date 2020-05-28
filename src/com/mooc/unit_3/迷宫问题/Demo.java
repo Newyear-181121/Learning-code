@@ -65,7 +65,19 @@ public class Demo {
      */
     public void back(Demo s){
         StackNode p = s.top;
-       // int i=
+        int i= ++ p.direction; //换一个方向。
+        while(true){
+            if (i == 4){
+                pop(s);
+                back(s);
+                break;
+            }
+            if (li(p.next.direction) != i && maze[p.y+gety(i)][p.x+getx(i)] == 1){
+                push(s,p.x+getx(i),p.y+gety(i),i);
+                break;
+            }
+            i++;
+        }
     }
 
     /**
