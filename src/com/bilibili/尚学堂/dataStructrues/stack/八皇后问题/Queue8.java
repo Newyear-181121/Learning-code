@@ -4,14 +4,17 @@ public class Queue8 {
     //
     int max = 8;
     static int count = 0;
+    static int judgeCount = 0;
     // 数组的下标表示行，数组中的值，表示列。
     int[] array = new int[max];
 
     public static void main(String[] args){
         Queue8 queue8 = new Queue8();
         queue8.check(0);
+        System.out.println("第一个是 7 的解法有："+ queue8.count_7);
         System.out.println(count);
-        System.out.printf("");
+        System.out.printf("1\t2\t3\t4\t5\t6\t7\t8\n%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n",queue8.count_0,queue8.count_1,queue8.count_2,queue8.count_3,queue8.count_4,queue8.count_5,queue8.count_6,queue8.count_7);
+        System.out.println("一共进行了:"+judgeCount+"次");
     }
 
     /**
@@ -21,6 +24,7 @@ public class Queue8 {
      * @return
      */
     private boolean judge(int n){
+        judgeCount++;
         for (int i = 0; i < n ; i++) {
             // 判断是否在同列，和同一斜线。  （很坐标增量与纵坐标增量相同时，斜率是1，就是在45度的直线上。）
             if (array[i] == array[n] || Math.abs(n-i) == Math.abs(array[n] - array[i])){
@@ -36,23 +40,13 @@ public class Queue8 {
      */
     private void print(){
 
-        if (array[0] == 0) count_1++;
-        if (count_1 > 0){
-            System.out.println("第一个是0的解法有："+count_1);
-        }
-        if (array[0] == 1) count_2++;
-        if (array[0] == 2) count_3++;
-        if (array[0] == 3) count_4++;
-        if (array[0] == 4) count_5++;
-        if (array[0] == 5) count_6++;
-        if (array[0] == 6) count_7++;
-        if (array[0] == 7) count_8++;
-
+        ny_out();
         count++;
         for (int i = 0;i < array.length;i++){
             System.out.print(array[i] + " ");
         }
         System.out.println();
+
 
 
     }
@@ -83,14 +77,14 @@ public class Queue8 {
     /**
      * 想加的一点小功能
      */
-    static int count_1 = 0;
+    int count_1 = 0;
     int count_2 = 0;
     int count_3 = 0;
     int count_4 = 0;
     int count_5 = 0;
     int count_6 = 0;
     int count_7 = 0;
-    int count_8 = 0;
+    int count_0 = 0;
 
 
 
@@ -107,6 +101,43 @@ public class Queue8 {
             }
 
 
+        }
+    }
+
+    /**
+     * 运行一下就知道这是做什么的了。
+     */
+    private void ny_out(){
+
+        if (array[0] == 0) count_0++;
+        if (array[0] == 1) count_1++;
+        if (array[0] == 2) count_2++;
+        if (array[0] == 3) count_3++;
+        if (array[0] == 4) count_4++;
+        if (array[0] == 5) count_5++;
+        if (array[0] == 6) count_6++;
+        if (array[0] == 7) count_7++;
+
+        if (count_1 == 1){
+            System.out.println("第一个是 0 的解法有："+count_0);
+        }
+        if (count_2 == 1){
+            System.out.println("第一个是 1 的解法有："+count_1);
+        }
+        if (count_3 == 1){
+            System.out.println("第一个是 2 的解法有："+count_2);
+        }
+        if (count_4 == 1){
+            System.out.println("第一个是 3 的解法有："+count_3);
+        }
+        if (count_5 == 1){
+            System.out.println("第一个是 4 的解法有："+count_4);
+        }
+        if (count_6 == 1){
+            System.out.println("第一个是 5 的解法有："+count_5);
+        }
+        if (count_7 == 1){
+            System.out.println("第一个是 6 的解法有："+count_6);
         }
     }
 }
