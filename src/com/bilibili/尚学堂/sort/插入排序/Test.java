@@ -18,13 +18,13 @@ public class Test {
 
 
         System.out.println("排序前");
-        Out.out_time();
+        Out.time();
 
         InserSort.inserSort(arr);
 
         System.out.println("排序后");
         //System.out.println(Arrays.toString(arr));
-        Out.out_time();
+        Out.time();
 
 
         System.out.println("总共比较了："+ InserSort.count);
