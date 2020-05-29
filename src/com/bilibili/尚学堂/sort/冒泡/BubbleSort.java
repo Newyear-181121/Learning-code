@@ -1,10 +1,14 @@
-package sort;
+package sort.冒泡;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * 冒泡排序
+ *
+ *  把第i个数跟后面相邻的数比， 符合判断条件 就交换位置。
+ *
+ *      看起来就像是，越大的数，一个一个往后移动。
  *
  *  优化，： 增加一个标志，当排序提前完成的时候，提前结束后续不必要的排序。
  */

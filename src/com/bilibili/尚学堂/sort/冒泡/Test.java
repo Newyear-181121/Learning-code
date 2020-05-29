@@ -1,4 +1,4 @@
-package sort;
+package sort.冒泡;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,6 +26,5 @@ public class Test {
         System.out.println(date2str);
         //System.out.println(Arrays.toString(arr));
 
-        System.out.println("排序使用时间");
     }
 }
