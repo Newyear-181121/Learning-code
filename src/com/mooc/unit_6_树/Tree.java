@@ -5,13 +5,11 @@ public class Tree {
     public Tree lchild; //左孩子树  左孩子也是左子树
     public Tree rchild; // 右子树
 
-    public void init(){
+    public Tree(){
         lchild.root = root.left; //左子树的根节点 是 根节点的左孩子
         rchild.root = root.right; //右子树的根节点 是根节点的右孩子
     }
-    public void visit(Node node){
 
-    }
 
     /**
      * 先序遍历
@@ -51,4 +49,42 @@ public class Tree {
         }
     }
 
+    /*****************************************************************/
+    /* */
+    int leafCount = 0; // 统计叶子节点的个数。（度为0的节点的个数）
+    int twoCount = 0;  // 统计度为2的节点的个数。
+    int oneCount = 0;  // 统计度为1的节点的个数。
+
+    /**
+     * 遍历中的实际操作
+     * @param node
+     */
+    public void visit(Node node){
+        readLeafCount(node);
+        readtwoCount(node);
+        readOneCount(node);
+    }
+
+    /**
+     * 统计 叶子节点的个数
+     * @param node
+     */
+    public void readLeafCount(Node node){
+        if (node.left == null && node.right == null){
+            leafCount++;
+        }
+    }
+
+    public void readtwoCount(Node node){
+        if (node.left != null && node.right != null){
+            twoCount++;
+        }
+    }
+
+    public void readOneCount(Node node){
+        if ((node.left == null && node.right != null )
+                || (node.left != null && node.right == null)){
+            oneCount++;
+        }
+    }
 }
