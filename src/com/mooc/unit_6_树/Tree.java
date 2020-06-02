@@ -87,4 +87,45 @@ public class Tree {
             oneCount++;
         }
     }
+
+
+    /***************************************************************/
+    int depth = 0 ; // 计算二叉树的最大高度。
+
+    /**
+     * 使用全局变量的方法求 二叉树的高度
+     * @param rootTree
+     * @param h
+     */
+    public void preTreeDepth(Tree rootTree,int h){
+        if (rootTree != null ){
+            if (h > depth){
+                depth=h;
+            }
+            preTreeDepth(rootTree.lchild,h+1);
+            preTreeDepth(rootTree.rchild,h+1);
+        }
+    }
+
+    /**
+     * 函数返回值的方法求 二叉树的值
+     *  该方法只能使用 后续遍历的思想。
+     * @param rootTree
+     * @return 如果该数为空，则高度是零
+     */
+    public int postTreeDepth(Tree rootTree){
+        int hl,hr,max;
+        if (root != null){
+            hl = postTreeDepth(rootTree.lchild);
+            hr = postTreeDepth(rootTree.rchild);
+            max = hl>hr?hl:hr;
+            return max+1;
+        }else {
+            return 0;
+        }
+    }
+
+
+    /*****************************************************************/
+
 }
