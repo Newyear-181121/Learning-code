@@ -1,5 +1,8 @@
 package com.mooc.unit_6_树;
 
+
+import com.mooc.unit_3.栈.链表栈.LinkStack;
+
 public class Tree {
     public Node root;//每棵树都有一个根节点。
     public Tree lchild; //左孩子树  左孩子也是左子树
@@ -128,4 +131,43 @@ public class Tree {
 
     /*****************************************************************/
 
+    // 二叉树的非递归遍历
+
+    /**
+     * 中序遍历
+     * @param rootTree
+     */
+    public void inOrder_(Tree rootTree){
+        LinkStack s = new LinkStack();       //创建并出示话一个栈
+        Tree p = rootTree;                      // 定义一个临时变量
+        while( p != null || !s.isEmpty() ){     // 如果，临时变量和栈同时为空（临时变量指的是子树的根节点。）
+            if (p !=null){  // 根节点存在
+                s.push(p.root);      //      就 根节点 入栈
+                p=p.lchild;     //遍历左子树 的根节点
+            }else{              // 若子树的 根节点不存在
+                s.pop();       //弹出根节点
+                visit(p.root);  //访问该节点
+                p=p.rchild;     //遍历右子树
+            }
+        }
+    }
+
+    /**
+     * 先序遍历
+     * @param rootTree
+     */
+    public void postOrder_(Tree rootTree){
+        LinkStack s = new LinkStack();
+        Tree p = rootTree;
+        while( p != null || !s.isEmpty() ){
+            if (p !=null){ // 若节点存在
+                visit(p.root);
+                s.push(p);
+                p=p.lchild;
+            }else{
+                s.pop();
+                p=p.rchild;
+            }
+        }
+    }
 }

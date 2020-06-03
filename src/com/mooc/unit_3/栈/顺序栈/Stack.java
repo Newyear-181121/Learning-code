@@ -1,7 +1,7 @@
 package com.mooc.unit_3.栈.顺序栈;
 
 /**
- *
+ *  顺序栈 ，，数组栈
  */
 public class Stack {
     private int maxSize;
