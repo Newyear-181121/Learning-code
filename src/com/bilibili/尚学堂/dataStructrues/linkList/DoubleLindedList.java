@@ -17,16 +17,17 @@ public class DoubleLindedList {
             return;
         }
         DoubleNode temp = head.next;
-        while (true){
-            if (temp == null){
-                break;
-            }
-            System.out.println(temp);
+        while (temp != null ){
+            visiter(temp);
             temp = temp.next;
         }
         System.out.println("遍历结束");
     }
 
+    /**
+     *  链表尾部增加节点。
+     * @param doubleNode
+     */
     public void add(DoubleNode doubleNode){
 
         // 因为head节点不能动，因此我们需要一个辅助变量 temp
@@ -189,6 +190,14 @@ public class DoubleLindedList {
     }
     public void reversetDoubleList(){
         reversetDoubleList(getHead());
+    }
+
+    /**
+     * 访问此节点。
+     * @param temp 该节点的变量名。
+     */
+    private void visiter(DoubleNode temp) {
+        System.out.println(temp);
     }
 
 
