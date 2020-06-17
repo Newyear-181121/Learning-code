@@ -5,12 +5,13 @@ import util.Out;
 import java.util.Arrays;
 
 /**
- *
+ * 缩小增量排序
  */
 public class ShellSort {
 
     static int temp = 0;
     static int count = 0;
+    static int count1 = 0;
     /**
      * 希尔排序 交换法
      * @param arr
@@ -25,12 +26,14 @@ public class ShellSort {
                         temp = arr[j];
                         arr[j] = arr[j + gap];
                         arr[j + gap] = temp;
+                        count();
                     }
                 }
             }
             Out.out("希尔排序第" + (++count) + "轮"+ Arrays.toString(arr));
         }
     }
+
 
     /**
      * 移位 法
@@ -51,5 +54,12 @@ public class ShellSort {
             }
         }
 
+    }
+
+    /**
+     * 计算交换次数
+     */
+    private static void count() {
+        count1++;
     }
 }
