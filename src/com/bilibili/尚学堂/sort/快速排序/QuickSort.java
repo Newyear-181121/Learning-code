@@ -5,6 +5,9 @@ public class QuickSort {
     public static void quickSort(int[] arr,int left,int right){
         int l = left; //左下标
         int r = right;//右下标
+        if (left > right){
+            return;
+        }
 
         // 中轴值
         int pivot = arr[(left + right) /2 ];
@@ -37,6 +40,18 @@ public class QuickSort {
             if (arr[r] == pivot ){
                 l += 1;
             }
+        }
+
+        if ( l == r ){
+            l += 1;
+            r -= 1;
+        }
+
+        if (left < r ){
+            quickSort(arr,left,r);
+        }
+        if (right > 1 ){
+            quickSort(arr,l,right);
         }
 
 
