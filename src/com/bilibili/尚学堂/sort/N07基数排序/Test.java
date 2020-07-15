@@ -1,17 +1,14 @@
-package sort.快速排序;
-
+package sort.N07基数排序;
 
 import util.Out;
 
 import java.util.Arrays;
 
 public class Test {
-
     @org.junit.Test
     public void test(){
-        int[] arr = {-9,78,0,23,-567,70,32,684};
-
-        QuickSort.quickSort(arr,0,arr.length-1);
+        int arr[] = {8,9,1,7,2,3,5,4,6,0};
+        RadixSort.radixSort(arr);
         Out.out(Arrays.toString(arr));
     }
 }

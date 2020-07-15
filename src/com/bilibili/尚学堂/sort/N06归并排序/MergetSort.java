@@ -1,4 +1,4 @@
-package sort.归并排序;
+package sort.N06归并排序;
 
 import util.Out;
 

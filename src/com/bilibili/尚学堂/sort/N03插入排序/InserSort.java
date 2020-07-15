@@ -1,4 +1,4 @@
-package sort.插入排序;
+package sort.N03插入排序;
 
 /**
  * 插入排序

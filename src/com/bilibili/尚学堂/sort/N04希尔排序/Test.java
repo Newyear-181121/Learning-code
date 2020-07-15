@@ -1,4 +1,4 @@
-package sort.希尔排序;
+package sort.N04希尔排序;
 
 import util.Out;
 

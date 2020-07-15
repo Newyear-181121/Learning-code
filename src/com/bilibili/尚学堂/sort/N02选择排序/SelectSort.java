@@ -1,4 +1,4 @@
-package sort.选择排序;
+package sort.N02选择排序;
 
 /**
  *  选择排序

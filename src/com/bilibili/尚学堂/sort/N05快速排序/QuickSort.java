@@ -1,4 +1,4 @@
-package sort.快速排序;
+package sort.N05快速排序;
 
 public class QuickSort {
 
