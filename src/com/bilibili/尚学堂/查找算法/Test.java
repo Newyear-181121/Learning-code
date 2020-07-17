@@ -3,6 +3,7 @@ package 查找算法;
 import org.junit.After;
 import util.Out;
 import 查找算法.N02二分查找.BinarySearch;
+import 查找算法.N03插值查找.InserValueSearch;
 
 import java.util.List;
 
@@ -31,5 +32,11 @@ public class Test {
     public void n02_2(){
         List<Integer> resIndexList = BinarySearch.binarySearch2(arr,0,arr.length - 1,97);
         System.out.println(resIndexList);
+    }
+
+    @org.junit.Test
+    public void n03(){
+        int index = InserValueSearch.inserS(arr,0,arr.length - 1,97);
+        System.out.println(index);
     }
 }
