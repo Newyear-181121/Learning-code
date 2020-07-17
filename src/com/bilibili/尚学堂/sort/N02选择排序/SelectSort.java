@@ -11,7 +11,11 @@ package sort.N02选择排序;
  */
 public class SelectSort {
 
-    public static void selectSort(int[] arr){
+    /**
+     * 选择排序
+     * @param arr 目标数组
+     */
+    public static void sort(int[] arr){
         int minIndex = 0; //最小值的索引
         int min = arr[0]; //最小值
 

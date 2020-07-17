@@ -6,12 +6,16 @@ import java.util.Arrays;
 
 public class MergetSort {
 
-    public static void mergeSort(int[] arr,int left,int right,int[] temp){
+    public static void sort1(int[] arr){
+        sort(arr,0,arr.length-1,arr);
+    }
+
+    public static void sort(int[] arr,int left,int right,int[] temp){
         if (left < right ){
             int mid = (left + right )/2;
 
-            mergeSort(arr,left,mid,temp);
-            mergeSort(arr,mid+1,right,temp);
+            sort(arr,left,mid,temp);
+            sort(arr,mid+1,right,temp);
             merge(arr,left,mid,right,temp);
         }
     }
@@ -26,7 +30,6 @@ public class MergetSort {
      * @param temp
      */
     public static void merge(int[] arr,int left, int mid ,int right,int[] temp){
-        Out.out(Arrays.toString(arr));
         int i = left;
         int j = mid +1;
         int t = 0;

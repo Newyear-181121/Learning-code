@@ -1,8 +1,15 @@
 package sort.N05快速排序;
 
+/**
+ * 快速排序
+ */
 public class QuickSort {
 
-    public static void quickSort(int[] arr,int left,int right){
+    public static void sort1(int[] arr){
+        sort(arr,0,arr.length - 1 );
+    }
+
+    public static void sort(int[] arr,int left,int right){
         int l = left; //左下标
         int r = right;//右下标
         if (left > right){
@@ -41,20 +48,15 @@ public class QuickSort {
                 l += 1;
             }
         }
-
         if ( l == r ){
             l += 1;
             r -= 1;
         }
-
         if (left < r ){
-            quickSort(arr,left,r);
+            sort(arr,left,r);
         }
         if (right > 1 ){
-            quickSort(arr,l,right);
+            sort(arr,l,right);
         }
-
-
-
     }
 }

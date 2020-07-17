@@ -16,7 +16,7 @@ public class ShellSort {
      * 希尔排序 交换法
      * @param arr
      */
-    public static void shellSort(int[] arr){
+    public static void sort(int[] arr){
 
         
         for (int gap = arr.length / 2 ; gap > 0 ; gap /=2 ){
@@ -26,11 +26,10 @@ public class ShellSort {
                         temp = arr[j];
                         arr[j] = arr[j + gap];
                         arr[j + gap] = temp;
-                        count();
                     }
                 }
             }
-            Out.out("希尔排序第" + (++count) + "轮"+ Arrays.toString(arr));
+            //Out.out("希尔排序第" + (++count) + "轮"+ Arrays.toString(arr));
         }
     }
 
@@ -39,7 +38,7 @@ public class ShellSort {
      * 移位 法
      * @param arr
      */
-    public static void shellSort2(int[] arr){
+    public static void sort2(int[] arr){
         for (int gap = arr.length / 2 ; gap > 0 ; gap /=2 ){
             for (int i = gap; i < arr.length ; i++){
                 int j = i;
@@ -54,12 +53,5 @@ public class ShellSort {
             }
         }
 
-    }
-
-    /**
-     * 计算交换次数
-     */
-    private static void count() {
-        count1++;
     }
 }

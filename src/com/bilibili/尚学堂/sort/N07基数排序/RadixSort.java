@@ -41,7 +41,7 @@ public class RadixSort {
      * @param arr 要排序的一维数组
      *
      */
-    public static void radixSort(int[] arr){
+    public static void sort(int[] arr){
         int max = arr[0];
         for (int i = 1 ; i < arr.length; i++){
             if (arr[i] > max ){

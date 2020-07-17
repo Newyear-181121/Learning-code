@@ -10,7 +10,11 @@ public class InserSort {
 
     static int count = 0; // 记录比较次数。
 
-    public static void inserSort(int[] arr){
+    /**
+     * 插入排序
+     * @param arr 目标数组
+     */
+    public static void sort(int[] arr){
         for (int i = 1 ; i < arr.length ; i++) {
             int inserVal = arr[i];  // 保存第i个数，将要插入新的
             int inserIndex = i-1; // 第i 个数前面的那个数。
