@@ -1,6 +1,8 @@
 package 查找算法;
 
 import org.junit.After;
+import org.junit.Before;
+import sort.N06归并排序.MergetSort;
 import util.Out;
 import 查找算法.N02二分查找.BinarySearch;
 import 查找算法.N03插值查找.InserValueSearch;
@@ -15,16 +17,17 @@ import java.util.List;
  */
 public class Test {
 
-    int arr[] = {1,21,35,97,97,851,3264,3319};
+    int arr[] ;
 
-    @After
+    @Before
     public void after(){
-
+        arr = Out.generate_2(10000000,1000);
+        MergetSort.sort1(arr);
     }
 
     @org.junit.Test
     public void n02(){
-        int resIndex = BinarySearch.binarySearch(arr,0,arr.length -1 ,97);
+        int resIndex = BinarySearch.binarySearch(arr,0,arr.length -1 ,0);
         System.out.println(resIndex);
     }
 
