@@ -44,7 +44,22 @@ public class HashTab {
     public void list(){
         for (int i = 0 ; i < size ; i++ ){
             // 只需要 循坏调用 遍历链表的方法即可。
-            nodeLinkedListArray[i].list();
+            nodeLinkedListArray[i].list(i);
         }
+    }
+
+    public void findNodeById(int id){
+        int NodeLinkedListNO = hashFun(id);
+        Node current = nodeLinkedListArray[NodeLinkedListNO].findNodeById(id);
+        if ( current != null ) {
+            System.out.println("节点为： " + current);
+        } else {
+            System.out.println("没有该id的节点");
+        }
+    }
+
+    public void delectById(int id){
+        int NodeLinkedListNO = hashFun(id);
+        nodeLinkedListArray[NodeLinkedListNO].deletById(id);
     }
 }

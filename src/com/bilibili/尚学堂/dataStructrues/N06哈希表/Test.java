@@ -1,5 +1,7 @@
 package dataStructrues.N06哈希表;
 
+import java.util.Scanner;
+
 /**
  * Test :
  *
@@ -17,5 +19,7 @@ public class Test {
         hashTab.add(node);
         hashTab.list();
     }
+
+
 
 }
