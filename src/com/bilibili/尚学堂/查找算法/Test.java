@@ -21,7 +21,7 @@ public class Test {
 
     @Before
     public void after(){
-        arr = Out.generate_2(10000000,1000);
+        arr = Out.generate(10000000,1000);
         MergetSort.sort1(arr);
     }
 

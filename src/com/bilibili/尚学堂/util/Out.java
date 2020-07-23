@@ -33,7 +33,7 @@ public class Out {
      * @return 数组
      */
     public static int[] generate(int len){
-        return generate_2(len,100);
+        return generate(len,100);
     }
 
     /**
@@ -42,7 +42,7 @@ public class Out {
      * @param val 数组元素，数据最大值
      * @return
      */
-    public static int[] generate_2(int len,int val){
+    public static int[] generate(int len,int val){
         int[] arr = new int[len];
         for (int i = 0 ; i < len ; i++){
             arr[i] = (int) (Math.random() * val);
