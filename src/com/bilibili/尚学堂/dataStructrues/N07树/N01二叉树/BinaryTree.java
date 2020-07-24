@@ -20,22 +20,13 @@ public class BinaryTree {
         this.root = root;
     }
 
-    /**
-     * 根节点是否为空
-     * @return
-     */
-    public boolean rootIsEmpty(){
-        return root.isEmpty();
-    }
-
-
-
     //------------------------------------------------------ 遍历 ------------------------------------------------------- 遍历
     /**
      * 前序遍历
+     * 重写一下，前序遍历
      */
     public void preOrder(){
-        if ( ! rootIsEmpty() ){
+        if ( root != null ){
             this.root.preOrder();
         }else {
             System.out.println("二叉树为空，无法前序遍历");
@@ -46,7 +37,7 @@ public class BinaryTree {
      * 中序遍历
      */
     public void infixOrder(){
-        if ( ! rootIsEmpty() ) {
+        if ( root != null ) {
             this.root.infixOrder();
         } else {
             System.out.println("二叉树为空，无法中序遍历");
@@ -57,7 +48,7 @@ public class BinaryTree {
      * 后序遍历
      */
     public void postOrder(){
-        if ( ! rootIsEmpty() ) {
+        if ( root != null ) {
             this.root.postOrder();
         } else {
             System.out.println("二叉树为空，无法后序遍历");
@@ -70,7 +61,7 @@ public class BinaryTree {
      * @see Node#preOrderSearch(int) 
      */
     public Node preOrderSearch(int id){
-        if ( ! rootIsEmpty() ){
+        if ( root != null ){
             return root.preOrderSearch(id);
         }else{
             return null;
@@ -83,7 +74,7 @@ public class BinaryTree {
      * @return
      */
     public Node infixOrderSearch(int id){
-        if ( ! rootIsEmpty() ){
+        if ( root != null ){
             return root.infixOrderSearch(id);
         }else{
             return null;
@@ -91,7 +82,7 @@ public class BinaryTree {
     }
 
     public Node postOrderSearch(int id){
-        if ( ! rootIsEmpty() ){
+        if ( root != null ){
             return root.postOrderSearch(id);
         }else{
             return null;

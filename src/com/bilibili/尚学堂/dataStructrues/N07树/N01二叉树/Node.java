@@ -205,6 +205,10 @@ public class Node {
 
 
     //---------------------------------------------------- 删除 --------------------------------------------------------- 前中后 序 删除
+    /**
+     *  前序操作
+     * @param id
+     */
     public void delNode(int id){
         if ( this.left != null && this.left.id == id ){
             this.left = null ;      //删除左子节点

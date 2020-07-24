@@ -6,28 +6,34 @@ import org.jetbrains.annotations.NotNull;
  * @auther: NewYear
  * @Date: 2020-07-23 14:06
  * @version: 0.0.1
- * @description: Node
+ * @description: Node 霍夫曼数节点
  */
 public class Node implements Comparable<Node> {
 
-    int value;
+    int id;
+    String value;
     Node left;
     Node right;
 
-    public Node(int value){
-        this.value = value;
+    public Node(int id){
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Node{" +
-                "value=" + value +
+                "value=" + id +
                 '}';
     }
 
+    /**
+     * 从小到大排序
+     * @param o
+     * @return
+     */
     @Override
     public int compareTo(@NotNull Node o) {
-        return this.value - o.value;
+        return this.id - o.id;
     }
 
     public void preOrder(){
@@ -39,4 +45,5 @@ public class Node implements Comparable<Node> {
             this.right.preOrder();
         }
     }
+
 }

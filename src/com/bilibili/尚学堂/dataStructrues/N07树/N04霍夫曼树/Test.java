@@ -17,5 +17,6 @@ public class Test {
         Tree tree = new Tree();
         Node node = tree.createTree(arr);  // 像这种传入参数 ，然后返回一个 其他类型的结果的 方法，建议写成静态方法。
         tree.preOrder(node);
+
     }
 }
