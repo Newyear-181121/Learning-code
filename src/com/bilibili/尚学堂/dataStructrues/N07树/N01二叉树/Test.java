@@ -83,6 +83,11 @@ public class Test {
         Out.out("删除后，前序遍历");
         binaryTree.preOrder();
     }
+
+    @org.junit.Test
+    public void outNode(){
+        binaryTree.outNode(root);
+    }
 }
 
 

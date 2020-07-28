@@ -101,4 +101,56 @@ public class BinaryTree {
             Out.out("空树，无法删除");
         }
     }
+
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    /**
+     * 只适用完全二叉树。
+     * @param node
+     */
+    public void outNode(Node node){
+        if (node == null){
+            return;
+        }
+        Node[] nodes = new Node[10];
+        int floor = 1;
+        if (node == root ){
+            nodes[0] = root;
+
+            System.out.println(root);
+
+            if ( node.getLeft() != null ){
+                nodes[1] = node.getLeft();
+                System.out.print(nodes[1]);
+            }
+            if ( node.getRight() != null ){
+                nodes[2] = node.getRight();
+                System.out.println(nodes[2]);
+            }
+            floor++;
+        }
+
+        while(true){
+            int left = (int) Math.pow(2,floor-1) - 1; //这层最左边的 索引。
+            int length = (int) Math.pow(2,floor-1);   // 这层的长度
+            int right = left + length;  //这层最右边的索引
+            for (int i = left ;i < right ; i++){
+                if (nodes[i] != null && nodes[i].getLeft() != null ){
+                    nodes[2*i +1 ] = nodes[i].getLeft();
+                    System.out.print(nodes[i].getLeft());
+                } else {
+                    break;  //因为退出条件，所以只适用完全二叉树。
+                }
+                if ( nodes[i] != null && nodes[i].getRight() != null ){
+                    nodes[2*i + 2 ] = nodes[i].getRight();
+                    System.out.print(nodes[i].getRight());
+                } else {
+                    break;
+                }
+            }
+            System.out.println();
+            floor++;
+        }
+    }
 }
