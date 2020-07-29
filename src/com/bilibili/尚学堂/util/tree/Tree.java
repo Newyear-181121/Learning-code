@@ -1,7 +1,5 @@
 package util.tree;
 
-import com.sun.org.apache.bcel.internal.generic.ARETURN;
-
 /**
  * @auther: NewYear
  * @Date: 2020-07-28 20:21
@@ -22,26 +20,39 @@ public class Tree {
         this.root = root;
     }
 
+    //----------------------------------------------------- 按树层次结构输出 --------------------------------------------------
+    private static int floor = 1;
+
     public static void outNode(Node[] nodes){
+
+        flag = true;
         Node[] nodes1 = new Node[nodes.length * 2];
 
+        System.out.printf("数的第%d层,共有%d个节点 :",floor,nodes.length);
+
         // 遍历这个数组，全部打印，，每个节点的左右节点，又加到新的数组中去。
-        for (int i = 0 ; i< nodes.length -1 ; i++){
+        for (int i = 0 ; i<= nodes.length -1 ; i++){
             if (nodes[i] == null){
-                System.out.println("\t");
+                System.out.print("   空   ");
             } else{
-                System.out.println(nodes[i]);
+                System.out.print(i+ ":");
+                System.out.print(nodes[i] +  "    ");
             }
-            nodes1[2*i - 1] = nodes[i].left;
-            nodes1[2*i ] = nodes[i].right;
+            if (nodes[i] == null){
+                nodes1[2*i] = null;
+                nodes1[2*i +1 ] = null;
+            } else {
+                nodes1[2 * i] = nodes[i].left;
+                nodes1[2 * i + 1] = nodes[i].right;
+            }
 
             //只要新数组有一个不是空，
             if (flag != false){
                 // 如果 标志 数组是空， 就要判断一下 数组中的节点，是不是非空。
-                if (nodes[i].left != null){
+                if (nodes1[2*i] != null){
                     flag = false;
                 }
-                if (nodes[i].right != null){
+                if (nodes1[2*i +1 ] != null){
                     flag = false;
                 }
             }
@@ -51,6 +62,8 @@ public class Tree {
         // 判断新的数组是不是全空了。
         // 如果数组全是空的，flag = true 了，说明后面没有节点了，
         if (flag != true ){
+            System.out.println();
+            floor++;    //树的层数记录加1
             outNode(nodes1);
         }
     }
@@ -59,5 +72,4 @@ public class Tree {
         Node[] nodes = {node};
         outNode(nodes);
     }
-
 }
