@@ -10,13 +10,4 @@ public class Node {
     int id;
     Node left;
     Node right;
-
-
-    public void outNode(){
-        if ( this != null ){
-            System.out.println(this);
-        } else {
-            System.out.println("\t");
-        }
-    }
 }

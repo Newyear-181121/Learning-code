@@ -60,16 +60,4 @@ public class Tree {
         outNode(nodes);
     }
 
-    /**
-     * 判断这个数组是不是全是空，
-     *
-     */
-    public static boolean arrISempty(Node[] nodes) {
-        // 只要有一个不空，就算 没空。
-        for (int i = 0; i < nodes.length - 1; i++)
-            if (nodes[i] != null) {
-                return false;
-            }
-        return true;
-    }
 }

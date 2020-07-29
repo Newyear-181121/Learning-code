@@ -15,7 +15,7 @@ public class Test {
     Tree tree;
     @Before
     public void before(){
-        arr = Out.generate(20,50);
+        arr = Out.generate(20,30);
         tree = new Tree();
     }
 
@@ -24,8 +24,9 @@ public class Test {
         for (int i = 0 ; i< arr.length ; i++){
             tree.add(new Node(arr[i]));
         }
-        tree.infixOrder();
 
-        util.tree.Tree.outNode(tree.getRoot());
+
+        Tree.outNode(tree.getRoot());
+        tree.infixOrder();
     }
 }
