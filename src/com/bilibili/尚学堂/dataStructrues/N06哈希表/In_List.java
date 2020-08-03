@@ -14,5 +14,5 @@ public interface In_List {
     /**
      * 遍历链表
      */
-    public void list();
+    public void list(int no);
 }

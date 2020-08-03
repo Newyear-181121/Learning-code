@@ -9,6 +9,7 @@ import sort.N04希尔排序.ShellSort;
 import sort.N05快速排序.QuickSort;
 import sort.N06归并排序.MergetSort;
 import sort.N07基数排序.RadixSort;
+import sort.N08堆排序.HeapSort;
 import util.Out;
 
 /**
@@ -22,7 +23,7 @@ public class Test {
     int[] arr = null;
     @Before
     public void before(){
-        arr = Out.generate(80000);
+        arr = Out.generate(8000000,80000);
         //Out.outArr(arr);
         Out.out("排序前：" + Out.time());
     }
@@ -89,5 +90,10 @@ public class Test {
     @org.junit.Test
     public void n07(){
         RadixSort.sort(arr);
+    }
+
+    @org.junit.Test
+    public void n08_1(){
+        HeapSort.sort1(arr);
     }
 }
