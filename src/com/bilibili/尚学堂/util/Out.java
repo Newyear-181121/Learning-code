@@ -9,8 +9,8 @@ import java.util.Date;
  * 封装 输出。
  */
 public class Out {
-    public static void out(String str){
-        System.out.println(str);
+    public static void out(Object object){
+        System.out.println(object);
     }
 
     public static void outArr(int[] arr){
