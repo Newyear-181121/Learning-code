@@ -6,6 +6,8 @@ package dataStructrues.N04栈.链表实现栈;
 public class Node {
     private int id ;
 
+    private String value;
+
     private Node next;
 
     public Node() {
@@ -23,7 +25,13 @@ public class Node {
         this.id = id;
     }
 
+    public String getValue() {
+        return value;
+    }
 
+    public void setValue(String value) {
+        this.value = value;
+    }
 
     public Node getNext() {
         return next;

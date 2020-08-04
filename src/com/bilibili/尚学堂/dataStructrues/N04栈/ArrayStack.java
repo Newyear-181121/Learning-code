@@ -14,17 +14,25 @@ public class ArrayStack {
         stack = new int[this.maxSize];
     }
 
-    //栈满
+    /**
+     * 是否栈满
+     * @return 是 true  否 false
+     */
     public boolean isfull(){
-        return top ==maxSize -1;
+        return top == maxSize -1;
     }
 
-    //栈空
+    /**
+     * 栈空
+     */
     public boolean isEmpty(){
         return top == -1;
     }
 
-    //
+    /**
+     * 入栈
+     * @param value 入栈元素
+     */
     public void push(int value){
         if (isfull()){
             System.out.println("栈满了");
@@ -50,6 +58,8 @@ public class ArrayStack {
     /**
      * 遍历，
      * 从顶向底开始显示代码
+     *
+     * 这个遍历只有数组才能这个遍历
      */
     public void list(){
         if (isEmpty()){
@@ -59,5 +69,12 @@ public class ArrayStack {
         for(int i = top ; i >= 0; i-- ){
             System.out.printf("stack[%d]=%d\n",i,stack[i]);
         }
+    }
+
+    public int peek(){
+        if (isEmpty()){
+            throw new RuntimeException("栈空，没有数据。");
+        }
+        return stack[top];
     }
 }

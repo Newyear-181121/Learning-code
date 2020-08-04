@@ -15,7 +15,7 @@ public class TestLinkedStack {
             System.out.println("push:添加数据到栈（入栈）");
             System.out.println("pop:表示从栈取出数据（出栈）");
             System.out.println("请输入你的选择");
-            key = scanner.next();
+            key = scanner.nextLine();
             switch(key){
                 case "show":
                     stack.list();
@@ -45,4 +45,6 @@ public class TestLinkedStack {
         }
         System.out.println("程序已关闭");
     }
+
+
 }
