@@ -17,10 +17,14 @@ public class Node {
 
 
     /**
-     * 返回 该节点的高度
-     * @return
+     * 该节点 为根的子树高度。
+     * 注意 加一  这是重点。
+     * @return 该节点最大的高度
      */
     public int height(){
+        if (this == null){
+            return 0;
+        }
         return Math.max(left == null ? 0 : left.height(),right == null ? 0 : right.height()) + 1;
     }
 
@@ -35,6 +39,10 @@ public class Node {
         return this.left.height();
     }
 
+    /**
+     * 右子树高度
+     * @return 右子树高度
+     */
     public int rightHeight(){
         if (right == null){
             return 0;
