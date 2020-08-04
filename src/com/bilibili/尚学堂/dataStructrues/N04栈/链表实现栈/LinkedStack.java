@@ -15,28 +15,28 @@ public class LinkedStack {
 
     /**
      *  构造方法，，，先创建链表
-     * @param maxSize
+     * @param maxSize 链表的长度
      */
     public LinkedStack(int maxSize) {
         this.maxSize = maxSize;
         head = new Node(0);
-        top = head;         Out.out("给 栈针指向链头。");
+        top = head;         //Out.out("给 栈针指向链头。");
+        Node temp = head;
         for (int i = 1; i <= maxSize ; i++){
             Node cur = new Node(i);
-            Node temp = head;
             if (i == 1){
-                temp = head;            Out.out("第一次循环，临时变量指向链头");
-                head.setNext(cur);      Out.out("把第一个节点加载头节点之后。");
+                temp = head;            //Out.out("第一次循环，临时变量指向链头");
+                head.setNext(cur);      //Out.out("把第一个节点加载头节点之后。");
             } else {
-                temp.setNext(cur);      Out.out("把第"+ temp.getId() + "个节点加到第"+ temp.getId()+"个节点后");
+                temp.setNext(cur);      //Out.out("把第"+ temp.getId() + "个节点加到第"+ temp.getId()+"个节点后");
             }
-            temp = temp.getNext();      Out.out("临时变量节点后移一个。");
+            temp = temp.getNext();      //Out.out("临时变量节点后移一个。");
         }
 
     }
 
     public boolean isEmpty(){
-        return  (head.getNext() == null);
+        return  (head.getValue() == null);
     }
     public boolean isFull(){
         return (getlength() == maxSize);
@@ -81,7 +81,7 @@ public class LinkedStack {
      * @return
      */
     public Node getPreNode(int index){
-        if (head.getNext() == null){
+        if (head.getNext().getValue() == null){
             return null;
         }
         if(index <= 0 || index > getlength()){
@@ -95,16 +95,16 @@ public class LinkedStack {
     }
 
     /**
-     * 获取栈的有效
-     * @return
+     * 获取栈的有效长度
+     * @return 栈中数组个数
      */
     public int getlength(){
-        if (head.getNext() == null ){
+        if (head.getNext().getValue() == null ){
             return 0;
         }
         int length = 0;
         Node temp = head.getNext();
-        while (temp != null ){
+        while (temp.getValue() != null ){
             length++;
             temp.setNext(temp.getNext());//后移
         }
