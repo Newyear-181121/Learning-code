@@ -1,6 +1,5 @@
 package dataStructrues.N07树.N04霍夫曼树;
 
-import org.jetbrains.annotations.NotNull;
 
 /**
  * @auther: NewYear
@@ -32,7 +31,7 @@ public class Node implements Comparable<Node> {
      * @return
      */
     @Override
-    public int compareTo(@NotNull Node o) {
+    public int compareTo( Node o) {
         return this.id - o.id;
     }
 

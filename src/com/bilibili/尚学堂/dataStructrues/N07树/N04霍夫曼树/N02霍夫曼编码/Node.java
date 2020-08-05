@@ -1,7 +1,5 @@
 package dataStructrues.N07树.N04霍夫曼树.N02霍夫曼编码;
 
-import org.jetbrains.annotations.NotNull;
-
 /**
  * @auther: NewYear
  * @Date: 2020-07-24 15:57
@@ -21,7 +19,7 @@ public class Node implements Comparable<Node> {
     }
 
     @Override
-    public int compareTo(@NotNull Node o) {
+    public int compareTo( Node o) {
         return this.weight - o.weight;
     }
 
