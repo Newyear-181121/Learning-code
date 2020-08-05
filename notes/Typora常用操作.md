@@ -1,3 +1,17 @@
+# 设置字体，大小，颜色
+
+```html
+<font face="微软雅黑" size=6 color=#FF0000 >微软雅黑字体</font>
+```
+
+<font face="微软雅黑" size=6 color=#FF0000 >微软雅黑字体</font>
+
+
+
+---
+
+
+
 # 调整图像大小
 
 2016年10月19日 通过 typora.io
@@ -49,3 +63,8 @@ Another common use case is that when you insert a retina image, you need to scal
 ```
 
 You can set other css properties in the `style` attribute: they will be ignored when you edit or preview by Typora, but can affect the exported HTML or PDF.
+
+
+
+
+
