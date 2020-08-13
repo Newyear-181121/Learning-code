@@ -6,7 +6,7 @@
 
 <font face="微软雅黑" size=6 color=#FF0000 >微软雅黑字体</font>
 
-
+:sun_with_face:
 
 ---
 
@@ -38,7 +38,7 @@ Typora允许您使用``标签显示图像，也可以用来调整图像的大小
 
 
 
-
+<img src="http://www.w3.org/html/logo/img/mark-word-icon.png" width="200px" />
 
 # Resize Images
 
@@ -65,6 +65,12 @@ Another common use case is that when you insert a retina image, you need to scal
 You can set other css properties in the `style` attribute: they will be ignored when you edit or preview by Typora, but can affect the exported HTML or PDF.
 
 
+
+# Html 内嵌 网页框架
+
+<iframe src="http://www.baidu.com"  height="200" width="120" frameborder="0" scrolling="0"></iframe>
+
+---
 
 
 
