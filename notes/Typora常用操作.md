@@ -1,3 +1,5 @@
+
+
 # 设置字体，大小，颜色
 
 ```html
@@ -8,9 +10,13 @@
 
 :sun_with_face:
 
+<a name="跳01" href="#跳02">任意跳的目的</a>
+
 ---
 
+# 目录使用 [TOC]
 
+[TOC]
 
 # 调整图像大小
 
@@ -40,7 +46,7 @@ Typora允许您使用``标签显示图像，也可以用来调整图像的大小
 
 <img src="http://www.w3.org/html/logo/img/mark-word-icon.png" width="200px" />
 
-# Resize Images
+## Resize Images
 
 October 19, 2016 by typora.io
 
@@ -74,3 +80,16 @@ You can set other css properties in the `style` attribute: they will be ignored 
 
 
 
+# 页面内跳转
+
+## 1. 标题跳转
+
+[跳转到目录](#目录使用 [TOC])
+
+## 2. 任意跳转
+
+使用 HTML <a>标签
+
+
+
+<a href="#跳01" name="跳02">点击跳转</a>
