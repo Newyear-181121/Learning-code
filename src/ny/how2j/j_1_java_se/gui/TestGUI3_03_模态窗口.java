@@ -8,35 +8,35 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 
 /**
- * µ±Ò»¸ö¶Ô»°¿ò±»ÉèÖÃÎªÄ£Ì¬µÄÊ±ºò£¬Æä±³ºóµÄ¸¸´°Ìå£¬ÊÇ²»ÄÜ±»¼¤»îµÄ£¬³ı·Ç¸Ã¶Ô»°¿ò±»¹Ø±Õ
+ * å½“ä¸€ä¸ªå¯¹è¯æ¡†è¢«è®¾ç½®ä¸ºæ¨¡æ€çš„æ—¶å€™ï¼Œå…¶èƒŒåçš„çˆ¶çª—ä½“ï¼Œæ˜¯ä¸èƒ½è¢«æ¿€æ´»çš„ï¼Œé™¤éè¯¥å¯¹è¯æ¡†è¢«å…³é—­
  * @author New year
  *
  */
-public class TestGUI3_03 {
+public class TestGUI3_03_æ¨¡æ€çª—å£ {
 
 	public static void main(String[] args) {
-		JFrame f = new JFrame("Íâ²¿´°Ìå");
+		JFrame f = new JFrame("å¤–éƒ¨çª—ä½“");
 		f.setSize(800,600);
 		f.setLocation(100,100);
 		f.setLayout(null);
 		
-		JButton b1 = new JButton("µ¯³ö´°¿Ú");
+		JButton b1 = new JButton("å¼¹å‡ºçª—å£");
 		b1.setBounds(60,50,280,30);
 		f.add(b1);
 		
 		b1.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				// ¸ù¾İÍâ²¿´°ÌåÊµÀı»¯JDialog
+				// æ ¹æ®å¤–éƒ¨çª—ä½“å®ä¾‹åŒ–JDialog
 				JDialog d = new JDialog(f);
-				// ÉèÖÃÎªÄ£Ì¬
+				// è®¾ç½®ä¸ºæ¨¡æ€
 				d.setModal(true);
 				
-				d.setTitle("Ä£Ì¬¶Ô»°¿ò");
+				d.setTitle("æ¨¡æ€å¯¹è¯æ¡†");
 				d.setSize(400,300);
 				d.setLocation(200,200);
 				d.setLayout(null);
-				JButton b = new JButton("°´Å¥");
+				JButton b = new JButton("æŒ‰é’®");
 				b.setBounds(50,50,280,30);
 				d.add(b);
 				d.setVisible(true);

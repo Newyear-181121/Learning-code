@@ -8,14 +8,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- * ÊÊÅäÆ÷
+ * é€‚é…å™¨
  * @author New year
- *MouseAdapter Êó±ê¼àÌıÊÊÅäÆ÷
- *Ò»°ãËµÀ´ÔÚĞ´¼àÌıÆ÷µÄÊ±ºò£¬»áÊµÏÖMouseListener¡£
- *µ«ÊÇMouseListenerÀïÃæÓĞºÜ¶à·½·¨Êµ¼ÊÉÏ¶¼Ã»ÓĞÓÃµ½£¬±ÈÈçmouseReleased £¬mousePressed£¬mouseExitedµÈµÈ¡£
- *Õâ¸öÊ±ºò¾Í¿ÉÒÔÊ¹ÓÃ Êó±ê¼àÌıÊÊÅäÆ÷£¬MouseAdapter Ö»ĞèÒªÖØĞ´±ØÒªµÄ·½·¨¼´¿É¡£
+ *MouseAdapter é¼ æ ‡ç›‘å¬é€‚é…å™¨
+ *ä¸€èˆ¬è¯´æ¥åœ¨å†™ç›‘å¬å™¨çš„æ—¶å€™ï¼Œä¼šå®ç°MouseListenerã€‚
+ *ä½†æ˜¯MouseListeneré‡Œé¢æœ‰å¾ˆå¤šæ–¹æ³•å®é™…ä¸Šéƒ½æ²¡æœ‰ç”¨åˆ°ï¼Œæ¯”å¦‚mouseReleased ï¼ŒmousePressedï¼ŒmouseExitedç­‰ç­‰ã€‚
+ *è¿™ä¸ªæ—¶å€™å°±å¯ä»¥ä½¿ç”¨ é¼ æ ‡ç›‘å¬é€‚é…å™¨ï¼ŒMouseAdapter åªéœ€è¦é‡å†™å¿…è¦çš„æ–¹æ³•å³å¯ã€‚
  */
-public class TestGUI2_04 {
+public class TestGUI2_04_é€‚é…å™¨ {
 	public static void main(String[] args) {
 		  
         final JFrame f = new JFrame("LoL");
@@ -25,16 +25,19 @@ public class TestGUI2_04 {
   
         final JLabel l = new JLabel("");
   
-        ImageIcon i = new ImageIcon("E:/´æ´¢ÎÄ¼ş¼Ğ/×ÀÃæÎÄ¼ş/Java/how2j(Ñ§Ï°×ÊÁÏ£©/how2j£¨Ñ§Ï°´úÂë£©/All/com.how2j.java_SE.study.Test/src/gui_image/shana.png");
+        ImageIcon i = new ImageIcon("src\\ny\\how2j\\j_1_java_se\\gui_image\\shana.png");// å†…å®¹è·Ÿè·¯å¾„
         l.setIcon(i);
         l.setBounds(375, 275, i.getIconWidth(), i.getIconHeight());
   
         f.add(l);
   
-        // MouseAdapter ÊÊÅäÆ÷£¬Ö»ĞèÒªÖØĞ´ÓÃµ½µÄ·½·¨£¬Ã»ÓĞÓÃµ½µÄ¾Í²»ÓÃĞ´ÁË
+        // MouseAdapter é€‚é…å™¨ï¼Œåªéœ€è¦é‡å†™ç”¨åˆ°çš„æ–¹æ³•ï¼Œæ²¡æœ‰ç”¨åˆ°çš„å°±ä¸ç”¨å†™äº†
+        /**
+         * æ·»åŠ æŒ‡å®šçš„é¼ æ ‡åŠ¨ä½œä¾¦å¬å™¨ï¼Œä»¥æ¥æ”¶æ¥è‡ªæ­¤ç»„ä»¶çš„é¼ æ ‡åŠ¨ä½œäº‹ä»¶ã€‚
+         */
         l.addMouseMotionListener(new MouseAdapter() {
   
-            // Ö»ÓĞmouseEnteredÓÃµ½ÁË
+            // åªæœ‰mouseEnteredç”¨åˆ°äº†
             public void mouseDragged(MouseEvent e) {
   
                

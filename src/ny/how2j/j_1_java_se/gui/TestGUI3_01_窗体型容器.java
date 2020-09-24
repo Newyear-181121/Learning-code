@@ -10,43 +10,43 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- * ´°ÌåĞÍÈİÆ÷
+ * çª—ä½“å‹å®¹å™¨
  * @author New year
- *javaµÄÍ¼ĞÎ½çÃæÖĞ£¬ÈİÆ÷ÊÇÓÃÀ´´æ·Å °´Å¥£¬ÊäÈë¿òµÈ×é¼şµÄ¡£ 
+ *javaçš„å›¾å½¢ç•Œé¢ä¸­ï¼Œå®¹å™¨æ˜¯ç”¨æ¥å­˜æ”¾ æŒ‰é’®ï¼Œè¾“å…¥æ¡†ç­‰ç»„ä»¶çš„ã€‚ 
  *
- *´°ÌåĞÍÈİÆ÷ÓĞÁ½¸ö£¬Ò»¸öÊÇJFrame,Ò»¸öÊÇJDialog
+ *çª—ä½“å‹å®¹å™¨æœ‰ä¸¤ä¸ªï¼Œä¸€ä¸ªæ˜¯JFrame,ä¸€ä¸ªæ˜¯JDialog
  *
- *JFrameÊÇ×î³£ÓÃµÄ´°ÌåĞÍÈİÆ÷£¬Ä¬ÈÏÇé¿öÏÂ£¬ÔÚÓÒÉÏ½ÇÓĞ×î´ó»¯×îĞ¡»¯°´Å¥
+ *JFrameæ˜¯æœ€å¸¸ç”¨çš„çª—ä½“å‹å®¹å™¨ï¼Œé»˜è®¤æƒ…å†µä¸‹ï¼Œåœ¨å³ä¸Šè§’æœ‰æœ€å¤§åŒ–æœ€å°åŒ–æŒ‰é’®
  */
-public class TestGUI3_01 {
+public class TestGUI3_01_çª—ä½“å‹å®¹å™¨ {
 	static boolean bu = true;
 	
 
 	public static void main(String[] args){
 		
 		
-		//ÆÕÍ¨µÄ´°Ìå£¬´ø×î´óºÍ×îĞ¡»¯°´Å¥
+		//æ™®é€šçš„çª—ä½“ï¼Œå¸¦æœ€å¤§å’Œæœ€å°åŒ–æŒ‰é’®
 		JFrame f = new JFrame("name");
 		
 		f.setSize(400,400);
 		f.setLocation(500,200);
 		f.setLayout(null);
 		
-		JButton b = new JButton("Òş²ØÍ¼Æ¬");		//°´Å¥
+		JButton b = new JButton("éšè—å›¾ç‰‡");		//æŒ‰é’®
 		
-		//ÉèÖÃ°´Å¥µÄÑùÊ½
+		//è®¾ç½®æŒ‰é’®çš„æ ·å¼
 		b.setBounds(150,200,100,30);
 		
-		JLabel l = new JLabel();				//±êÇ©
+		JLabel l = new JLabel();				//æ ‡ç­¾
 		
-		ImageIcon i = new ImageIcon("E:/New year/Pictures/like/348706.jpg");			//Í¼Æ¬		//ÔÚÀ¨ºÅÖĞÉèÖÃÍ¼Æ¬µÄpath
+		ImageIcon i = new ImageIcon("src\\ny\\how2j\\j_1_java_se\\gui_image\\annie.jpg");			//å›¾ç‰‡		//åœ¨æ‹¬å·ä¸­è®¾ç½®å›¾ç‰‡çš„path
 		
-		l.setIcon(i);		//°Ñ±êÇ©ÉèÖÃÎªÍ¼Æ¬
+		l.setIcon(i);		//æŠŠæ ‡ç­¾è®¾ç½®ä¸ºå›¾ç‰‡
 		
-		//ÉèÖÃ±êÇ©µÄ´óĞ¡
+		//è®¾ç½®æ ‡ç­¾çš„å¤§å°
 		l.setBounds(0,0,i.getIconWidth(),i.getIconHeight());
 		
-		//¸ø°´Å¥Ôö¼Ó¼àÌı
+		//ç»™æŒ‰é’®å¢åŠ ç›‘å¬
 		b.addActionListener(new ActionListener() {
 			
 
@@ -55,9 +55,9 @@ public class TestGUI3_01 {
 				if(bu) {
 					l.setVisible(false);
 					bu = false;
-					b.setText("ÏÔÊ¾Í¼Æ¬");
+					b.setText("æ˜¾ç¤ºå›¾ç‰‡");
 				} else {
-					b.setText("Òş²ØÍ¼Æ¬");
+					b.setText("éšè—å›¾ç‰‡");
 					l.setVisible(true);
 					bu = true;
 				}
