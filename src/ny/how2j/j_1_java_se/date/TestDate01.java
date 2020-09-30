@@ -5,14 +5,12 @@ import java.util.Date;
 public class TestDate01 {
 	public static void main(String[] args) {
 		 
-        // µ±Ç°Ê±¼ä
+        // å½“å‰æ—¶é—´
         Date d1 = new Date();
-        System.out.println("µ±Ç°Ê±¼ä:");
-        System.out.println(d1);
-        System.out.println();
-        // ´Ó1970Äê1ÔÂ1ÈÕ ÔçÉÏ8µã0·Ö0Ãë ¿ªÊ¼¾­ÀúµÄºÁÃëÊı
+        System.out.println("å½“å‰æ—¶é—´:"+d1);
+        // ä»1970å¹´1æœˆ1æ—¥ æ—©ä¸Š8ç‚¹0åˆ†0ç§’ å¼€å§‹ç»å†çš„æ¯«ç§’æ•°
         Date d2 = new Date(5000);
-        System.out.println("´Ó1970Äê1ÔÂ1ÈÕ ÔçÉÏ8µã0·Ö0Ãë ¿ªÊ¼¾­ÀúÁË5ÃëµÄÊ±¼ä");
+        System.out.println("ä»1970å¹´1æœˆ1æ—¥ æ—©ä¸Š8ç‚¹0åˆ†0ç§’ å¼€å§‹ç»å†äº†5ç§’çš„æ—¶é—´");
         System.out.println(d2);
  
     }

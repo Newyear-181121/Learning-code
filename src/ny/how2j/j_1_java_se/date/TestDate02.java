@@ -4,17 +4,17 @@ import java.util.Date;
 
 public class TestDate02 {
 	public static void main(String[] args) {
-        //×¢Òâ£ºÊÇjava.util.Date;
-        //¶ø·Ç java.sql.Date£¬´ËÀàÊÇ¸øÊı¾İ¿â·ÃÎÊµÄÊ±ºòÊ¹ÓÃµÄ
+        //æ³¨æ„ï¼šæ˜¯java.util.Date;
+        //è€Œé java.sql.Dateï¼Œæ­¤ç±»æ˜¯ç»™æ•°æ®åº“è®¿é—®çš„æ—¶å€™ä½¿ç”¨çš„
         Date now= new Date();
-        //´òÓ¡µ±Ç°Ê±¼ä
-        System.out.println("µ±Ç°Ê±¼ä:"+now.toString());
-        //getTime() µÃµ½Ò»¸ölongĞÍµÄÕûÊı
-        //Õâ¸öÕûÊı´ú±í 1970.1.1 08:00:00:000£¬Ã¿¾­ÀúÒ»ºÁÃë£¬Ôö¼Ó1
-        System.out.println("µ±Ç°Ê±¼ägetTime()·µ»ØµÄÖµÊÇ£º"+now.getTime());
+        //æ‰“å°å½“å‰æ—¶é—´
+        System.out.println("å½“å‰æ—¶é—´:"+now.toString());
+        //getTime() å¾—åˆ°ä¸€ä¸ªlongå‹çš„æ•´æ•°
+        //è¿™ä¸ªæ•´æ•°ä»£è¡¨ 1970.1.1 08:00:00:000ï¼Œæ¯ç»å†ä¸€æ¯«ç§’ï¼Œå¢åŠ 1
+        System.out.println("å½“å‰æ—¶é—´getTime()è¿”å›çš„å€¼æ˜¯ï¼š"+now.getTime());
           
         Date zero = new Date(0);
-        System.out.println("ÓÃ0×÷Îª¹¹Ôì·½·¨£¬µÃµ½µÄÈÕÆÚÊÇ:"+zero);
+        System.out.println("ç”¨0ä½œä¸ºæ„é€ æ–¹æ³•ï¼Œå¾—åˆ°çš„æ—¥æœŸæ˜¯:"+zero);
           
     }
 
