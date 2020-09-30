@@ -12,6 +12,7 @@ https://www.cnblogs.com/msymm/p/9872818.html
 
 
 
+<<<<<<< HEAD
 -   和Vector不同，**ArrayList中的操作不是线程安全的**！所以，建议在单线程中才使用ArrayList，而在多线程中可以选择Vector或者CopyOnWriteArrayList。
 
 
@@ -20,3 +21,6 @@ https://www.cnblogs.com/msymm/p/9872818.html
 
 ## 常用方法
 
+=======
+-   和Vector不同，**ArrayList中的操作不是线程安全的**！所以，建议在单线程中才使用ArrayList，而在多线程中可以选择Vector或者CopyOnWriteArrayList。
+>>>>>>> be1e537... feat(md): 容器的一点笔记。
