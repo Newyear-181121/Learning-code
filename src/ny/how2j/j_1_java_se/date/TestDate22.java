@@ -11,24 +11,24 @@ public class TestDate22 {
 	    public static void main(String[] args) {
 	        Calendar c = Calendar.getInstance();
 	        Date now = c.getTime();
-	        // µ±Ç°ÈÕÆÚ
-	        System.out.println("µ±Ç°ÈÕÆÚ£º\t" + format(c.getTime()));
+	        // å½“å‰æ—¥æœŸ
+	        System.out.println("å½“å‰æ—¥æœŸï¼š\t" + format(c.getTime()));
 	 
-	        // ÏÂ¸öÔÂµÄ½ñÌì
+	        // ä¸‹ä¸ªæœˆçš„ä»Šå¤©
 	        c.setTime(now);
 	        c.add(Calendar.MONTH, 1);
-	        System.out.println("ÏÂ¸öÔÂµÄ½ñÌì:\t" +format(c.getTime()));
+	        System.out.println("ä¸‹ä¸ªæœˆçš„ä»Šå¤©:\t" +format(c.getTime()));
 	 
-	        // È¥ÄêµÄ½ñÌì
+	        // å»å¹´çš„ä»Šå¤©
 	        c.setTime(now);
 	        c.add(Calendar.YEAR, -1);
-	        System.out.println("È¥ÄêµÄ½ñÌì:\t" +format(c.getTime()));
+	        System.out.println("å»å¹´çš„ä»Šå¤©:\t" +format(c.getTime()));
 	 
-	        // ÉÏ¸öÔÂµÄµÚÈıÌì
+	        // ä¸Šä¸ªæœˆçš„ç¬¬ä¸‰å¤©
 	        c.setTime(now);
 	        c.add(Calendar.MONTH, -1);
 	        c.set(Calendar.DATE, 3);
-	        System.out.println("ÉÏ¸öÔÂµÄµÚÈıÌì:\t" +format(c.getTime()));
+	        System.out.println("ä¸Šä¸ªæœˆçš„ç¬¬ä¸‰å¤©:\t" +format(c.getTime()));
 	 
 	    }
 	 

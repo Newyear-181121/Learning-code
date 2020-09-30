@@ -1,52 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection2_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection2_2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection2_3.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection4_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection5_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection5_2.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/TestCollection5_3.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection/Testcollection3_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/HashSet.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/Node2_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/Node2_2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/Node2_3.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/Stack1_5.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/Test2_3.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection1_2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection1_3.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection3_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection3_2.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection4_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection4_2.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection4_3.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollection4_4.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_2/TestCollections.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_3/TestCollection1_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_3/TestCollection2_2.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_3/TestCollection3_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_3/TestCollection4_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/collection_4/TestCollection1_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate01.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate02.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate03.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate11.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate12.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate21.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/date/TestDate22.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/digit/TestNumber01.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/exception/TestException01.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/exception/TestException2_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/file/TestFile1_3.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/gui/TestGUI2_04_适配器.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/gui/TestGUI3_01_窗体型容器.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/gui/TestGUI3_02_大小不可调节的窗口_JDialog.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/gui/TestGUI3_03_模态窗口.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/lambda/TestLambda1_2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/review/character/Hero.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_12_springboot/src/main/java" charset="UTF-8" />
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/helloworld_demo/HelloWorld.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/property/Item.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/property/LifePotion.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/property/Weapon.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/reflection/Hero.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/reflection/Hero3_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/reflection/TestReflection2_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/socket/Server2_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/socket/TestSocket1_3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/socket/TestSocket1_5.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

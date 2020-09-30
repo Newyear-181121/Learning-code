@@ -7,23 +7,23 @@ public class TestDate11 {
 	
 	public static void main(String[] args) {
         
-        //y ´ú±íÄê
-        //M ´ú±íÔÂ
-        //d ´ú±íÈÕ
-        //H ´ú±í24½øÖÆµÄĞ¡Ê±
-        //h ´ú±í12½øÖÆµÄĞ¡Ê±
-        //m ´ú±í·ÖÖÓ
-        //s ´ú±íÃë
-        //S ´ú±íºÁÃë
+        //y ä»£è¡¨å¹´
+        //M ä»£è¡¨æœˆ
+        //d ä»£è¡¨æ—¥
+        //H ä»£è¡¨24è¿›åˆ¶çš„å°æ—¶
+        //h ä»£è¡¨12è¿›åˆ¶çš„å°æ—¶
+        //m ä»£è¡¨åˆ†é’Ÿ
+        //s ä»£è¡¨ç§’
+        //S ä»£è¡¨æ¯«ç§’
         SimpleDateFormat sdf =new SimpleDateFormat("yyyy-MM-dd--HH:mm:ss--SSS" );
         Date d= new Date();
         String str = sdf.format(d);
-        System.out.println("µ±Ç°Ê±¼äÍ¨¹ı yyyy-MM-dd HH:mm:ss SSS ¸ñÊ½»¯ºóµÄÊä³ö: "+str);
+        System.out.println("å½“å‰æ—¶é—´é€šè¿‡ yyyy-MM-dd HH:mm:ss SSS æ ¼å¼åŒ–åçš„è¾“å‡º: "+str);
          
         SimpleDateFormat sdf1 =new SimpleDateFormat("yyyy-MM-dd" );
         Date d1= new Date();
         String str1 = sdf1.format(d1);
-        System.out.println("µ±Ç°Ê±¼äÍ¨¹ı yyyy-MM-dd ¸ñÊ½»¯ºóµÄÊä³ö: "+str1);
+        System.out.println("å½“å‰æ—¶é—´é€šè¿‡ yyyy-MM-dd æ ¼å¼åŒ–åçš„è¾“å‡º: "+str1);
          
     }
 

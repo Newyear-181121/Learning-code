@@ -7,10 +7,10 @@ public class TestDate03 {
 	public static void main(String[] args) {
         Date now= new Date();
   
-        //µ±Ç°ÈÕÆÚµÄºÁÃëÊı
-        System.out.println("Date.getTime() \t\t\t·µ»ØÖµ: "+now.getTime());
-        //Í¨¹ıSystem.currentTimeMillis()»ñÈ¡µ±Ç°ÈÕÆÚµÄºÁÃëÊı
-        System.out.println("System.currentTimeMillis() \t·µ»ØÖµ: "+System.currentTimeMillis());
+        //å½“å‰æ—¥æœŸçš„æ¯«ç§’æ•°
+        System.out.println("Date.getTime() \t\t\tè¿”å›å€¼: "+now.getTime());
+        //é€šè¿‡System.currentTimeMillis()è·å–å½“å‰æ—¥æœŸçš„æ¯«ç§’æ•°
+        System.out.println("System.currentTimeMillis() \tè¿”å›å€¼: "+System.currentTimeMillis());
            
     }
 

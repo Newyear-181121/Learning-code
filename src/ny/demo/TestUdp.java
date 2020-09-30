@@ -6,7 +6,7 @@ import java.net.*;
 /**
  * 监听指定端口
  */
-public class test {
+public class TestUdp {
     public static void main(String[] args) throws IOException {
 
         DatagramSocket ds = new DatagramSocket(5555,InetAddress.getByName("0.0.0.0"));

@@ -13,7 +13,7 @@ public class TestDate12 {
           
         try {
             Date d = sdf.parse(str);
-            System.out.printf("×Ö·û´® %s Í¨¹ı¸ñÊ½  yyyy/MM/dd HH:mm:ss %n×ª»»ÎªÈÕÆÚ¶ÔÏó: %s",str,d.toString());
+            System.out.printf("å­—ç¬¦ä¸² %s é€šè¿‡æ ¼å¼  yyyy/MM/dd HH:mm:ss %nè½¬æ¢ä¸ºæ—¥æœŸå¯¹è±¡: %s",str,d.toString());
         } catch (ParseException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

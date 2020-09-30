@@ -6,14 +6,14 @@ import java.util.Date;
 public class TestDate21 {
 	
 	public static void main(String[] args) {
-        //采用单例模式获取日历对象Calendar.getInstance();
+        //閲囩敤鍗曚緥妯″紡鑾峰彇鏃ュ巻瀵硅薄Calendar.getInstance();
         Calendar c = Calendar.getInstance();
           
-        //通过日历对象得到日期对象
+        //閫氳繃鏃ュ巻瀵硅薄寰楀埌鏃ユ湡瀵硅薄
         Date d = c.getTime();
   
         Date d2 = new Date(0);
-        c.setTime(d2); //把这个日历，调成日期 : 1970.1.1 08:00:00
+        c.setTime(d2); //鎶婅繖涓棩鍘嗭紝璋冩垚鏃ユ湡 : 1970.1.1 08:00:00
     }
 
 }
