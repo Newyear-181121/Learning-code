@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/helloworld_demo/HelloWorld.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/property/Item.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/property/LifePotion.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/property/Weapon.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/reflection/Hero.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/reflection/Hero3_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/reflection/TestReflection2_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/socket/Server2_1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/socket/TestSocket1_3.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/socket/TestSocket1_5.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/ny/how2j/j_1_java_se/stream/TestStream2_1.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
