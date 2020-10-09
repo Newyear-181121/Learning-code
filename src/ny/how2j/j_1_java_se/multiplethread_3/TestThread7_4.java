@@ -5,25 +5,25 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Ê¹ÓÃjava×Ô´øÏß³Ì³Ø
+ * ä½¿ç”¨javaè‡ªå¸¦çº¿ç¨‹æ± 
  * @author New year
  *
- *javaÌá¹©×Ô´øµÄÏß³Ì³Ø£¬¶ø²»ĞèÒª×Ô¼ºÈ¥¿ª·¢Ò»¸ö×Ô¶¨ÒåÏß³Ì³ØÁË¡£
+ *javaæä¾›è‡ªå¸¦çš„çº¿ç¨‹æ± ï¼Œè€Œä¸éœ€è¦è‡ªå·±å»å¼€å‘ä¸€ä¸ªè‡ªå®šä¹‰çº¿ç¨‹æ± äº†ã€‚
  *
- *Ïß³Ì³ØÀàThreadPoolExecutorÔÚ°üjava.util.concurrentÏÂ
+ *çº¿ç¨‹æ± ç±»ThreadPoolExecutoråœ¨åŒ…java.util.concurrentä¸‹
  *
  * 
  *ThreadPoolExecutor threadPool= new ThreadPoolExecutor(10, 15, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
  * 
  *
  *
- *µÚÒ»¸ö²ÎÊı10 ±íÊ¾Õâ¸öÏß³Ì³Ø³õÊ¼»¯ÁË10¸öÏß³ÌÔÚÀïÃæ¹¤×÷
- *µÚ¶ş¸ö²ÎÊı15 ±íÊ¾Èç¹û10¸öÏß³Ì²»¹»ÓÃÁË£¬¾Í»á×Ô¶¯Ôö¼Óµ½×î¶à15¸öÏß³Ì
- *µÚÈı¸ö²ÎÊı60 ½áºÏµÚËÄ¸ö²ÎÊıTimeUnit.SECONDS£¬±íÊ¾¾­¹ı60Ãë£¬¶à³öÀ´µÄÏß³Ì»¹Ã»ÓĞ½Óµ½»î¶ù£¬¾Í»á»ØÊÕ£¬×îºó±£³Ö³Ø×ÓÀï¾Í10¸ö
- *µÚËÄ¸ö²ÎÊıTimeUnit.SECONDS ÈçÉÏ
- *µÚÎå¸ö²ÎÊı new LinkedBlockingQueue() ÓÃÀ´·ÅÈÎÎñµÄ¼¯ºÏ
+ *ç¬¬ä¸€ä¸ªå‚æ•°10 è¡¨ç¤ºè¿™ä¸ªçº¿ç¨‹æ± åˆå§‹åŒ–äº†10ä¸ªçº¿ç¨‹åœ¨é‡Œé¢å·¥ä½œ
+ *ç¬¬äºŒä¸ªå‚æ•°15 è¡¨ç¤ºå¦‚æœ10ä¸ªçº¿ç¨‹ä¸å¤Ÿç”¨äº†ï¼Œå°±ä¼šè‡ªåŠ¨å¢åŠ åˆ°æœ€å¤š15ä¸ªçº¿ç¨‹
+ *ç¬¬ä¸‰ä¸ªå‚æ•°60 ç»“åˆç¬¬å››ä¸ªå‚æ•°TimeUnit.SECONDSï¼Œè¡¨ç¤ºç»è¿‡60ç§’ï¼Œå¤šå‡ºæ¥çš„çº¿ç¨‹è¿˜æ²¡æœ‰æ¥åˆ°æ´»å„¿ï¼Œå°±ä¼šå›æ”¶ï¼Œæœ€åä¿æŒæ± å­é‡Œå°±10ä¸ª
+ *ç¬¬å››ä¸ªå‚æ•°TimeUnit.SECONDS å¦‚ä¸Š
+ *ç¬¬äº”ä¸ªå‚æ•° new LinkedBlockingQueue() ç”¨æ¥æ”¾ä»»åŠ¡çš„é›†åˆ
  *
- *execute·½·¨ÓÃÓÚÌí¼ÓĞÂµÄÈÎÎñ
+ *executeæ–¹æ³•ç”¨äºæ·»åŠ æ–°çš„ä»»åŠ¡
  */
 public class TestThread7_4 {
 
@@ -32,16 +32,16 @@ public class TestThread7_4 {
 		ThreadPoolExecutor threadPool= new ThreadPoolExecutor(10, 15, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 		
 		//
-		int i = 0;		//Ôö¼ÓÒ»°Ù¸öÏß³Ì£¬ÓÃÀ´²âÊÔ
+		int i = 0;		//å¢åŠ ä¸€ç™¾ä¸ªçº¿ç¨‹ï¼Œç”¨æ¥æµ‹è¯•
 		while(true){
 		threadPool.execute(new Runnable(){
 			public void run(){
-				System.out.println("ÈÎÎñ1");
+				System.out.println("ä»»åŠ¡1");
 			}
 		});
-		System.out.println("ÈÎÎñ" + i);
+		System.out.println("ä»»åŠ¡" + i);
 		i++;
-		if(i == 100)		//Ìø³öÅĞ¶Ï
+		if(i == 100)		//è·³å‡ºåˆ¤æ–­
 			break;
 		}
 	}

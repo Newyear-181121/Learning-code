@@ -7,15 +7,15 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Ïß³Ì½»»¥
+ * çº¿ç¨‹äº¤äº’
  * @author New year
  *
  *
- *Ê¹ÓÃsynchronized·½Ê½½øÐÐÏß³Ì½»»¥£¬ÓÃµ½µÄÊÇÍ¬²½¶ÔÏóµÄwait,notifyºÍnotifyAll·½·¨
+ *ä½¿ç”¨synchronizedæ–¹å¼è¿›è¡Œçº¿ç¨‹äº¤äº’ï¼Œç”¨åˆ°çš„æ˜¯åŒæ­¥å¯¹è±¡çš„wait,notifyå’ŒnotifyAllæ–¹æ³•
  *
- *LockÒ²Ìá¹©ÁËÀàËÆµÄ½â¾ö°ì·¨£¬Ê×ÏÈÍ¨¹ýlock¶ÔÏóµÃµ½Ò»¸öCondition¶ÔÏó£¬È»ºó·Ö±ðµ÷ÓÃÕâ¸öCondition¶ÔÏóµÄ£ºawait, signal,signalAll ·½·¨
+ *Lockä¹Ÿæä¾›äº†ç±»ä¼¼çš„è§£å†³åŠžæ³•ï¼Œé¦–å…ˆé€šè¿‡lockå¯¹è±¡å¾—åˆ°ä¸€ä¸ªConditionå¯¹è±¡ï¼Œç„¶åŽåˆ†åˆ«è°ƒç”¨è¿™ä¸ªConditionå¯¹è±¡çš„ï¼šawait, signal,signalAll æ–¹æ³•
  *
- *×¢Òâ£º ²»ÊÇCondition¶ÔÏóµÄwait,nofity,notifyAll·½·¨,ÊÇawait,signal,signalAll
+ *æ³¨æ„ï¼š ä¸æ˜¯Conditionå¯¹è±¡çš„wait,nofity,notifyAllæ–¹æ³•,æ˜¯await,signal,signalAll
  */
 public class TestThread8_4 {
 
@@ -35,32 +35,32 @@ public class TestThread8_4 {
 		Thread t1 = new Thread() {
 			public void run() {
 				try {
-					log("Ïß³ÌÆô¶¯");
-					log("ÊÔÍ¼Õ¼ÓÐ¶ÔÏó£ºlock");
+					log("çº¿ç¨‹å¯åŠ¨");
+					log("è¯•å›¾å æœ‰å¯¹è±¡ï¼šlock");
 					
 					lock.lock();
 					
-					log("Õ¼ÓÐ¶ÔÏó£ºlock");
-					log("½øÐÐ5ÃëµÄÒµÎñ²Ù×÷");
+					log("å æœ‰å¯¹è±¡ï¼šlock");
+					log("è¿›è¡Œ5ç§’çš„ä¸šåŠ¡æ“ä½œ");
 					Thread.sleep(5000);
-					log("ÁÙÊ±ÊÍ·Å¶ÔÏó lock£¬ ²¢µÈ´ý");
-					condition.await();					//ÁÙÊ±ÊÍ·Å¶ÔÏó lock£¬ ²¢µÈ´ý
-					log("ÖØÐÂÕ¼ÓÐ¶ÔÏó lock£¬²¢½øÐÐ5ÃëµÄÒµÎñ²Ù×÷");
+					log("ä¸´æ—¶é‡Šæ”¾å¯¹è±¡ lockï¼Œ å¹¶ç­‰å¾…");
+					condition.await();					//ä¸´æ—¶é‡Šæ”¾å¯¹è±¡ lockï¼Œ å¹¶ç­‰å¾…
+					log("é‡æ–°å æœ‰å¯¹è±¡ lockï¼Œå¹¶è¿›è¡Œ5ç§’çš„ä¸šåŠ¡æ“ä½œ");
 					Thread.sleep(5000);
 					
 				} catch(InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					log("ÊÍ·Å¶ÔÏó£ºlock");
+					log("é‡Šæ”¾å¯¹è±¡ï¼šlock");
 					lock.unlock();
 				}
-				log("Ïß³Ì½áÊø");
+				log("çº¿ç¨‹ç»“æŸ");
 			}
 		};
 		t1.setName("t1");
 		t1.start();
 		try {
-			//ÏÈÈÃt1·É2Ãë
+			//å…ˆè®©t1é£ž2ç§’
 			Thread.sleep(5000);
 		} catch (InterruptedException e1) {
             e1.printStackTrace();
@@ -69,23 +69,23 @@ public class TestThread8_4 {
 			
 			public void run() {
 				try {
-					log("Ïß³ÌÆô¶¯");
-					log("ÊÔÍ¼Õ¼ÓÐ¶ÔÏó£ºlock");
+					log("çº¿ç¨‹å¯åŠ¨");
+					log("è¯•å›¾å æœ‰å¯¹è±¡ï¼šlock");
 					
 					lock.lock();
 					
-					log("Õ¼ÓÐ¶ÔÏó£ºlock");
-					log("½øÐÐ5ÃëµÄÒµÎñ²Ù×÷");
+					log("å æœ‰å¯¹è±¡ï¼šlock");
+					log("è¿›è¡Œ5ç§’çš„ä¸šåŠ¡æ“ä½œ");
 					Thread.sleep(5000);
-					log("»½ÐÑµÈ´ýÖÐµÄÏß³Ì");
+					log("å”¤é†’ç­‰å¾…ä¸­çš„çº¿ç¨‹");
 					condition.signal();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					log("ÊÍ·Å¶ÔÏó£ºlock");
+					log("é‡Šæ”¾å¯¹è±¡ï¼šlock");
 					lock.unlock();
 				}
-				log("Ïß³Ì½áÊø");
+				log("çº¿ç¨‹ç»“æŸ");
 			}
 		};
 		t2.setName("t2");
@@ -94,10 +94,10 @@ public class TestThread8_4 {
 
 }
 /**
- * ×Ü½áLockºÍsynchronizedµÄÇø±ð ¶¥ ÕÛ
- *1. LockÊÇÒ»¸ö½Ó¿Ú£¬¶øsynchronizedÊÇJavaÖÐµÄ¹Ø¼ü×Ö£¬synchronizedÊÇÄÚÖÃµÄÓïÑÔÊµÏÖ£¬LockÊÇ´úÂë²ãÃæµÄÊµÏÖ¡£
+ * æ€»ç»“Lockå’Œsynchronizedçš„åŒºåˆ« é¡¶ æŠ˜
+ *1. Lockæ˜¯ä¸€ä¸ªæŽ¥å£ï¼Œè€Œsynchronizedæ˜¯Javaä¸­çš„å…³é”®å­—ï¼Œsynchronizedæ˜¯å†…ç½®çš„è¯­è¨€å®žçŽ°ï¼ŒLockæ˜¯ä»£ç å±‚é¢çš„å®žçŽ°ã€‚
  *
- *2. Lock¿ÉÒÔÑ¡ÔñÐÔµÄ»ñÈ¡Ëø£¬Èç¹ûÒ»¶ÎÊ±¼ä»ñÈ¡²»µ½£¬¿ÉÒÔ·ÅÆú¡£synchronized²»ÐÐ£¬»áÒ»¸ù½îÒ»Ö±»ñÈ¡ÏÂÈ¥¡£ ½èÖúLockµÄÕâ¸öÌØÐÔ£¬¾ÍÄÜ¹»¹æ±ÜËÀËø£¬synchronized±ØÐëÍ¨¹ý½÷É÷ºÍÁ¼ºÃµÄÉè¼Æ£¬²ÅÄÜ¼õÉÙËÀËøµÄ·¢Éú¡£
+ *2. Lockå¯ä»¥é€‰æ‹©æ€§çš„èŽ·å–é”ï¼Œå¦‚æžœä¸€æ®µæ—¶é—´èŽ·å–ä¸åˆ°ï¼Œå¯ä»¥æ”¾å¼ƒã€‚synchronizedä¸è¡Œï¼Œä¼šä¸€æ ¹ç­‹ä¸€ç›´èŽ·å–ä¸‹åŽ»ã€‚ å€ŸåŠ©Lockçš„è¿™ä¸ªç‰¹æ€§ï¼Œå°±èƒ½å¤Ÿè§„é¿æ­»é”ï¼Œsynchronizedå¿…é¡»é€šè¿‡è°¨æ…Žå’Œè‰¯å¥½çš„è®¾è®¡ï¼Œæ‰èƒ½å‡å°‘æ­»é”çš„å‘ç”Ÿã€‚
  *
- *3. synchronizedÔÚ·¢ÉúÒì³£ºÍÍ¬²½¿é½áÊøµÄÊ±ºò£¬»á×Ô¶¯ÊÍ·ÅËø¡£¶øLock±ØÐëÊÖ¶¯ÊÍ·Å£¬ ËùÒÔÈç¹ûÍü¼ÇÁËÊÍ·ÅËø£¬Ò»Ñù»áÔì³ÉËÀËø¡£
+ *3. synchronizedåœ¨å‘ç”Ÿå¼‚å¸¸å’ŒåŒæ­¥å—ç»“æŸçš„æ—¶å€™ï¼Œä¼šè‡ªåŠ¨é‡Šæ”¾é”ã€‚è€ŒLockå¿…é¡»æ‰‹åŠ¨é‡Šæ”¾ï¼Œ æ‰€ä»¥å¦‚æžœå¿˜è®°äº†é‡Šæ”¾é”ï¼Œä¸€æ ·ä¼šé€ æˆæ­»é”ã€‚
 */

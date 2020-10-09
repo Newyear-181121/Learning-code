@@ -2,7 +2,7 @@ package multiplethread;
 
 
 /**
- * ¸ø  2-3   ÓÃµÄ
+ * ç»™  2-3   ç”¨çš„
  * @author New year
  *
  */
@@ -14,8 +14,8 @@ public class Hero2_3 {
     public int damage;
       
     public void attackHero(Hero2_3 h) {
-        //°ÑÔİÍ£Ê±¼äÈ¥µô£¬¶àÌõÏß³Ì¸÷×Ô»á¾¡Á¦È¥Õ¼ÓĞCPU×ÊÔ´
-        //Ïß³ÌµÄÓÅÏÈ¼¶Ğ§¹û²Å¿ÉÒÔ¿´µÃ³öÀ´
+        //æŠŠæš‚åœæ—¶é—´å»æ‰ï¼Œå¤šæ¡çº¿ç¨‹å„è‡ªä¼šå°½åŠ›å»å æœ‰CPUèµ„æº
+        //çº¿ç¨‹çš„ä¼˜å…ˆçº§æ•ˆæœæ‰å¯ä»¥çœ‹å¾—å‡ºæ¥
 //        try {
 //           
 //            Thread.sleep(0);
@@ -24,10 +24,10 @@ public class Hero2_3 {
 //            e.printStackTrace();
 //        }
         h.hp-=damage;
-        System.out.format("%s ÕıÔÚ¹¥»÷ %s, %sµÄÑª±ä³ÉÁË %.0f%n",name,h.name,h.name,h.hp);
+        System.out.format("%s æ­£åœ¨æ”»å‡» %s, %sçš„è¡€å˜æˆäº† %.0f%n",name,h.name,h.name,h.hp);
           
         if(h.isDead2_3())
-            System.out.println(h.name +"ËÀÁË£¡");
+            System.out.println(h.name +"æ­»äº†ï¼");
     }
   
     public boolean isDead2_3() {

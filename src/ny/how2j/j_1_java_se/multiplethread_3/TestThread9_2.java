@@ -6,9 +6,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * AtomicInteger
  * @author New year
  *
- *JDK6 ÒÔºó£¬ĞÂÔö¼ÓÁËÒ»¸ö°üjava.util.concurrent.atomic£¬ÀïÃæÓĞ¸÷ÖÖÔ­×ÓÀà£¬±ÈÈçAtomicInteger¡£
- *¶øAtomicIntegerÌá¹©ÁË¸÷ÖÖ×ÔÔö£¬×Ô¼õµÈ·½·¨£¬ÕâĞ©·½·¨¶¼ÊÇÔ­×ÓĞÔµÄ¡£ »»¾ä»°Ëµ£¬×ÔÔö·½·¨ incrementAndGet ÊÇÏß³Ì°²È«µÄ£¬Í¬Ò»¸öÊ±¼ä£¬Ö»ÓĞÒ»¸öÏß³Ì¿ÉÒÔµ÷ÓÃÕâ¸ö·½·¨¡£
- *´úÂë±È½Ï ¸´ÖÆ´úÂë
+ *JDK6 ä»¥åï¼Œæ–°å¢åŠ äº†ä¸€ä¸ªåŒ…java.util.concurrent.atomicï¼Œé‡Œé¢æœ‰å„ç§åŸå­ç±»ï¼Œæ¯”å¦‚AtomicIntegerã€‚
+ *è€ŒAtomicIntegeræä¾›äº†å„ç§è‡ªå¢ï¼Œè‡ªå‡ç­‰æ–¹æ³•ï¼Œè¿™äº›æ–¹æ³•éƒ½æ˜¯åŸå­æ€§çš„ã€‚ æ¢å¥è¯è¯´ï¼Œè‡ªå¢æ–¹æ³• incrementAndGet æ˜¯çº¿ç¨‹å®‰å…¨çš„ï¼ŒåŒä¸€ä¸ªæ—¶é—´ï¼Œåªæœ‰ä¸€ä¸ªçº¿ç¨‹å¯ä»¥è°ƒç”¨è¿™ä¸ªæ–¹æ³•ã€‚
+ *ä»£ç æ¯”è¾ƒ å¤åˆ¶ä»£ç 
  *
  */
 public class TestThread9_2 {

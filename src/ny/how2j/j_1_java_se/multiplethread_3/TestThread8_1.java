@@ -4,13 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * »ØÒä synchronized Í¬²½µÄ·½Ê½
+ * å›å¿† synchronized åŒæ­¥çš„æ–¹å¼
  * @author New year
  *
  *
- *Ê×ÏÈ»ØÒäÒ»ÏÂ synchronized Í¬²½¶ÔÏóµÄ·½Ê½
+ *é¦–å…ˆå›å¿†ä¸€ä¸‹ synchronized åŒæ­¥å¯¹è±¡çš„æ–¹å¼
  *
- *µ±Ò»¸öÏß³ÌÕ¼ÓÃ synchronized Í¬²½¶ÔÏó£¬ÆäËûÏß³Ì¾Í²»ÄÜÕ¼ÓÃÁË£¬Ö±µ½ÊÍ·ÅÕâ¸öÍ¬²½¶ÔÏóÎªÖ¹
+ *å½“ä¸€ä¸ªçº¿ç¨‹å ç”¨ synchronized åŒæ­¥å¯¹è±¡ï¼Œå…¶ä»–çº¿ç¨‹å°±ä¸èƒ½å ç”¨äº†ï¼Œç›´åˆ°é‡Šæ”¾è¿™ä¸ªåŒæ­¥å¯¹è±¡ä¸ºæ­¢
  */
 public class TestThread8_1 {
 
@@ -25,15 +25,15 @@ public class TestThread8_1 {
 		Thread t1 = new Thread(){
 			public void run(){
 				try {
-					System.out.println(now()+" t1 Ïß³ÌÒÑ¾­ÔËĞĞ");
-					System.out.println(now()+this.getName()+ " ÊÔÍ¼Õ¼ÓĞ¶ÔÏó£ºsomeObject");
+					System.out.println(now()+" t1 çº¿ç¨‹å·²ç»è¿è¡Œ");
+					System.out.println(now()+this.getName()+ " è¯•å›¾å æœ‰å¯¹è±¡ï¼šsomeObject");
 					synchronized (someObject) {
-						System.out.println( now()+this.getName()+ " Õ¼ÓĞ¶ÔÏó£ºsomeObject");
+						System.out.println( now()+this.getName()+ " å æœ‰å¯¹è±¡ï¼šsomeObject");
 						Thread.sleep(5000);
-						System.out.println(now()+this.getName()+ " ÊÍ·Å¶ÔÏó£ºsomeObject");
+						System.out.println(now()+this.getName()+ " é‡Šæ”¾å¯¹è±¡ï¼šsomeObject");
 						
 					}
-					System.out.println(now() + "t1 Ïß³Ì½áÊø");
+					System.out.println(now() + "t1 çº¿ç¨‹ç»“æŸ");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -45,14 +45,14 @@ public class TestThread8_1 {
 		Thread t2 = new Thread() {			
 			public void run() {
 				try {
-					System.out.println( now()+" t2 Ïß³ÌÒÑ¾­ÔËĞĞ");
-					System.out.println( now()+this.getName()+ " ÊÔÍ¼Õ¼ÓĞ¶ÔÏó£ºsomeObject");
+					System.out.println( now()+" t2 çº¿ç¨‹å·²ç»è¿è¡Œ");
+					System.out.println( now()+this.getName()+ " è¯•å›¾å æœ‰å¯¹è±¡ï¼šsomeObject");
 					synchronized (someObject) {
-						System.out.println( now()+this.getName()+ " Õ¼ÓĞ¶ÔÏó£ºsomeObject");
+						System.out.println( now()+this.getName()+ " å æœ‰å¯¹è±¡ï¼šsomeObject");
 						Thread.sleep(5000);
-						System.out.println( now()+this.getName()+ " ÊÍ·Å¶ÔÏó£ºsomeObject");
+						System.out.println( now()+this.getName()+ " é‡Šæ”¾å¯¹è±¡ï¼šsomeObject");
 					}
-					System.out.println(now()+" t2 Ïß³Ì½áÊø");
+					System.out.println(now()+" t2 çº¿ç¨‹ç»“æŸ");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

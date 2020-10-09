@@ -3,26 +3,26 @@ package multiplethread_3;
 import java.util.LinkedList;
 
 /**
- * 7-2µÄÏß³Ì³Ø
+ * 7-2çš„çº¿ç¨‹æ± 
  * @author New year
  *
  */
 public class ThreadPool7_2 {
 
-	// Ïß³Ì³Ø´óĞ¡
+	// çº¿ç¨‹æ± å¤§å°
 	int threadPoolSize;
 
-	// ÈÎÎñÈİÆ÷
+	// ä»»åŠ¡å®¹å™¨
 	LinkedList<Runnable> tasks = new LinkedList<Runnable>();
 	
-	// ÊÔÍ¼Ïû·ÑÈÎÎñµÄÏß³Ì
-	public ThreadPool7_2() {		//¹¹ÔìÆ÷
+	// è¯•å›¾æ¶ˆè´¹ä»»åŠ¡çš„çº¿ç¨‹
+	public ThreadPool7_2() {		//æ„é€ å™¨
 		threadPoolSize = 10 ;
 		
-		// Æô¶¯10¸öÈÎÎñÏû·ÑÕßÏß³Ì
+		// å¯åŠ¨10ä¸ªä»»åŠ¡æ¶ˆè´¹è€…çº¿ç¨‹
 		synchronized (tasks) {
 			for (int i = 0; i< threadPoolSize;i++ ){
-				new TaskConsumeThread("ÈÎÎñÏû·ÑÕßÏß³Ì " + i).start();
+				new TaskConsumeThread("ä»»åŠ¡æ¶ˆè´¹è€…çº¿ç¨‹ " + i).start();
 			}
 		}
 	}
@@ -31,20 +31,20 @@ public class ThreadPool7_2 {
 	public void add(Runnable r) {
 		synchronized (tasks) {
 			tasks.add(r);
-			// »½ĞÑµÈ´ıµÄÈÎÎñÏû·ÑÕßÏß³Ì
+			// å”¤é†’ç­‰å¾…çš„ä»»åŠ¡æ¶ˆè´¹è€…çº¿ç¨‹
 			tasks.notifyAll();
 		}
 	}
 	
 	class TaskConsumeThread extends Thread {
-		public TaskConsumeThread(String name) {		//¹¹ÔìÆ÷
+		public TaskConsumeThread(String name) {		//æ„é€ å™¨
 			super (name);
 		}
 		
 		Runnable task;
 		
 		public void run () {
-			System.out.println("Æô¶¯£º " + this.getName());		//ÏÈÊä³öÆô¶¯Ïß³ÌµÄÃû×Ö
+			System.out.println("å¯åŠ¨ï¼š " + this.getName());		//å…ˆè¾“å‡ºå¯åŠ¨çº¿ç¨‹çš„åå­—
 			while (true) {
 				synchronized (tasks) {
 					while (tasks.isEmpty()){
@@ -55,10 +55,10 @@ public class ThreadPool7_2 {
 						}
 					}
 					task = tasks.removeLast();
-					// ÔÊĞíÌí¼ÓÈÎÎñµÄÏß³Ì¿ÉÒÔ¼ÌĞøÌí¼ÓÈÎÎñ
+					// å…è®¸æ·»åŠ ä»»åŠ¡çš„çº¿ç¨‹å¯ä»¥ç»§ç»­æ·»åŠ ä»»åŠ¡
 					tasks.notifyAll();
 				}
-				System.out.println(this.getName() + " »ñÈ¡µ½ÈÎÎñ£¬²¢Ö´ĞĞ");
+				System.out.println(this.getName() + " è·å–åˆ°ä»»åŠ¡ï¼Œå¹¶æ‰§è¡Œ");
 				task.run();
 			}
 		}

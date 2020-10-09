@@ -3,12 +3,12 @@ package multiplethread_3;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Í¬²½²âÊÔ
+ * åŒæ­¥æµ‹è¯•
  * @author New year
  *
  *
- *·Ö±ğÊ¹ÓÃ»ù±¾±äÁ¿µÄ·ÇÔ­×ÓĞÔµÄ++ÔËËã·ûºÍ Ô­×ÓĞÔµÄAtomicInteger¶ÔÏóµÄ incrementAndGet À´½øĞĞ¶àÏß³Ì²âÊÔ¡£
- *²âÊÔ½á¹û,,ÔËĞĞ¿ÉÖª
+ *åˆ†åˆ«ä½¿ç”¨åŸºæœ¬å˜é‡çš„éåŸå­æ€§çš„++è¿ç®—ç¬¦å’Œ åŸå­æ€§çš„AtomicIntegerå¯¹è±¡çš„ incrementAndGet æ¥è¿›è¡Œå¤šçº¿ç¨‹æµ‹è¯•ã€‚
+ *æµ‹è¯•ç»“æœ,,è¿è¡Œå¯çŸ¥
  */
 public class TestThread9_3 {
 
@@ -17,7 +17,7 @@ public class TestThread9_3 {
 	
 	public static void main(String[] args) {
 
-		int number = 10000;		//Õâ¸öÖµÌ«´óÁË»á³öÏÖÒì³£Å×³ö¡£
+		int number = 10000;		//è¿™ä¸ªå€¼å¤ªå¤§äº†ä¼šå‡ºç°å¼‚å¸¸æŠ›å‡ºã€‚
 		Thread[] ts1 = new Thread[number];
 		for(int i = 0;i< number ; i++) {
 			Thread t = new Thread(){
@@ -29,16 +29,16 @@ public class TestThread9_3 {
 			
 			/*
 			switch(){
-				case 1.0: System.out.println("ÔËĞĞ1/10µÄ½ø³Ì");break;
-				case 2.0: System.out.println("ÔËĞĞ2/10µÄ½ø³Ì");break;
-				case 3.0: System.out.println("ÔËĞĞ3/10µÄ½ø³Ì");break;
-				case 4: System.out.println("ÔËĞĞ4/10µÄ½ø³Ì");break;
-				case 5: System.out.println("ÔËĞĞ5/10µÄ½ø³Ì");break;
-				case 6: System.out.println("ÔËĞĞ6/10µÄ½ø³Ì");break;
-				case 7: System.out.println("ÔËĞĞ7/10µÄ½ø³Ì");break;
-				case 8: System.out.println("ÔËĞĞ8/10µÄ½ø³Ì");break;
-				case 9: System.out.println("ÔËĞĞ9/10µÄ½ø³Ì");break;
-				case 10: System.out.println("ËùÓĞµÄ½ø³Ì¶¼ÔËĞĞÁË");break;
+				case 1.0: System.out.println("è¿è¡Œ1/10çš„è¿›ç¨‹");break;
+				case 2.0: System.out.println("è¿è¡Œ2/10çš„è¿›ç¨‹");break;
+				case 3.0: System.out.println("è¿è¡Œ3/10çš„è¿›ç¨‹");break;
+				case 4: System.out.println("è¿è¡Œ4/10çš„è¿›ç¨‹");break;
+				case 5: System.out.println("è¿è¡Œ5/10çš„è¿›ç¨‹");break;
+				case 6: System.out.println("è¿è¡Œ6/10çš„è¿›ç¨‹");break;
+				case 7: System.out.println("è¿è¡Œ7/10çš„è¿›ç¨‹");break;
+				case 8: System.out.println("è¿è¡Œ8/10çš„è¿›ç¨‹");break;
+				case 9: System.out.println("è¿è¡Œ9/10çš„è¿›ç¨‹");break;
+				case 10: System.out.println("æ‰€æœ‰çš„è¿›ç¨‹éƒ½è¿è¡Œäº†");break;
 			}
 			*/
 			
@@ -47,7 +47,7 @@ public class TestThread9_3 {
 			ts1[i] = t;
 		}
 		
-		//µÈ´ıÕâĞ©Ïß³ÌÈ«²¿½áÊø
+		//ç­‰å¾…è¿™äº›çº¿ç¨‹å…¨éƒ¨ç»“æŸ
 		for (Thread t: ts1) {
 			try {
 				t.join();
@@ -58,7 +58,7 @@ public class TestThread9_3 {
 		}
 		
 		
-		System.out.printf("%d¸öÏß³Ì½øĞĞvalue++ºó£¬valueµÄÖµ±ä³É:%d%n", number,value);
+		System.out.printf("%dä¸ªçº¿ç¨‹è¿›è¡Œvalue++åï¼Œvalueçš„å€¼å˜æˆ:%d%n", number,value);
 		Thread[] ts2 = new Thread[number];
 		for(int i = 0; i<number;i++) {
 			Thread t = new Thread(){
@@ -70,7 +70,7 @@ public class TestThread9_3 {
 			ts2[i] = t;
 		}
 		
-		//µÈ´ıÕâĞ©Ïß³ÌÈ«²¿½áÊø
+		//ç­‰å¾…è¿™äº›çº¿ç¨‹å…¨éƒ¨ç»“æŸ
 		for (Thread t: ts2) {
 			try {
 				t.join();
@@ -79,7 +79,7 @@ public class TestThread9_3 {
 				e.printStackTrace();
 			}
 		}
-		System.out.printf("%d¸öÏß³Ì½øĞĞatomicValue.incrementAndGet();ºó£¬atomicValueµÄÖµ±ä³É:%d%n", number,atomicValue.intValue());
+		System.out.printf("%dä¸ªçº¿ç¨‹è¿›è¡ŒatomicValue.incrementAndGet();åï¼ŒatomicValueçš„å€¼å˜æˆ:%d%n", number,atomicValue.intValue());
 	}
 
 }

@@ -14,17 +14,17 @@ public class Hero3_7 {
 		
 		public int damage;
 		
-		//»ØÑª
-	    //Ö±½ÓÔÚ·½·¨Ç°¼ÓÉÏĞŞÊÎ·ûsynchronized
-	    //ÆäËù¶ÔÓ¦µÄÍ¬²½¶ÔÏó£¬¾ÍÊÇthis
-	    //ºÍhurt·½·¨´ïµ½µÄĞ§¹ûÒ»Ñù
+		//å›è¡€
+	    //ç›´æ¥åœ¨æ–¹æ³•å‰åŠ ä¸Šä¿®é¥°ç¬¦synchronized
+	    //å…¶æ‰€å¯¹åº”çš„åŒæ­¥å¯¹è±¡ï¼Œå°±æ˜¯this
+	    //å’Œhurtæ–¹æ³•è¾¾åˆ°çš„æ•ˆæœä¸€æ ·
 		public synchronized void recover() {
 			hp +=1;
 		}
 		
-		//µôÑª
+		//æ‰è¡€
 		public void hurt() {
-			//Ê¹ÓÃthis×÷ÎªÍ¬²½¶ÔÏó
+			//ä½¿ç”¨thisä½œä¸ºåŒæ­¥å¯¹è±¡
 			synchronized (this) {
 				hp-=1;
 			}
@@ -32,9 +32,9 @@ public class Hero3_7 {
 		
 		public void attackHero(Hero3_7 h) {
 			h.hp -=damage;
-			System.out.printf("%s ÕıÔÚ¹¥»÷ %s, %sµÄÑª±ä³ÉÁË %.0f%n",name,h.name,h.name,h.hp);
+			System.out.printf("%s æ­£åœ¨æ”»å‡» %s, %sçš„è¡€å˜æˆäº† %.0f%n",name,h.name,h.name,h.hp);
 			if(h.isDead())
-				System.out.println(h.name + "ËÀÁË£¡");
+				System.out.println(h.name + "æ­»äº†ï¼");
 		}
 		
 		public boolean isDead() {

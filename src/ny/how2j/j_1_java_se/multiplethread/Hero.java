@@ -2,7 +2,7 @@ package multiplethread;
 
 
 /**
- * Ïß³Ì¸ÅÄî
+ * çº¿ç¨‹æ¦‚å¿µ
  * @author New year
  *
  */
@@ -15,22 +15,22 @@ public class Hero {
 	
 	public void attackHero(Hero h) {
 		
-		//try ºÍcatch ÖÐÖ÷ÒªµÄÄ¿±êÊÇ¾ÍÊÇÎªÁËÕý³£Ö´ÐÐtry¿éÖÐµÄÓï¾ä
+		//try å’Œcatch ä¸­ä¸»è¦çš„ç›®æ ‡æ˜¯å°±æ˜¯ä¸ºäº†æ­£å¸¸æ‰§è¡Œtryå—ä¸­çš„è¯­å¥
 		try {
-			//ÎªÁË±íÊ¾¹¥»÷ÐèÒªÊ±¼ä£¬Ã¿´Î¹¥»÷ÔÝÍ£1000ºÁÃë
+			//ä¸ºäº†è¡¨ç¤ºæ”»å‡»éœ€è¦æ—¶é—´ï¼Œæ¯æ¬¡æ”»å‡»æš‚åœ1000æ¯«ç§’
 			Thread.sleep(1000);
 			
-		} catch (InterruptedException e) {		//Èç¹ûcatchÖÐÓÐreturnÓï¾ä£¬Ôò²»»áÖ´ÐÐfinallyµÄÓï¾ä¡£
+		} catch (InterruptedException e) {		//å¦‚æžœcatchä¸­æœ‰returnè¯­å¥ï¼Œåˆ™ä¸ä¼šæ‰§è¡Œfinallyçš„è¯­å¥ã€‚
 			e.printStackTrace();
 		}
 		h.hp -=damage;
-		System.out.format("%s ÕýÔÚ¹¥»÷%s,%sµÄÑª±ä³ÉÁË %.0f%n", name,h.name,h.name,h.hp);
+		System.out.format("%s æ­£åœ¨æ”»å‡»%s,%sçš„è¡€å˜æˆäº† %.0f%n", name,h.name,h.name,h.hp);
 		
 		if(h.isDead())
-			System.out.println(h.name +"ËÀÁË£¡");
+			System.out.println(h.name +"æ­»äº†ï¼");
 	}
 	
 	public boolean isDead() {
-		return 0>=hp?true:false;		//Ã»ÑªÁË£¬¾ÍÊÇËÀÁË¡£
+		return 0>=hp?true:false;		//æ²¡è¡€äº†ï¼Œå°±æ˜¯æ­»äº†ã€‚
 	}
 }

@@ -2,14 +2,14 @@ package multiplethread_3;
 
 
 /**
- * ÑİÊ¾ËÀËø
+ * æ¼”ç¤ºæ­»é”
  * @author New year
  *
- *1. Ïß³Ì1 Ê×ÏÈÕ¼ÓĞ¶ÔÏó1£¬½Ó×ÅÊÔÍ¼Õ¼ÓĞ¶ÔÏó2
- *2. Ïß³Ì2 Ê×ÏÈÕ¼ÓĞ¶ÔÏó2£¬½Ó×ÅÊÔÍ¼Õ¼ÓĞ¶ÔÏó1
- *3. Ïß³Ì1 µÈ´ıÏß³Ì2ÊÍ·Å¶ÔÏó2
- *4. Óë´ËÍ¬Ê±£¬Ïß³Ì2µÈ´ıÏß³Ì1ÊÍ·Å¶ÔÏó1
- *¾Í»á¡£¡£¡£Ò»Ö±µÈ´ıÏÂÈ¥£¬Ö±µ½Ìì»ÄµØÀÏ£¬º£¿İÊ¯ÀÃ£¬É½ÎŞÀâ £¬ÌìµØºÏ¡£¡£¡£
+ *1. çº¿ç¨‹1 é¦–å…ˆå æœ‰å¯¹è±¡1ï¼Œæ¥ç€è¯•å›¾å æœ‰å¯¹è±¡2
+ *2. çº¿ç¨‹2 é¦–å…ˆå æœ‰å¯¹è±¡2ï¼Œæ¥ç€è¯•å›¾å æœ‰å¯¹è±¡1
+ *3. çº¿ç¨‹1 ç­‰å¾…çº¿ç¨‹2é‡Šæ”¾å¯¹è±¡2
+ *4. ä¸æ­¤åŒæ—¶ï¼Œçº¿ç¨‹2ç­‰å¾…çº¿ç¨‹1é‡Šæ”¾å¯¹è±¡1
+ *å°±ä¼šã€‚ã€‚ã€‚ä¸€ç›´ç­‰å¾…ä¸‹å»ï¼Œç›´åˆ°å¤©è’åœ°è€ï¼Œæµ·æ¯çŸ³çƒ‚ï¼Œå±±æ— æ£± ï¼Œå¤©åœ°åˆã€‚ã€‚ã€‚
  *
  */
 public class TestThread5_1 {
@@ -17,25 +17,25 @@ public class TestThread5_1 {
 	public static void main(String[] args) {
 
 		final Hero3_7 ahri = new Hero3_7();
-		ahri.name = "¾ÅÎ²Ñıºü";
+		ahri.name = "ä¹å°¾å¦–ç‹";
 		final Hero3_7 annie = new Hero3_7();
-		annie.name = "°²Äİ" ;
+		annie.name = "å®‰å¦®" ;
 		
 		Thread t1 = new Thread() {
 			public void run() {
-				//Õ¼ÓĞ¾ÅÎ²Ñıºü
+				//å æœ‰ä¹å°¾å¦–ç‹
 				synchronized (ahri) {
-					System.out.println("t1 ÒÑÕ¼ÓĞ¾ÅÎ²Ñıºü");
+					System.out.println("t1 å·²å æœ‰ä¹å°¾å¦–ç‹");
 					try {
-						//Í£¶Ù1000ºÁÃë£¬ÁíÒ»¸öÏß³ÌÓĞ×ã¹»µÄÊ±¼äÕ¼ÓĞ°²Äİ
+						//åœé¡¿1000æ¯«ç§’ï¼Œå¦ä¸€ä¸ªçº¿ç¨‹æœ‰è¶³å¤Ÿçš„æ—¶é—´å æœ‰å®‰å¦®
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					
-					System.out.println("t1 ÊÔÍ¼Õ¼ÓĞ°²Äİ");
-					System.out.println("t1 µÈ´ıÖĞ ¡£¡£¡£¡£");
+					System.out.println("t1 è¯•å›¾å æœ‰å®‰å¦®");
+					System.out.println("t1 ç­‰å¾…ä¸­ ã€‚ã€‚ã€‚ã€‚");
 					
 					synchronized (annie) {	
 						System.out.println("do something");
@@ -47,18 +47,18 @@ public class TestThread5_1 {
 		t1.start();
 		Thread t2 = new Thread() {
 			public void run() {
-				//Õ¼ÓĞ°²Äİ
+				//å æœ‰å®‰å¦®
 				synchronized (annie) {
-					System.out.println("t2 ÒÑÕ¼ÓĞ°²Äİ");
+					System.out.println("t2 å·²å æœ‰å®‰å¦®");
 					try {
-						//Í£¶Ù1000Ãë£¬ÁíÒ»¸öÏß³ÌÓĞ×ã¹»µÄÊ±¼äÕ¼ÓĞÔİÓÃ¾ÅÎ²Ñıºü
+						//åœé¡¿1000ç§’ï¼Œå¦ä¸€ä¸ªçº¿ç¨‹æœ‰è¶³å¤Ÿçš„æ—¶é—´å æœ‰æš‚ç”¨ä¹å°¾å¦–ç‹
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					System.out.println("t2 ÊÔÍ¼Õ¼ÓĞ¾ÅÎ²Ñıºü");
-					System.out.println("t2 µÈ´ıÖĞ ¡£¡£¡£¡£");
+					System.out.println("t2 è¯•å›¾å æœ‰ä¹å°¾å¦–ç‹");
+					System.out.println("t2 ç­‰å¾…ä¸­ ã€‚ã€‚ã€‚ã€‚");
 					synchronized (ahri) {
 						System.out.println("do something");
 					}

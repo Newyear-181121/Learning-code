@@ -2,7 +2,7 @@ package multiplethread;
 
 
 /**
- *    这个类是1_2服务的类
+ *    杩欎釜绫绘槸1_2鏈嶅姟鐨勭被
  * @author New year
  *
  */

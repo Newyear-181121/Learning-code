@@ -2,19 +2,19 @@ package multiplethread_3;
 
 
 /**
- * ÔÚ·½·¨Ç°£¬¼ÓÉÏĞŞÊÎ·ûsynchronized
+ * åœ¨æ–¹æ³•å‰ï¼ŒåŠ ä¸Šä¿®é¥°ç¬¦synchronized
  * @author New year
  *
- *ÔÚrecoverÇ°£¬Ö±½Ó¼ÓÉÏsynchronized £¬ÆäËù¶ÔÓ¦µÄÍ¬²½¶ÔÏó£¬¾ÍÊÇthis
- *ºÍhurt·½·¨´ïµ½µÄĞ§¹ûÊÇÒ»Ñù
- *Íâ²¿Ïß³Ì·ÃÎÊgareenµÄ·½·¨£¬¾Í²»ĞèÒª¶îÍâÊ¹ÓÃsynchronized ÁË
+ *åœ¨recoverå‰ï¼Œç›´æ¥åŠ ä¸Šsynchronized ï¼Œå…¶æ‰€å¯¹åº”çš„åŒæ­¥å¯¹è±¡ï¼Œå°±æ˜¯this
+ *å’Œhurtæ–¹æ³•è¾¾åˆ°çš„æ•ˆæœæ˜¯ä¸€æ ·
+ *å¤–éƒ¨çº¿ç¨‹è®¿é—®gareençš„æ–¹æ³•ï¼Œå°±ä¸éœ€è¦é¢å¤–ä½¿ç”¨synchronized äº†
  */
 public class TestThread3_7 {
 
 	public static void main(String[] args) {
 
 		final Hero3_7 gareen = new Hero3_7();
-		gareen.name = "¸ÇÂ×";
+		gareen.name = "ç›–ä¼¦";
 		gareen.hp = 10000;
 		
 		int n = 10000;
@@ -26,7 +26,7 @@ public class TestThread3_7 {
 			Thread t = new Thread( ){
 				public void run() {
 					
-					//recover×Ô´øsynchronized
+					//recoverè‡ªå¸¦synchronized
 					gareen.recover();
 					
 					try {
@@ -43,7 +43,7 @@ public class TestThread3_7 {
 			Thread  t = new Thread(){
 				public void run() {
 					
-					 //hurt×Ô´øsynchronized
+					 //hurtè‡ªå¸¦synchronized
 					gareen.hurt();
 					
 					try {
@@ -55,11 +55,11 @@ public class TestThread3_7 {
 				}
 			};
 			t.start();
-			reduceThreads[i] = t ;		//¸øÊı×éÖĞÃ¿Ò»¸öÏß³Ì¶¼Ìí¼Ó¿ªÊ¼·½·¨¡£
+			reduceThreads[i] = t ;		//ç»™æ•°ç»„ä¸­æ¯ä¸€ä¸ªçº¿ç¨‹éƒ½æ·»åŠ å¼€å§‹æ–¹æ³•ã€‚
 		}
 		
 		/**
-		 * ±éÀúÃ¿Ò»¸öÏß³Ì£¬½«ËùÓĞÏß³Ì¶¼¼ÓÈçµ½Ö÷Ïß³ÌÖĞÈ¥¡£
+		 * éå†æ¯ä¸€ä¸ªçº¿ç¨‹ï¼Œå°†æ‰€æœ‰çº¿ç¨‹éƒ½åŠ å¦‚åˆ°ä¸»çº¿ç¨‹ä¸­å»ã€‚
 		 */
 		for (Thread t : addThreads) {
 			try {
@@ -71,36 +71,36 @@ public class TestThread3_7 {
 		}
 		for (Thread t: reduceThreads) {
 			try {
-				t.join();		//¹Ö²»µÃÕâÀï»á±¨´í£¬Ô­À´Íü¼ÇÌí¼ÓreduceThreadsµÄÏß³ÌÁË¡£
+				t.join();		//æ€ªä¸å¾—è¿™é‡Œä¼šæŠ¥é”™ï¼ŒåŸæ¥å¿˜è®°æ·»åŠ reduceThreadsçš„çº¿ç¨‹äº†ã€‚
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		
-		System.out.printf("%d¸öÔö¼ÓÏß³ÌºÍ%d¸ö¼õÉÙÏß³Ì½áÊøºó%n¸ÇÂ×µÄÑªÁ¿ÊÇ %.0f%n", n,n,gareen.hp);
+		System.out.printf("%dä¸ªå¢åŠ çº¿ç¨‹å’Œ%dä¸ªå‡å°‘çº¿ç¨‹ç»“æŸå%nç›–ä¼¦çš„è¡€é‡æ˜¯ %.0f%n", n,n,gareen.hp);
 	}
 
 }
 
 /*
-Ïß³Ì°²È«µÄÀà ¶¥ ÕÛ
-Èç¹ûÒ»¸öÀà£¬Æä·½·¨¶¼ÊÇÓĞsynchronizedĞŞÊÎµÄ£¬ÄÇÃ´¸ÃÀà¾Í½Ğ×öÏß³Ì°²È«µÄÀà
+çº¿ç¨‹å®‰å…¨çš„ç±» é¡¶ æŠ˜
+å¦‚æœä¸€ä¸ªç±»ï¼Œå…¶æ–¹æ³•éƒ½æ˜¯æœ‰synchronizedä¿®é¥°çš„ï¼Œé‚£ä¹ˆè¯¥ç±»å°±å«åšçº¿ç¨‹å®‰å…¨çš„ç±»
 
-Í¬Ò»Ê±¼ä£¬Ö»ÓĞÒ»¸öÏß³ÌÄÜ¹»½øÈë ÕâÖÖÀàµÄÒ»¸öÊµÀı µÄÈ¥ĞŞ¸ÄÊı¾İ£¬½ø¶ø±£Ö¤ÁËÕâ¸öÊµÀıÖĞµÄÊı¾İµÄ°²È«(²»»áÍ¬Ê±±»¶àÏß³ÌĞŞ¸Ä¶ø±ä³ÉÔàÊı¾İ)
+åŒä¸€æ—¶é—´ï¼Œåªæœ‰ä¸€ä¸ªçº¿ç¨‹èƒ½å¤Ÿè¿›å…¥ è¿™ç§ç±»çš„ä¸€ä¸ªå®ä¾‹ çš„å»ä¿®æ”¹æ•°æ®ï¼Œè¿›è€Œä¿è¯äº†è¿™ä¸ªå®ä¾‹ä¸­çš„æ•°æ®çš„å®‰å…¨(ä¸ä¼šåŒæ—¶è¢«å¤šçº¿ç¨‹ä¿®æ”¹è€Œå˜æˆè„æ•°æ®)
 
-±ÈÈçStringBufferºÍStringBuilderµÄÇø±ğ
-StringBufferµÄ·½·¨¶¼ÊÇÓĞsynchronizedĞŞÊÎµÄ£¬StringBuffer¾Í½Ğ×öÏß³Ì°²È«µÄÀà
-¶øStringBuilder¾Í²»ÊÇÏß³Ì°²È«µÄÀà
+æ¯”å¦‚StringBufferå’ŒStringBuilderçš„åŒºåˆ«
+StringBufferçš„æ–¹æ³•éƒ½æ˜¯æœ‰synchronizedä¿®é¥°çš„ï¼ŒStringBufferå°±å«åšçº¿ç¨‹å®‰å…¨çš„ç±»
+è€ŒStringBuilderå°±ä¸æ˜¯çº¿ç¨‹å®‰å…¨çš„ç±»
 */
 
 /**
-°Ñ·ÇÏß³Ì°²È«µÄ¼¯ºÏ×ª»»ÎªÏß³Ì°²È« ¶¥ ÕÛ
-ArrayListÊÇ·ÇÏß³Ì°²È«µÄ£¬»»¾ä»°Ëµ£¬¶à¸öÏß³Ì¿ÉÒÔÍ¬Ê±½øÈëÒ»¸öArrayList¶ÔÏóµÄadd·½·¨
+æŠŠéçº¿ç¨‹å®‰å…¨çš„é›†åˆè½¬æ¢ä¸ºçº¿ç¨‹å®‰å…¨ é¡¶ æŠ˜
+ArrayListæ˜¯éçº¿ç¨‹å®‰å…¨çš„ï¼Œæ¢å¥è¯è¯´ï¼Œå¤šä¸ªçº¿ç¨‹å¯ä»¥åŒæ—¶è¿›å…¥ä¸€ä¸ªArrayListå¯¹è±¡çš„addæ–¹æ³•
 
-½èÖúCollections.synchronizedList£¬¿ÉÒÔ°ÑArrayList×ª»»ÎªÏß³Ì°²È«µÄList¡£
+å€ŸåŠ©Collections.synchronizedListï¼Œå¯ä»¥æŠŠArrayListè½¬æ¢ä¸ºçº¿ç¨‹å®‰å…¨çš„Listã€‚
 
-Óë´ËÀàËÆµÄ£¬»¹ÓĞHashSet,LinkedList,HashMapµÈµÈ·ÇÏß³Ì°²È«µÄÀà£¬¶¼Í¨¹ı¹¤¾ßÀàCollections×ª»»ÎªÏß³Ì°²È«µÄ
+ä¸æ­¤ç±»ä¼¼çš„ï¼Œè¿˜æœ‰HashSet,LinkedList,HashMapç­‰ç­‰éçº¿ç¨‹å®‰å…¨çš„ç±»ï¼Œéƒ½é€šè¿‡å·¥å…·ç±»Collectionsè½¬æ¢ä¸ºçº¿ç¨‹å®‰å…¨çš„
 
 
 package multiplethread;

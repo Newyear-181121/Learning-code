@@ -2,10 +2,10 @@ package multiplethread;
 
 
 /**
- * 临时暂停
+ * 涓存椂鏆傚仠
  * @author New year
  *
- *当前线程，临时暂停，使得其他线程可以有更多的机会占用CPU资源
+ *褰撳墠绾跨▼锛屼复鏃舵殏鍋滐紝浣垮緱鍏朵粬绾跨▼鍙互鏈夋洿澶氱殑鏈轰細鍗犵敤CPU璧勬簮
  */
 public class TestThread2_4 {
 
@@ -13,22 +13,22 @@ public class TestThread2_4 {
 		
 
 		final Hero gareen = new Hero();
-        gareen.name = "盖伦";
+        gareen.name = "鐩栦鸡";
         gareen.hp = 61600;
         gareen.damage = 1;
   
         final Hero teemo = new Hero();
-        teemo.name = "提莫";
+        teemo.name = "鎻愯帿";
         teemo.hp = 30000;
         teemo.damage = 1;
           
         final Hero bh = new Hero();
-        bh.name = "赏金猎人";
+        bh.name = "璧忛噾鐚庝汉";
         bh.hp = 50000;
         bh.damage = 1;
           
         final Hero leesin = new Hero();
-        leesin.name = "盲僧";
+        leesin.name = "鐩插儳";
         leesin.hp = 45050;
         leesin.damage = 1;
         
@@ -44,7 +44,7 @@ public class TestThread2_4 {
         Thread t2 = new Thread(){
         	public void run(){
         		while(!leesin.isDead()){
-        			//临时暂停，使得t1可以占用CPU资源
+        			//涓存椂鏆傚仠锛屼娇寰梩1鍙互鍗犵敤CPU璧勬簮
                     Thread.yield();
                     
                     bh.attackHero(leesin);

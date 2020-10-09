@@ -8,30 +8,30 @@ public class Hero6_2 {
 	
 	public synchronized void recover() {
 		hp = hp+5;
-		System.out.printf("%s »ØÑª1µã,Ôö¼ÓÑªºó£¬%sµÄÑªÁ¿ÊÇ%.0f%n", name, name, hp);
-		// Í¨ÖªÄÇĞ©µÈ´ıÔÚthis¶ÔÏóÉÏµÄÏß³Ì£¬¿ÉÒÔĞÑ¹ıÀ´ÁË£¬ÈçµÚ20ĞĞ£¬µÈ´ı×ÅµÄ¼õÑªÏß³Ì£¬ËÕĞÑ¹ıÀ´
-		this.notify();		//Í¨ÖªÕâ¸ö¶ÔÏóÉÏµÄÏß³ÌÆô¶¯
+		System.out.printf("%s å›è¡€1ç‚¹,å¢åŠ è¡€åï¼Œ%sçš„è¡€é‡æ˜¯%.0f%n", name, name, hp);
+		// é€šçŸ¥é‚£äº›ç­‰å¾…åœ¨thiså¯¹è±¡ä¸Šçš„çº¿ç¨‹ï¼Œå¯ä»¥é†’è¿‡æ¥äº†ï¼Œå¦‚ç¬¬20è¡Œï¼Œç­‰å¾…ç€çš„å‡è¡€çº¿ç¨‹ï¼Œè‹é†’è¿‡æ¥
+		this.notify();		//é€šçŸ¥è¿™ä¸ªå¯¹è±¡ä¸Šçš„çº¿ç¨‹å¯åŠ¨
 	}
 	
 	public synchronized void hurt() {
 		if (hp==1) {
 			try {
-				// ÈÃÕ¼ÓĞthisµÄ¼õÑªÏß³Ì£¬ÔİÊ±ÊÍ·Å¶ÔthisµÄÕ¼ÓĞ£¬²¢µÈ´ı
-				this.wait();		//ÈÃÕâ¸öÏß³ÌÉÏµÄÏß³ÌµÈ´ı
+				// è®©å æœ‰thisçš„å‡è¡€çº¿ç¨‹ï¼Œæš‚æ—¶é‡Šæ”¾å¯¹thisçš„å æœ‰ï¼Œå¹¶ç­‰å¾…
+				this.wait();		//è®©è¿™ä¸ªçº¿ç¨‹ä¸Šçš„çº¿ç¨‹ç­‰å¾…
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		
 		hp = hp - 5;
-		System.out.printf("%s ¼õÑª1µã,¼õÉÙÑªºó£¬%sµÄÑªÁ¿ÊÇ%.0f%n", name, name, hp);
+		System.out.printf("%s å‡è¡€1ç‚¹,å‡å°‘è¡€åï¼Œ%sçš„è¡€é‡æ˜¯%.0f%n", name, name, hp);
 	}
 	
 	public void attackHero(Hero6_2 h) {
 		h.hp -= damage ;
-		System.out.format("%s ÕıÔÚ¹¥»÷ %s, %sµÄÑª±ä³ÉÁË %.0f%n", name, h.name, h.name, h.hp);
+		System.out.format("%s æ­£åœ¨æ”»å‡» %s, %sçš„è¡€å˜æˆäº† %.0f%n", name, h.name, h.name, h.hp);
 		if (h.isDead())
-			System.out.println(h.name + "ËÀÁË£¡");
+			System.out.println(h.name + "æ­»äº†ï¼");
 	}
 	
 	public boolean isDead() {

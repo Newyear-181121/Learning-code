@@ -2,14 +2,14 @@ package multiplethread_3;
 
 
 /**
- * Ê¹ÓÃhero¶ÔÏó×÷ÎªÍ¬²½¶ÔÏó
+ * ä½¿ç”¨heroå¯¹è±¡ä½œä¸ºåŒæ­¥å¯¹è±¡
  * @author New year
  *
- *¼ÈÈ»ÈÎÒâ¶ÔÏó¶¼¿ÉÒÔÓÃÀ´×÷ÎªÍ¬²½¶ÔÏó£¬¶øËùÓĞµÄÏß³Ì·ÃÎÊµÄ¶¼ÊÇÍ¬Ò»¸öhero¶ÔÏó£¬Ë÷ĞÔ¾ÍÊ¹ÓÃgareenÀ´×÷ÎªÍ¬²½¶ÔÏó 
- *½øÒ»²½µÄ£¬¶ÔÓÚHeroµÄhurt·½·¨£¬¼ÓÉÏ£º 
+ *æ—¢ç„¶ä»»æ„å¯¹è±¡éƒ½å¯ä»¥ç”¨æ¥ä½œä¸ºåŒæ­¥å¯¹è±¡ï¼Œè€Œæ‰€æœ‰çš„çº¿ç¨‹è®¿é—®çš„éƒ½æ˜¯åŒä¸€ä¸ªheroå¯¹è±¡ï¼Œç´¢æ€§å°±ä½¿ç”¨gareenæ¥ä½œä¸ºåŒæ­¥å¯¹è±¡ 
+ *è¿›ä¸€æ­¥çš„ï¼Œå¯¹äºHeroçš„hurtæ–¹æ³•ï¼ŒåŠ ä¸Šï¼š 
  *synchronized (this) { 
  *} 
- *±íÊ¾µ±ÆÚ¶ÔÏóÎªÍ¬²½¶ÔÏó£¬¼´Ò²ÊÇgareenÎªÍ¬²½¶ÔÏó
+ *è¡¨ç¤ºå½“æœŸå¯¹è±¡ä¸ºåŒæ­¥å¯¹è±¡ï¼Œå³ä¹Ÿæ˜¯gareenä¸ºåŒæ­¥å¯¹è±¡
  *
  */
 public class TestThread3_6 {
@@ -17,20 +17,20 @@ public class TestThread3_6 {
 	public static void main(String[] args) {
 		
 		final Hero3_6 gareen = new Hero3_6();
-		gareen.name = "¸ÇÂ×";
+		gareen.name = "ç›–ä¼¦";
 		gareen.hp = 10000;
 		
 		int n = 10000;
 		
-		//ÕâÀïÊÇ´´½¨ÁËÁ½¸öÊı×é£¬·Ö±ğÓÃÀ´´æ·Å¼ÓÑªºÍµôÑªµÄÒ»Íò¸öÏß³Ì¡£
+		//è¿™é‡Œæ˜¯åˆ›å»ºäº†ä¸¤ä¸ªæ•°ç»„ï¼Œåˆ†åˆ«ç”¨æ¥å­˜æ”¾åŠ è¡€å’Œæ‰è¡€çš„ä¸€ä¸‡ä¸ªçº¿ç¨‹ã€‚
 		Thread[] addThreads = new Thread[n];
 		Thread[] reduceThreads = new Thread[n];
 		
 		for (int i = 0 ; i < n ; i++) {
-			Thread t = new Thread() {		//ÕâÀïÊÇÄÚ²¿Àà£¬ÊµÏÖÏß³Ì
-				public void run() {			//ÄÚ²¿ÀàµÄ·½·¨ÖØĞ´
+			Thread t = new Thread() {		//è¿™é‡Œæ˜¯å†…éƒ¨ç±»ï¼Œå®ç°çº¿ç¨‹
+				public void run() {			//å†…éƒ¨ç±»çš„æ–¹æ³•é‡å†™
 					
-					//Ê¹ÓÃgareen×÷Îªsynchronized
+					//ä½¿ç”¨gareenä½œä¸ºsynchronized
 					synchronized (gareen) {
 						gareen.recover();
 					}
@@ -52,8 +52,8 @@ public class TestThread3_6 {
 		for (int i = 0 ; i < n ; i++) {
 			Thread t = new Thread(){
 				public void run() {
-					//Ê¹ÓÃgareen×÷Îªsynchronized
-                    //ÔÚ·½·¨hurtÖĞÓĞsynchronized(this)
+					//ä½¿ç”¨gareenä½œä¸ºsynchronized
+                    //åœ¨æ–¹æ³•hurtä¸­æœ‰synchronized(this)
 					gareen.hurt();
 					
 					try {
@@ -85,7 +85,7 @@ public class TestThread3_6 {
 			}
 		}
 		
-		System.out.printf("%d¸öÔö¼ÓÏß³ÌºÍ%d¸ö¼õÉÙÏß³Ì½áÊøºó%n¸ÇÂ×µÄÑªÁ¿ÊÇ %.0f%n", n,n,gareen.hp);
+		System.out.printf("%dä¸ªå¢åŠ çº¿ç¨‹å’Œ%dä¸ªå‡å°‘çº¿ç¨‹ç»“æŸå%nç›–ä¼¦çš„è¡€é‡æ˜¯ %.0f%n", n,n,gareen.hp);
 
 	}
 

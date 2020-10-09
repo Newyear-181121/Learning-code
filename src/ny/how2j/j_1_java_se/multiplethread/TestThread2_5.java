@@ -2,20 +2,20 @@ package multiplethread;
 
 
 /**
- * �ػ��߳�
+ * 守护线程
  * @author New year
  *
  *
- *�ػ��̵߳ĸ����ǣ� ��һ����������е��̶߳����ػ��̵߳�ʱ�򣬽�����ǰ���̡�
+ *守护线程的概念是： 当一个进程里，所有的线程都是守护线程的时候，结束当前进程。
  *
- *�ͺ���һ����˾�����۲�����������Щ��ҵ��ҹ��Ĳ��š�
- *����֮�⣬���к��ڣ���������Щ֧�ֲ��š�
+ *就好像一个公司有销售部，生产部这些和业务挂钩的部门。
+ *除此之外，还有后勤，行政等这些支持部门。
  *
- *���һ�ҹ�˾���۲�������������ɢ�ˣ���ôֻʣ�º��ں���������ô��ҹ�˾Ҳ���Խ�ɢ�ˡ�
+ *如果一家公司销售部，生产部都解散了，那么只剩下后勤和行政，那么这家公司也可以解散了。
  *
- *�ػ��߳̾��൱����Щ֧�ֲ��ţ����һ������ֻʣ���ػ��̣߳���ô���̾ͻ��Զ�������
+ *守护线程就相当于那些支持部门，如果一个进程只剩下守护线程，那么进程就会自动结束。
  *
- *�ػ��߳�ͨ���ᱻ��������־������ͳ�Ƶȹ�����
+ *守护线程通常会被用来做日志，性能统计等工作。
  */
 public class TestThread2_5 {
 
@@ -27,15 +27,15 @@ public class TestThread2_5 {
 				
 				while(true){
 					try {
-						Thread.sleep(1000);		//�߳���ͣ1000����
+						Thread.sleep(1000);		//线程暂停1000毫秒
 					} catch (InterruptedException e){
 						e.printStackTrace();
 					}
-					System.out.printf("�Ѿ�����LOL %d ��%n", seconds++);
+					System.out.printf("已经玩了LOL %d 秒%n", seconds++);
 				}
 			}
 		};
-		t1.setDaemon(true);	//������ػ�������//������ʱ����̲������С�
+		t1.setDaemon(true);	//这就是守护进程吗？//有这句的时候进程不能运行。
 		t1.start();
 	}
 

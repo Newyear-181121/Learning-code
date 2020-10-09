@@ -2,7 +2,7 @@ package multiplethread_3;
 
 
 /**
- * 			ÑİÊ¾Í¬²½ÎÊÌâµÄ¹¤¾ßÀà
+ * 			æ¼”ç¤ºåŒæ­¥é—®é¢˜çš„å·¥å…·ç±»
  * @author New year
  *
  */
@@ -11,22 +11,26 @@ public class Hero {
 	public float hp;
 	
 	public int damage;
-	
-	//»ØÑª
+
+	/**
+	 * å›è¡€
+	 */
 	public void recover(){
 		hp = hp + 1;
 	}
-	
-	//µôÑª
+
+	/**
+	 * 	æ‰è¡€
+	 */
 	public void hurt(){
 		hp = hp - 1;
 	}
 
 	public void attackHero(Hero h) {
 		h.hp-=damage;
-		System.out.printf("%s ÕıÔÚ¹¥»÷ %s, %sµÄÑª±ä³ÉÁË %.0f%n",name,h.name,h.name,h.hp);
+		System.out.printf("%s æ­£åœ¨æ”»å‡» %s, %sçš„è¡€å˜æˆäº† %.0f%n",name,h.name,h.name,h.hp);
 		if(h.isDead())
-			System.out.println(h.name + "ËÀÁË£¡");
+			System.out.println(h.name + "æ­»äº†ï¼");
 	}
 	
 	public boolean isDead(){

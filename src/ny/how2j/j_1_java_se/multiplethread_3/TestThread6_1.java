@@ -2,7 +2,7 @@ package multiplethread_3;
 
 
 /**
- * ²»ºÃµÄ½â¾ö·½Ê½     		½â¾ö»¥½»ÎÊÌâ
+ * ä¸å¥½çš„è§£å†³æ–¹å¼     		è§£å†³äº’äº¤é—®é¢˜
  * @author New year
  *
  */
@@ -11,7 +11,7 @@ public class TestThread6_1 {
 	public static void main(String[] args) {
 
 		final Hero6_1 gareen= new Hero6_1() ;
-		gareen.name = "¸ÇÂ×";
+		gareen.name = "ç›–ä¼¦";
 		gareen.hp = 616;
 		gareen.damage = 60 ;
 		
@@ -20,25 +20,25 @@ public class TestThread6_1 {
 				int i = 0 ;
 				while(true) {
 					
-					System.out.printf("t1Ïß³Ì£¬µÚ%d´ÎÖ´ĞĞ",i);
+					System.out.printf("t1çº¿ç¨‹ï¼Œç¬¬%dæ¬¡æ‰§è¡Œ",i);
 					i++;
 					
 					
-					//ÒòÎª¼õÑª¸ü¿ì£¬ËùÒÔ¸ÇÂ×µÄÑªÁ¿³ÙÔç»áµ½´ï1
-                    //Ê¹ÓÃwhileÑ­»·ÅĞ¶ÏÊÇ·ñÊÇ1£¬Èç¹ûÊÇ1¾Í²»Í£µÄÑ­»·
-                    //Ö±µ½¼ÓÑªÏß³Ì»Ø¸´ÁËÑªÁ¿
+					//å› ä¸ºå‡è¡€æ›´å¿«ï¼Œæ‰€ä»¥ç›–ä¼¦çš„è¡€é‡è¿Ÿæ—©ä¼šåˆ°è¾¾1
+                    //ä½¿ç”¨whileå¾ªç¯åˆ¤æ–­æ˜¯å¦æ˜¯1ï¼Œå¦‚æœæ˜¯1å°±ä¸åœçš„å¾ªç¯
+                    //ç›´åˆ°åŠ è¡€çº¿ç¨‹å›å¤äº†è¡€é‡
 				//	while(gareen.hp==1){
 				//		continue;
 				//	}
 					
 					if(gareen.isDead()){
-						System.out.println("ÒÑ¾­Ã»ÑªÁË");
+						System.out.println("å·²ç»æ²¡è¡€äº†");
 						break;
 					}
 					gareen.attackHero(gareen);
 					
 					gareen.hurt();
-					System.out.printf("t1 Îª%s ¼õÑª1µã,¼õÉÙÑªºó£¬%sµÄÑªÁ¿ÊÇ%.0f%n",gareen.name,gareen.name,gareen.hp);
+					System.out.printf("t1 ä¸º%s å‡è¡€1ç‚¹,å‡å°‘è¡€åï¼Œ%sçš„è¡€é‡æ˜¯%.0f%n",gareen.name,gareen.name,gareen.hp);
 					try {
 						Thread.sleep(10);
 					} catch (InterruptedException e) {
@@ -50,22 +50,22 @@ public class TestThread6_1 {
 		};
 		t1.start();
 		
-		Thread t2 = new Thread() {		//ÔÚÏß³ÌÄÚ²¿ÀàÖĞÖØĞ´run·½·¨¡££¬£¬ÉèÖÃÏß³Ì
+		Thread t2 = new Thread() {		//åœ¨çº¿ç¨‹å†…éƒ¨ç±»ä¸­é‡å†™runæ–¹æ³•ã€‚ï¼Œï¼Œè®¾ç½®çº¿ç¨‹
 			public void run() {
 				int i = 0; 
 				while(true) {
 					
-					System.out.printf("t2Ïß³Ì£¬µÚ%d´ÎÖ´ĞĞ£º",i);
+					System.out.printf("t2çº¿ç¨‹ï¼Œç¬¬%dæ¬¡æ‰§è¡Œï¼š",i);
 					i++;
 					
 					if(gareen.isHealth()){
-						System.out.println("ÑªÁ¿ÒÑ¾­»ØÂúÁË");
+						System.out.println("è¡€é‡å·²ç»å›æ»¡äº†");
 						break;
 					}
 					
 					
 					gareen.recover();
-					System.out.printf("t2 Îª%s »ØÑª1µã,Ôö¼ÓÑªºó£¬%sµÄÑªÁ¿ÊÇ%.0f%n",gareen.name,gareen.name,gareen.hp);
+					System.out.printf("t2 ä¸º%s å›è¡€1ç‚¹,å¢åŠ è¡€åï¼Œ%sçš„è¡€é‡æ˜¯%.0f%n",gareen.name,gareen.name,gareen.hp);
 					
 					try {
 						Thread.sleep(100);
@@ -76,7 +76,7 @@ public class TestThread6_1 {
 				}
 			}
 		};
-		t2.start(); 		//Ïß³ÌÉùÃ÷ºóÂíÉÏÆô¶¯Ïß³Ì£¬
+		t2.start(); 		//çº¿ç¨‹å£°æ˜åé©¬ä¸Šå¯åŠ¨çº¿ç¨‹ï¼Œ
 		
 		
 	}

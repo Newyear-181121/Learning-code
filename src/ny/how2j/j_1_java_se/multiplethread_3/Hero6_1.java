@@ -2,7 +2,7 @@ package multiplethread_3;
 
 
 /**
- * 			²»ºÃµÄ½â¾ö·½Ê½
+ * 			ä¸å¥½çš„è§£å†³æ–¹å¼
  * @author New year
  *
  */
@@ -24,9 +24,9 @@ public  class Hero6_1 {
 	
 	public synchronized void attackHero(Hero6_1 h) {
 		h.hp-=damage;
-		System.out.format("%s ÕıÔÚ¹¥»÷ %s, %sµÄÑª±ä³ÉÁË %.0f%n",name,h.name,h.name,h.hp);
+		System.out.format("%s æ­£åœ¨æ”»å‡» %s, %sçš„è¡€å˜æˆäº† %.0f%n",name,h.name,h.name,h.hp);
 		if(h.isDead())
-			System.out.println(h.name + "ËÀÁË!");
+			System.out.println(h.name + "æ­»äº†!");
 	}
 	
 	public boolean isDead() {

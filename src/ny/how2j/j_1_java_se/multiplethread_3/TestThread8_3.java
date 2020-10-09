@@ -7,14 +7,14 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * trylock·½·¨
+ * trylockæ–¹æ³•
  * @author New year
  *
- *synchronized ÊÇ²»Õ¼ÓÃµ½ÊÖ²»°ÕĞİµÄ£¬»áÒ»Ö±ÊÔÍ¼Õ¼ÓÃÏÂÈ¥¡£
- *Óë synchronized µÄ×êÅ£½Ç¼â²»Ò»Ñù£¬Lock½Ó¿Ú»¹Ìá¹©ÁËÒ»¸ötrylock·½·¨¡£
- *trylock»áÔÚÖ¸¶¨Ê±¼ä·¶Î§ÄÚÊÔÍ¼Õ¼ÓÃ£¬Õ¼³É¹¦ÁË£¬¾ÍÅ¾Å¾Å¾¡£ Èç¹ûÊ±¼äµ½ÁË£¬»¹Õ¼ÓÃ²»³É¹¦£¬Å¤Í·¾Í×ß~
+ *synchronized æ˜¯ä¸å ç”¨åˆ°æ‰‹ä¸ç½¢ä¼‘çš„ï¼Œä¼šä¸€ç›´è¯•å›¾å ç”¨ä¸‹å»ã€‚
+ *ä¸ synchronized çš„é’»ç‰›è§’å°–ä¸ä¸€æ ·ï¼ŒLockæ¥å£è¿˜æä¾›äº†ä¸€ä¸ªtrylockæ–¹æ³•ã€‚
+ *trylockä¼šåœ¨æŒ‡å®šæ—¶é—´èŒƒå›´å†…è¯•å›¾å ç”¨ï¼Œå æˆåŠŸäº†ï¼Œå°±å•ªå•ªå•ªã€‚ å¦‚æœæ—¶é—´åˆ°äº†ï¼Œè¿˜å ç”¨ä¸æˆåŠŸï¼Œæ‰­å¤´å°±èµ°~
  *
- *×¢Òâ£º ÒòÎªÊ¹ÓÃtrylockÓĞ¿ÉÄÜ³É¹¦£¬ÓĞ¿ÉÄÜÊ§°Ü£¬ËùÒÔºóÃæunlockÊÍ·ÅËøµÄÊ±ºò£¬ĞèÒªÅĞ¶ÏÊÇ·ñÕ¼ÓÃ³É¹¦ÁË£¬Èç¹ûÃ»Õ¼ÓÃ³É¹¦Ò²unlock,¾Í»áÅ×³öÒì³£
+ *æ³¨æ„ï¼š å› ä¸ºä½¿ç”¨trylockæœ‰å¯èƒ½æˆåŠŸï¼Œæœ‰å¯èƒ½å¤±è´¥ï¼Œæ‰€ä»¥åé¢unlocké‡Šæ”¾é”çš„æ—¶å€™ï¼Œéœ€è¦åˆ¤æ–­æ˜¯å¦å ç”¨æˆåŠŸäº†ï¼Œå¦‚æœæ²¡å ç”¨æˆåŠŸä¹Ÿunlock,å°±ä¼šæŠ›å‡ºå¼‚å¸¸
  */
 public class TestThread8_3 {
 
@@ -34,34 +34,34 @@ public class TestThread8_3 {
 			public void run() {
 				boolean locked = false;
 				try {
-					log("Ïß³ÌÆô¶¯");
-					log("ÊÔÍ¼Õ¼ÓĞ¶ÔÏó£ºlock");
+					log("çº¿ç¨‹å¯åŠ¨");
+					log("è¯•å›¾å æœ‰å¯¹è±¡ï¼šlock");
 					
 					locked = lock.tryLock(1,TimeUnit.SECONDS);
 					if(locked) {
-						log("Õ¼ÓĞ¶ÔÏó£ºlock");
-						log("½øĞĞ5ÃëµÄÒµÎñ²Ù×÷");
+						log("å æœ‰å¯¹è±¡ï¼šlock");
+						log("è¿›è¡Œ5ç§’çš„ä¸šåŠ¡æ“ä½œ");
 						Thread.sleep(5000);
 					}
 					else{
-						log("¾­¹ı1ÃëÖÓµÄÅ¬Á¦£¬»¹Ã»ÓĞÕ¼ÓĞ¶ÔÏó£¬·ÅÆúÕ¼ÓĞ");
+						log("ç»è¿‡1ç§’é’Ÿçš„åŠªåŠ›ï¼Œè¿˜æ²¡æœ‰å æœ‰å¯¹è±¡ï¼Œæ”¾å¼ƒå æœ‰");
 					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
 					
-					if(locked){		//ÅĞ¶ÏÊÇ·ñÊÇ·ñÕ¼ÓÃÁË¶ÔÏó¡£
-						log("ÊÍ·Å¶ÔÏó£ºlock");
+					if(locked){		//åˆ¤æ–­æ˜¯å¦æ˜¯å¦å ç”¨äº†å¯¹è±¡ã€‚
+						log("é‡Šæ”¾å¯¹è±¡ï¼šlock");
 						lock.unlock();
 					}
 				}
-				log("Ïß³Ì½áÊø");
+				log("çº¿ç¨‹ç»“æŸ");
 			}
 		};
 		t1.setName("t1");
 		t1.start();
 		try {
-			//ÏÈÈÃt1·É2Ãë
+			//å…ˆè®©t1é£2ç§’
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -71,27 +71,27 @@ public class TestThread8_3 {
 			public void run() {
 				boolean locked = false;
 				try {
-					log("Ïß³ÌÆô¶¯");
-					log("ÊÔÍ¼Õ¼ÓĞ¶ÔÏó£ºlock");
+					log("çº¿ç¨‹å¯åŠ¨");
+					log("è¯•å›¾å æœ‰å¯¹è±¡ï¼šlock");
 					
 					locked = lock.tryLock(1,TimeUnit.SECONDS);
 					if(locked) {
-						log("Õ¼ÓĞ¶ÔÏó£ºlock");
-						log("½øĞĞ5ÃëµÄÒµÎñ²Ù×÷");
+						log("å æœ‰å¯¹è±¡ï¼šlock");
+						log("è¿›è¡Œ5ç§’çš„ä¸šåŠ¡æ“ä½œ");
 						Thread.sleep(5000);
 					}
 					else {
-						log("¾­¹ı1ÃëÖÓµÄÅ¬Á¦£¬»¹Ã»ÓĞÕ¼ÓĞ¶ÔÏó£¬·ÅÆúÕ¼ÓĞ");
+						log("ç»è¿‡1ç§’é’Ÿçš„åŠªåŠ›ï¼Œè¿˜æ²¡æœ‰å æœ‰å¯¹è±¡ï¼Œæ”¾å¼ƒå æœ‰");
 					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					if(locked){		//ÅĞ¶ÏÊÇ·ñÊÇ·ñÕ¼ÓÃÁË¶ÔÏó¡£
-						log("ÊÍ·Å¶ÔÏó£ºlock");
-						lock.unlock();		//Èç¹ûÕ¼ÓÃÁË£¬¾Í¹Ø±Õ¡£
+					if(locked){		//åˆ¤æ–­æ˜¯å¦æ˜¯å¦å ç”¨äº†å¯¹è±¡ã€‚
+						log("é‡Šæ”¾å¯¹è±¡ï¼šlock");
+						lock.unlock();		//å¦‚æœå ç”¨äº†ï¼Œå°±å…³é—­ã€‚
 					}
 				}
-				log("Ïß³Ì½áÊø");
+				log("çº¿ç¨‹ç»“æŸ");
 			}
 		};
 		t2.setName("t2");

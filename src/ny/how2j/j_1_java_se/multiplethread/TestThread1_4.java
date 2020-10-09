@@ -2,43 +2,43 @@ package multiplethread;
 
 
 /**
- * ´´½¨¶àÏß³Ì-ÄäÃûÀà
+ * åˆ›å»ºå¤šçº¿ç¨‹-åŒ¿åç±»
  * @author New year
  *		
- *Ê¹ÓÃÄäÃûÀà£¬¼Ì³ĞThread,ÖØĞ´run·½·¨£¬Ö±½ÓÔÚrun·½·¨ÖĞĞ´ÒµÎñ´úÂë
- *ÄäÃûÀàµÄÒ»¸öºÃ´¦ÊÇ¿ÉÒÔºÜ·½±ãµÄ·ÃÎÊÍâ²¿µÄ¾Ö²¿±äÁ¿¡£
- *Ç°ÌáÊÇÍâ²¿µÄ¾Ö²¿±äÁ¿ĞèÒª±»ÉùÃ÷Îªfinal¡£(JDK7ÒÔºó¾Í²»ĞèÒªÁË)
+ *ä½¿ç”¨åŒ¿åç±»ï¼Œç»§æ‰¿Thread,é‡å†™runæ–¹æ³•ï¼Œç›´æ¥åœ¨runæ–¹æ³•ä¸­å†™ä¸šåŠ¡ä»£ç 
+ *åŒ¿åç±»çš„ä¸€ä¸ªå¥½å¤„æ˜¯å¯ä»¥å¾ˆæ–¹ä¾¿çš„è®¿é—®å¤–éƒ¨çš„å±€éƒ¨å˜é‡ã€‚
+ *å‰ææ˜¯å¤–éƒ¨çš„å±€éƒ¨å˜é‡éœ€è¦è¢«å£°æ˜ä¸ºfinalã€‚(JDK7ä»¥åå°±ä¸éœ€è¦äº†)
  */
 public class TestThread1_4 {
 
 	public static void main(String[] args) {
 		
 		Hero gareen = new Hero();
-		gareen.name = "¸ÇÂ×";
+		gareen.name = "ç›–ä¼¦";
 		gareen.hp = 300;
 		gareen.damage = 30;
 		
 		Hero teemo = new  Hero();
-		teemo.name = "ÌáÄª";
+		teemo.name = "æè«";
 		teemo.hp = 300;
 		teemo.damage = 30;
 		
 		Hero bh = new Hero();
-		bh.name = "ÉÍ½ğÁÔÈË";
+		bh.name = "èµé‡‘çŒäºº";
 		bh.hp = 500;
 		bh.damage = 65;
 		
 		Hero leesin = new Hero();
-		leesin.name = "Ã¤É®";
+		leesin.name = "ç›²åƒ§";
 		leesin.hp = 455;
 		leesin.damage = 80;
 		
 		
-		//ÄäÃûÀà
+		//åŒ¿åç±»
 		Thread t1 = new Thread() {
 			public void run() {
-				//ÄäÃûÀàÖĞÓÃµ½Íâ²¿µÄ¾Ö²¿±äÁ¿teemo£¬±ØĞë°ÑteemoÉùÃ÷Îªfinal
-                //µ«ÊÇÔÚJDK7ÒÔºó£¬¾Í²»ÊÇ±ØĞë¼ÓfinalµÄÁË
+				//åŒ¿åç±»ä¸­ç”¨åˆ°å¤–éƒ¨çš„å±€éƒ¨å˜é‡teemoï¼Œå¿…é¡»æŠŠteemoå£°æ˜ä¸ºfinal
+                //ä½†æ˜¯åœ¨JDK7ä»¥åï¼Œå°±ä¸æ˜¯å¿…é¡»åŠ finalçš„äº†
 				while(!teemo.isDead()){
 					gareen.attackHero(teemo);
 				}
