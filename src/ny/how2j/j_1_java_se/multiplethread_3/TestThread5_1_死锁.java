@@ -12,7 +12,7 @@ package multiplethread_3;
  *就会。。。一直等待下去，直到天荒地老，海枯石烂，山无棱 ，天地合。。。
  *
  */
-public class TestThread5_1 {
+public class TestThread5_1_死锁 {
 
 	public static void main(String[] args) {
 

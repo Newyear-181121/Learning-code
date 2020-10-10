@@ -11,35 +11,35 @@ import java.io.Serializable;
 
 
 /**
- * ĞòÁĞ»¯Ò»¸ö¶ÔÏó
+ * åºåˆ—åŒ–ä¸€ä¸ªå¯¹è±¡
  * @author New year
  *
  *
- *			´´½¨Ò»¸öHero¶ÔÏó£¬ÉèÖÃÆäÃû³ÆÎªgaren¡£ 
- *			°Ñ¸Ã¶ÔÏóĞòÁĞ»¯µ½Ò»¸öÎÄ¼şgaren.lol¡£
- *			È»ºóÔÙÍ¨¹ıĞòÁĞ»¯°Ñ¸ÃÎÄ¼ş×ª»»ÎªÒ»¸öHero¶ÔÏó
+ *			åˆ›å»ºä¸€ä¸ªHeroå¯¹è±¡ï¼Œè®¾ç½®å…¶åç§°ä¸ºgarenã€‚ 
+ *			æŠŠè¯¥å¯¹è±¡åºåˆ—åŒ–åˆ°ä¸€ä¸ªæ–‡ä»¶garen.lolã€‚
+ *			ç„¶åå†é€šè¿‡åºåˆ—åŒ–æŠŠè¯¥æ–‡ä»¶è½¬æ¢ä¸ºä¸€ä¸ªHeroå¯¹è±¡
  *
- *			×¢£º°ÑÒ»¸ö¶ÔÏóĞòÁĞ»¯ÓĞÒ»¸öÇ°ÌáÊÇ£ºÕâ¸ö¶ÔÏóµÄÀà£¬±ØĞëÊµÏÖÁËSerializable½Ó¿Ú
+ *			æ³¨ï¼šæŠŠä¸€ä¸ªå¯¹è±¡åºåˆ—åŒ–æœ‰ä¸€ä¸ªå‰ææ˜¯ï¼šè¿™ä¸ªå¯¹è±¡çš„ç±»ï¼Œå¿…é¡»å®ç°äº†Serializableæ¥å£
  */
 public class TestStream9_1 {
 
 	public static void main(String[] args) {
 		
-		//´´½¨Ò»¸öHero garen
-        //Òª°ÑHero¶ÔÏóÖ±½Ó±£´æÔÚÎÄ¼şÉÏ£¬Îñ±ØÈÃHeroÀàÊµÏÖSerializable½Ó¿Ú
+		//åˆ›å»ºä¸€ä¸ªHero garen
+        //è¦æŠŠHeroå¯¹è±¡ç›´æ¥ä¿å­˜åœ¨æ–‡ä»¶ä¸Šï¼ŒåŠ¡å¿…è®©Heroç±»å®ç°Serializableæ¥å£
         Hero h = new Hero();
         h.name = "garen";
         h.hp = 616;
         
-      //×¼±¸Ò»¸öÎÄ¼şÓÃÓÚ±£´æ¸Ã¶ÔÏó
-        File f =new File("f:demo/garen.lol");		//Ã»ÓĞ´´½¨Õâ¸öÎÄ¼ş
-        											//Êä³öµÄÊ±ºòÒÀÈ»»á½¨Á¢Õâ¸öÎÄ¼ş
+      //å‡†å¤‡ä¸€ä¸ªæ–‡ä»¶ç”¨äºä¿å­˜è¯¥å¯¹è±¡
+        File f =new File("f:demo/garen.lol");		//æ²¡æœ‰åˆ›å»ºè¿™ä¸ªæ–‡ä»¶
+        											//è¾“å‡ºçš„æ—¶å€™ä¾ç„¶ä¼šå»ºç«‹è¿™ä¸ªæ–‡ä»¶
 
         try(
-        		//´´½¨¶ÔÏóÊä³öÁ÷
+        		//åˆ›å»ºå¯¹è±¡è¾“å‡ºæµ
         		FileOutputStream fos = new FileOutputStream(f);
-        		ObjectOutputStream oos = new ObjectOutputStream(fos);			//»º´æÁ÷£¬Êı¾İÁ÷£¬¶ÔÏóÁ÷  ¶¼Òª½¨Á¢ÔÚ×Ö½ÚÁ÷ÉÏ¡£¡£¡£
-        		//´´½¨¶ÔÏóÊäÈëÁ÷ 
+        		ObjectOutputStream oos = new ObjectOutputStream(fos);			//ç¼“å­˜æµï¼Œæ•°æ®æµï¼Œå¯¹è±¡æµ  éƒ½è¦å»ºç«‹åœ¨å­—èŠ‚æµä¸Šã€‚ã€‚ã€‚
+        		//åˆ›å»ºå¯¹è±¡è¾“å…¥æµ 
         		FileInputStream fis = new FileInputStream(f);
         		ObjectInputStream ois = new ObjectInputStream(fis);
         	){
@@ -55,8 +55,8 @@ public class TestStream9_1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-        			//Ô­ÎÄÖĞÓĞÕâ¸ö£¬¶øÎÒÕâÀïÖ»ÊÇ°ÑÁíÒ»¸öÀàÖ±½Ó¼Óµ½Ò»¸öÎÄ¼şÖĞÁË¡£
-          			//ÔÚÃ»ÓĞ¼Ó   Hero h2 = (Hero) ois.readObject();Õâ¾ä´úÂëµÄÊ±ºòÃ»ÓĞÕâ¸öÒì³£¡£
+        			//åŸæ–‡ä¸­æœ‰è¿™ä¸ªï¼Œè€Œæˆ‘è¿™é‡Œåªæ˜¯æŠŠå¦ä¸€ä¸ªç±»ç›´æ¥åŠ åˆ°ä¸€ä¸ªæ–‡ä»¶ä¸­äº†ã€‚
+          			//åœ¨æ²¡æœ‰åŠ    Hero h2 = (Hero) ois.readObject();è¿™å¥ä»£ç çš„æ—¶å€™æ²¡æœ‰è¿™ä¸ªå¼‚å¸¸ã€‚
         catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -65,9 +65,9 @@ public class TestStream9_1 {
 
 }
 
-//ÕâÀï²»ÄÜÔÙÓĞpublicÁË
+//è¿™é‡Œä¸èƒ½å†æœ‰publicäº†
  class Hero implements Serializable {
-    //±íÊ¾Õâ¸öÀàµ±Ç°µÄ°æ±¾£¬Èç¹ûÓĞÁË±ä»¯£¬±ÈÈçĞÂÉè¼ÆÁËÊôĞÔ£¬¾ÍÓ¦¸ÃĞŞ¸ÄÕâ¸ö°æ±¾ºÅ
+    //è¡¨ç¤ºè¿™ä¸ªç±»å½“å‰çš„ç‰ˆæœ¬ï¼Œå¦‚æœæœ‰äº†å˜åŒ–ï¼Œæ¯”å¦‚æ–°è®¾è®¡äº†å±æ€§ï¼Œå°±åº”è¯¥ä¿®æ”¹è¿™ä¸ªç‰ˆæœ¬å·
     private static final long serialVersionUID = 1L;
     public String name;
     public float hp;
