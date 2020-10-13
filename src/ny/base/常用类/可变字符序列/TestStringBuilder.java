@@ -54,7 +54,9 @@ public class TestStringBuilder {
     }
 
     /**
-     * 初始化一个可变字符序列
+     * 初始化可变字符序列 sb
+     *  sb 赋值，
+     *  如果不赋值直接使用，运行时会报空指针异常。
      */
     public void init(){
         sb = new StringBuffer();
@@ -102,6 +104,7 @@ public class TestStringBuilder {
 
     /**
      * 这不是一个好的方法， 因为他会产生额外的对象。
+     * test3 是用来和test4 做对比的。
      */
     public void test3(){
         long long1 = System.currentTimeMillis();
@@ -117,6 +120,10 @@ public class TestStringBuilder {
         out((free2-free1),"free");
     }
 
+    /**
+     *  可变字符串的优势，
+     *  多次改变该字符串，不会额外创建多余的对象，不会消耗多余的时间，不会消耗多余的内存。
+     */
     public void test4(){
         sb.delete(0,sb.length()-1);
         long long1 = System.currentTimeMillis();
