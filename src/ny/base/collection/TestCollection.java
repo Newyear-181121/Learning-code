@@ -9,10 +9,12 @@ import java.util.Collection;
  * @version: 0.0.1
  * @description: Test_01_Collention
  */
-public class Test_01_Collection {
+public class TestCollection {
 
     public static void main(String[] args) {
+
         Collection co = new ArrayList();
+
     }
 
 }
