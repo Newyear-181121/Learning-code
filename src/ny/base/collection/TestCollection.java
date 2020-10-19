@@ -23,8 +23,8 @@ public class TestCollection {
 
          tco.init();
 
-         tco.test1();
-
+         //tco.test1();
+        tco.test03();
 
     }
 
@@ -68,7 +68,7 @@ public class TestCollection {
 
         Out.out("移除co1的元素前：",co.toString());
         co.removeAll(co1);
-        Out.out("移除co1的元素后：",co.toString());
+        Out.out("移除co1的元素后：",co);
 
 
         //co.removeIf();
@@ -93,5 +93,38 @@ public class TestCollection {
          */
     }
 
+    /**
+     *  List 接口的方法测试
+     */
+    public void test03(){
+        List<String> l = new ArrayList<>();
+        l.add("A");
+        l.add("B");
+        l.add("C");
+        l.add("D");
+
+        Out.out("List:",l);
+
+        l.add(3,"test");
+        l.add(3,"master");
+        Out.out("add:",l);
+
+        l.remove(4);
+        Out.out("remove:",l);
+
+        l.set(3,"main");
+        Out.out("set:",l);
+
+        Out.out("get:",l.get(3));
+
+        Out.out("indexOf:",l.indexOf("main"));
+
+        l.add("C");
+        Out.out("lastIndexOf(C):",l.lastIndexOf("C"));
+        Out.out("Indexof(C):",l.indexOf("C"));
+
+        Out.out("INdesof(test):",l.indexOf("test"));
+
+    }
 
 }
