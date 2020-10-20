@@ -42,6 +42,13 @@ public class MyArrayList<E> {
         }
     }
 
+    public int size(){
+        return size;
+    }
+    public boolean isEmpty(){
+        return size == 0 ? true : false ;
+    }
+
     /**
      * 扩容
      */
@@ -96,6 +103,23 @@ public class MyArrayList<E> {
         elementDate[index] = element;
     }
 
+    public void remove(int index){
+        checkRange(index);
+        int numMoved = elementDate.length-index-1;              // 需要拷贝的数据的长度。
+        if (numMoved > 0){
+            System.arraycopy(elementDate,index+1,elementDate,index,numMoved);
+        }
+        elementDate[--size] = null;
+    }
+
+    public void remove(E element){
+        for (int i = 0 ; i < size ; i++){
+            if (element.equals(get(i))){
+                remove(i);
+            }
+        }
+    }
+
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
@@ -120,6 +144,11 @@ public class MyArrayList<E> {
         Out.out(myal.size);
 
         Out.out(myal);
-        Out.out(myal.get(50));
+        Out.out(myal.get(10));
+
+        myal.remove(15);
+        myal.remove("test18");
+        Out.out(myal);
+        Out.out(myal.size);
     }
 }
