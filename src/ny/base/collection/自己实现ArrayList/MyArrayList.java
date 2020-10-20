@@ -1,10 +1,12 @@
-package ny.base.collection;
+package ny.base.collection.自己实现ArrayList;
 
 /**
  * @auther: NewYear
  * @Date: 2020-10-19 20:51
  * @version: 0.0.1
  * @description: MyArrayList  自定义实现arrayList
+ *
+ *  普通的add方法。
  */
 public class MyArrayList {
 
