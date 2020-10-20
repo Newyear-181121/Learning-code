@@ -1,4 +1,4 @@
-package ny.base.collection.自己实现ArrayList;
+package ny.base.collection;
 
 import ny.base.常用类.myUtil.Out;
 
