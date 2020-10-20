@@ -26,6 +26,7 @@ public class MyLinkedList {
             last = node ;      // 把新节点 设置成last
             last.setNext(null);         // 把新的 last 节点的尾指针置空。
         }
+        size++;                 //没添加一个 元素，size都要加一 的。
     }
 
 
@@ -45,13 +46,43 @@ public class MyLinkedList {
         return sb.toString();
     }
 
+    public void checkRange(int index){
+        if (index < 0 || index > size -1){
+            throw new RuntimeException("不合法的索引："+index);
+        }
+    }
+
+    public Object get(int index){
+        MyLinkedListNode node ;
+        checkRange(index);
+        if (index <= (size >> 1)) {         // 从前往后找。
+            node = first;
+            for (int i = 0; i < index; i++) {
+                node = node.getNext();
+            }
+        } else {                            // 从后往前找。
+            node = last;
+            for (int i = size-1 ; i > index ; i--){
+                node = node.getPrevious();
+            }
+        }
+
+        return node.getElement();
+    }
+
 
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
         linkedList.add("a");
         linkedList.add("b");
         linkedList.add("c");
+        linkedList.add("d");
+        linkedList.add("e");
+        linkedList.add("f");
+        linkedList.add("g");
 
         Out.out(linkedList);
+
+        Out.out(linkedList.get(4));
     }
 }
