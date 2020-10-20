@@ -12,6 +12,10 @@ import ny.base.常用类.myUtil.Out;
  *  增加泛型     普通类添加泛型支持很简单。
  *  增加数组扩容功能
  *      两个问题： 1. 什么时候扩容。 2. 怎么扩容。
+ *  增加 set 和get方法
+ *  增加数组边界检查。
+ *      get set 传入 index 时需要检查索引是否在范围内。
+ *      构建传入容量是，也要检查容量 值是否合法，不能是负数。
  */
 public class MyArrayList<E> {
 
@@ -24,8 +28,18 @@ public class MyArrayList<E> {
         elementDate = new Object[DEFALT_CAPACITY];
     }
 
+    /**
+     * ch
+     * @param capacity
+     */
     public MyArrayList(int capacity){
-        elementDate = new Object[capacity];
+        if (capacity < 0){
+            throw new RuntimeException("容量不能小于0"+capacity);
+        }else if (capacity == 0) {
+            elementDate = new Object[DEFALT_CAPACITY];
+        } else{
+            elementDate = new Object[capacity];
+        }
     }
 
     /**
@@ -56,6 +70,32 @@ public class MyArrayList<E> {
         elementDate[size++] = element;
     }
 
+    /**
+     * 判断索引是否合法
+     * @param index
+     */
+    public void checkRange(int index){
+        if (index < 0 || index > size -1){
+            throw new RuntimeException("索引不合法！"+ index);
+        }
+    }
+
+    /**
+     * 获取指定元素。
+     * @param index 索引
+     * @return 索引位置的 元素
+     * 因为使用了泛型 所以可以使用泛型转型。
+     */
+    public E get(int index){
+        checkRange(index);
+        return (E)elementDate[index];
+    }
+
+    public void set(E element,int index){
+        checkRange(index);
+        elementDate[index] = element;
+    }
+
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
@@ -80,5 +120,6 @@ public class MyArrayList<E> {
         Out.out(myal.size);
 
         Out.out(myal);
+        Out.out(myal.get(50));
     }
 }
