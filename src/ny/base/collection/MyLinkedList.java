@@ -8,7 +8,7 @@ import ny.base.常用类.myUtil.Out;
  * @version: 0.0.1
  * @description: MyLinkedList
  */
-public class MyLinkedList {
+public class MyLinkedList<E> {
 
     private MyLinkedListNode first;
     private MyLinkedListNode last;
@@ -23,8 +23,8 @@ public class MyLinkedList {
         return size==0?true:false;
     }
 
-    public void add(Object obj){
-        MyLinkedListNode node = new MyLinkedListNode(obj);
+    public void add(E element){
+        MyLinkedListNode node = new MyLinkedListNode(element);
         if (first == null){
             first = node;
             last = node;
@@ -110,10 +110,10 @@ public class MyLinkedList {
     /**
      * 在指定的索引位置插入 元素。
      * @param index
-     * @param obj
+     * @param element
      */
-    public void add(int index,Object obj){
-        MyLinkedListNode newNode = new MyLinkedListNode(obj);
+    public void add(int index,E element){
+        MyLinkedListNode newNode = new MyLinkedListNode(element);
         MyLinkedListNode temp = getNode(index);
 
         if (temp == null){
