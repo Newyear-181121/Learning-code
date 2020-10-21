@@ -13,4 +13,9 @@ public class MyHashMapNode {
     Object value;
     MyHashMapNode next;
 
+
+    @Override
+    public String toString() {
+        return  key.toString() +"="+value.toString();
+    }
 }
