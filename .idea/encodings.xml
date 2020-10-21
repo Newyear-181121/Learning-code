@@ -2,12 +2,15 @@
 <project version="4">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="Encoding">
 =======
 >>>>>>> 32263dd... fix: 删除一些觉得不好的代码。
 =======
   <component name="Encoding">
 >>>>>>> 40bce0c... fix: 删掉了一些没什么用的实例。
+=======
+>>>>>>> check_usermail
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
