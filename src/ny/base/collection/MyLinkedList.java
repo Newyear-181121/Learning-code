@@ -15,6 +15,14 @@ public class MyLinkedList {
 
     private int size;
 
+    public int size(){
+        return size;
+    }
+
+    public boolean isEmpty(){
+        return size==0?true:false;
+    }
+
     public void add(Object obj){
         MyLinkedListNode node = new MyLinkedListNode(obj);
         if (first == null){
@@ -52,9 +60,9 @@ public class MyLinkedList {
         }
     }
 
-    public Object get(int index){
-        MyLinkedListNode node ;
+    public MyLinkedListNode getNode(int index){
         checkRange(index);
+        MyLinkedListNode node ;
         if (index <= (size >> 1)) {         // 从前往后找。
             node = first;
             for (int i = 0; i < index; i++) {
@@ -66,8 +74,37 @@ public class MyLinkedList {
                 node = node.getPrevious();
             }
         }
+        return node;
+    }
 
-        return node.getElement();
+    public Object get(int index){
+        MyLinkedListNode node = getNode(index);
+        return node!=null?node.getElement():null;        // 这里返回的是节点的值，如果节点是 null 就取不到 null 的值。
+    }
+
+    public void remove(int index){
+        MyLinkedListNode node = getNode(index);
+
+        MyLinkedListNode up = node.getPrevious();   // node 节点的上一个。
+        MyLinkedListNode down = node.getNext();     // node 节点的下一个。
+
+        if (index == 0){        // 如果是表头
+            first = down;
+            //first.setPrevious(null);
+            size--;
+            return;
+        }
+        if (index == size-1){   //如果是表尾
+            last = up;
+            //last.setNext(null);
+            size--;
+            return;
+        }
+        // 不是头，也不是尾。
+        up.setNext(down);
+        down.setPrevious(up);
+        size--;
+
     }
 
 
@@ -81,8 +118,25 @@ public class MyLinkedList {
         linkedList.add("f");
         linkedList.add("g");
 
+        Out.out(linkedList.size());
         Out.out(linkedList);
 
         Out.out(linkedList.get(4));
+
+        linkedList.remove(0);
+        Out.out(linkedList.size());
+        Out.out(linkedList);
+
+        linkedList.remove(5);
+        Out.out(linkedList.size());
+        Out.out(linkedList);
+
+
+        linkedList.remove(linkedList.size()-1);
+        Out.out(linkedList.size());
+        Out.out(linkedList);
+
+        Out.out("若删除的时候，头节点的前一个节点不置空，则还能访问到：",linkedList.getNode(0).getPrevious());
+        Out.out("若删除的时候，尾节点的后一个节点不置空，则还能访问到：",linkedList.getNode(linkedList.size()-1).getNext());
     }
 }
