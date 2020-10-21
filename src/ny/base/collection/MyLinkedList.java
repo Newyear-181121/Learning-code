@@ -90,13 +90,13 @@ public class MyLinkedList {
 
         if (index == 0){        // 如果是表头
             first = down;
-            //first.setPrevious(null);
+            first.setPrevious(null);
             size--;
             return;
         }
         if (index == size-1){   //如果是表尾
             last = up;
-            //last.setNext(null);
+            last.setNext(null);
             size--;
             return;
         }
@@ -104,6 +104,39 @@ public class MyLinkedList {
         up.setNext(down);
         down.setPrevious(up);
         size--;
+
+    }
+
+    /**
+     * 在指定的索引位置插入 元素。
+     * @param index
+     * @param obj
+     */
+    public void add(int index,Object obj){
+        MyLinkedListNode newNode = new MyLinkedListNode(obj);
+        MyLinkedListNode temp = getNode(index);
+
+        if (temp == null){
+            return;
+        }
+        MyLinkedListNode up = temp.getPrevious();
+
+
+        newNode.setNext(temp);
+        temp.setPrevious(newNode);
+
+        if (up == null){
+            first = newNode;
+
+            size++;
+            return;
+        }
+
+        up.setNext(newNode);
+        newNode.setPrevious(up);
+
+
+        size++;
 
     }
 
@@ -136,7 +169,11 @@ public class MyLinkedList {
         Out.out(linkedList.size());
         Out.out(linkedList);
 
-        Out.out("若删除的时候，头节点的前一个节点不置空，则还能访问到：",linkedList.getNode(0).getPrevious());
+        Out.out("若删除的时候，头节点的前一个节点不置空，则还能访问到,置空后增访问到null",linkedList.getNode(0).getPrevious());
         Out.out("若删除的时候，尾节点的后一个节点不置空，则还能访问到：",linkedList.getNode(linkedList.size()-1).getNext());
+
+
+        linkedList.add(0,"test");
+        Out.out("在指定位置加入新元素后：",linkedList);
     }
 }
