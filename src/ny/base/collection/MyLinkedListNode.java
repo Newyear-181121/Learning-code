@@ -47,4 +47,8 @@ public class MyLinkedListNode {
     public void setElement(Object element) {
         this.element = element;
     }
+
+    public String toString(){
+        return element.toString();
+    }
 }
