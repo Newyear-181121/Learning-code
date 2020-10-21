@@ -11,8 +11,10 @@ import ny.base.常用类.myUtil.Out;
  * 类里面的方法，就是对自己的属性进行操作的一些方法。
  *
  *  增加 get 方法
+ *
+ *  最后 添加泛型支持
  */
-public class MyHashMap {
+public class MyHashMap<K,V> {
 
     MyHashMapNode[] tables;
     int size;
@@ -22,6 +24,8 @@ public class MyHashMap {
     public MyHashMap(){
         tables = new MyHashMapNode[16];     //长度一般定义成2的幂数。
     }
+
+    /* 公共方法 */
 
     /**
      * 自定义的 哈希 计算方法。 比较简陋。
@@ -35,7 +39,12 @@ public class MyHashMap {
         return v&(length-1);
     }
 
-    public void put(Object key,Object value){
+    /**
+     * put 方法，不重复的key 直接添加到 map中来，重复的key 值保存成最新的内容。
+     * @param key
+     * @param value
+     */
+    public void put(K key,V value){
         MyHashMapNode newNode = new MyHashMapNode();
         newNode.hash = myHash(key.hashCode(),tables.length);
         newNode.key = key;
@@ -101,7 +110,7 @@ public class MyHashMap {
         return sb.toString();
     }
 
-    public MyHashMapNode getNode(Object key){
+    public MyHashMapNode getNode(K key){
         MyHashMapNode node = null ;
 //        for (MyHashMapNode node : tables){      //
 //            while(node != null){
@@ -127,12 +136,12 @@ public class MyHashMap {
         return node;
     }
 
-    public Object get(Object key){
-        return getNode(key).value;
+    public V get(K key){
+        return (V)getNode(key).value;
     }
 
     public static void main(String[] args) {
-        MyHashMap mm = new MyHashMap();
+        MyHashMap<Integer,String> mm = new MyHashMap<>();
         mm.put(123,"qwe");
         mm.put(122,"rwer");
         Out.out("size:",mm.size);
