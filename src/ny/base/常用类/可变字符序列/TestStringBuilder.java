@@ -7,10 +7,13 @@ import org.omg.CosNaming.BindingIterator;
  * @Date: 2020-10-10 16:41
  * @version: 0.0.1
  * @description: TestStringBuilder
+ *
+ *  之前 声明类错了，声明成 了 Buffer 了，
+ *  直接把声明改回 Builder ，类没有报错，，，，这两个类方法时差不多的。
  */
 public class TestStringBuilder {
 
-    StringBuffer sb ;       // 只声明对象，如果不复制，就使用这个对象就会报空指针异常。
+    StringBuilder sb ;       // 只声明对象，如果不复制，就使用这个对象就会报空指针异常。
     int count;
 
     public static void main(String[] args) {
@@ -59,12 +62,14 @@ public class TestStringBuilder {
      *  如果不赋值直接使用，运行时会报空指针异常。
      */
     public void init(){
-        sb = new StringBuffer();
-        for (int i = 0 ; i <26 ; i++){
-            char temp = (char)('a'+i);
+        sb = new StringBuilder();
+        for (int i = 0 ; i <3 ; i++){
+            //char temp = (char)('a'+i);
+            int temp = i%9;
             this.sb.append(temp);
         }
         out(sb);
+        //int re = (int) sb;        //这个类型不能转int型
     }
 
     /**
