@@ -1,5 +1,7 @@
 package ny.base.IO;
 
+import ny.base.常用类.myUtil.Out;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Arrays;
@@ -26,6 +28,7 @@ public class Dirlist {
             list = path.list(new DirFilter(args[0]) );
         }
         Arrays.sort(list,String.CASE_INSENSITIVE_ORDER);
+        Out.out("打印当前路径下的所有文件及文件夹名称：");
         for (String dirItem : list){
             System.out.println(dirItem);
         }

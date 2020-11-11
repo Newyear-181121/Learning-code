@@ -1,4 +1,4 @@
-package ny.base.常用类.file;
+package ny.base.IO.file;
 
 import ny.base.常用类.myUtil.Out;
 
@@ -11,6 +11,10 @@ import java.util.Date;
  * @Date: 2020-10-14 19:37
  * @version: 0.0.1
  * @description: TestFile
+ *          File 中方法 分类
+ *              文件路径
+ *              文件状态
+ *              
  */
 public class TestFile {
 
