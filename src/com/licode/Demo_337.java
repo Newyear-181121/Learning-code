@@ -55,14 +55,14 @@ public class Demo_337 {
 /**
  * 准备测试的 树结构
  */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-
-
-}
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//    TreeNode(int x) { val = x; }
+//
+//
+//}
 
 class Tree{
     TreeNode root;
