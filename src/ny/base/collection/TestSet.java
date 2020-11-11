@@ -60,6 +60,7 @@ public class TestSet {
         init(set2,10,20);
 
         set.addAll(set2);
+        String[] strs = (String[]) set.toArray();       //转换类型需要强制转型
         Out.out(set);
     }
 
