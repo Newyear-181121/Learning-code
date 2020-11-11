@@ -14,7 +14,7 @@ import java.util.Date;
  *          File 中方法 分类
  *              文件路径
  *              文件状态
- *              
+ *
  */
 public class TestFile {
 
@@ -22,36 +22,28 @@ public class TestFile {
 
     File f ;
 
-    public static void main(String[] args)  {
-        TestFile tf = new TestFile();
 
 
-        tf.outDir();
-
-        tf.test1();
-
-        tf.test2();
+    public TestFile(){
+        current = System.getProperty("user.dir");
+        f = new File(current);
     }
-
-
     /**
      * 输出当前项目绝对路径。
      */
     private void outDir() {
-        System.out.println(System.getProperty("user.dir"));
+        System.out.println(current);
     }
 
     /**
      * file 类常用方法测试。
      */
     public void test1()  {
-        current = System.getProperty("user.dir");
-        f = new File(current);
         Out.out("文件是否存在：",f.exists());
         Out.out("File是否是目录：",f.isDirectory());
         Out.out("File是否是文件：",f.isFile());
         Out.out("File最后修改时间：",new Date(f.lastModified()));
-        Out.out("File的大小：",f.length());
+        Out.out("File(文件）的大小：",f.length());
         Out.out("File的文件名：",f.getName());
         Out.out("File的目录路径:",f.getPath());
         Out.out("File的绝对路径是：",f.getAbsolutePath());
@@ -69,6 +61,19 @@ public class TestFile {
      * @param file
      */
     public void printFiles(File file,int level){
+        printFiles(file,level,0);
+    }
+
+    /**
+     *
+     * @param file
+     * @param level 临时
+     * @param max  最大层数
+     */
+    public void printFiles(File file,int level,int max){
+        if(level>= max && max != 0){
+            return;
+        }
         for (int i = 0 ; i<level;i++){
             System.out.print("*");
         }
@@ -76,14 +81,25 @@ public class TestFile {
         if (file.isDirectory()){
             File[] files = file.listFiles();
             for (File temp:files){
-                printFiles(temp,level+1);   //递归调用。
+                printFiles(temp,level+1,max);   //递归调用。
             }
         }
     }
 
     private void test2() {
-        printFiles(f,0);
+        printFiles(f,0,3);
     }
 
 
+
+    public static void main(String[] args)  {
+        TestFile tf = new TestFile();
+
+
+        tf.outDir();
+
+        tf.test1();
+
+        tf.test2();
+    }
 }
