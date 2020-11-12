@@ -39,14 +39,13 @@ public class TestIO {
 
             byte[] flush = new byte[1024*10]; // 缓冲容器
             int len = -1;
-            while (true) {
 
                 if ((len = infile.read(flush)) != -1) {
                     String str = new String(flush,0,len);// 从字符串数组 声明 字符串，从 flush 的 0 开始，长度是流的长度。
                     Out.out(str);
                 }
 
-            }
+            
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -63,6 +62,7 @@ public class TestIO {
             }
         }
     }
+
 
 
 
