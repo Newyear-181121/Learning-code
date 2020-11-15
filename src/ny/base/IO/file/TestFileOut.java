@@ -18,12 +18,14 @@ import java.io.*;
  */
 public class TestFileOut {
 
-    File f =null ;
-    OutputStream os = null ;
 
+    /**
+     *  字节输出流
+     */
     @Test
     public void Outfile(){
         File f = new File("C:/Demo/testFileOut-test01.txt");
+        OutputStream os = null ;
         try {
             os = new FileOutputStream(f,true);       // 没有文件时可以创建文件，没有父文件夹时会抛出异常。
             /**
@@ -50,6 +52,75 @@ public class TestFileOut {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+
+    /**
+     * 字符输出流
+     */
+    public void write(String str){
+        File f = new File("C:/Demo/testFileOut-test02.txt");
+        Writer writer = null;
+
+        try {
+            writer = new FileWriter(f);
+
+            char[] ch = str.toCharArray();      //使用字符数组
+
+            writer.write(ch);
+            writer.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null ){
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /**
+     * 字符输出流  测试
+     */
+    @Test
+    public void test02(){
+        write("可以使用中文输出试试");
+    }
+
+
+    /**
+     * ByteArrayOutputStream
+     *  字节数组输出流，
+     *      意思就是 把流输出到 一个字节数组中来。
+     *      这个流内部维护了一个 32 byte 的数组。
+     *
+     *      这个流的用处就是保存 文件输入流中的字节内容。
+     *
+     */
+    public void byteArrayOut(){
+
+        File f = new File(System.getProperty("user.dir")+"/README.md");
+
+        ByteArrayOutputStream baos = null;
+        // InputStream is;      // 如果要在 try 的括号中声明流，就不能在前面再 声明了。
+
+        baos = new ByteArrayOutputStream();
+
+        try ( InputStream is = new FileInputStream(f)){ // 在括号中声明，是会自动关闭的。
+            byte[] flush = new byte[1024*10];
+            int len = -1 ;
+            while( (len = is.read(flush)) != -1 ){
+                baos.write(flush,0,len);    // 写出到字节数组。     也可以写出到文件的，这里写出到自己维护的一个数组中来。
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
