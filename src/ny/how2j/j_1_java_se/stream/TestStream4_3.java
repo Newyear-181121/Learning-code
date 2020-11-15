@@ -6,13 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Ê¹ÓÃtry()µÄ·½Ê½
- * 			ÒâË¼ÊÇÔÚtryµÄÀ¨ºÅÀïĞ´codeµÄÓÃ·¨
+ * ä½¿ç”¨try()çš„æ–¹å¼
+ * 			æ„æ€æ˜¯åœ¨tryçš„æ‹¬å·é‡Œå†™codeçš„ç”¨æ³•
  * 
- * 		°ÑÁ÷¶¨ÒåÔÚtry()Àï,try,catch»òÕßfinally½áÊøµÄÊ±ºò£¬»á×Ô¶¯¹Ø±Õ
- * 		ÕâÖÖ±àĞ´´úÂëµÄ·½Ê½½Ğ×ö try-with-resources£¬ ÕâÊÇ´ÓJDK7¿ªÊ¼Ö§³ÖµÄ¼¼Êõ
+ * 		æŠŠæµå®šä¹‰åœ¨try()é‡Œ,try,catchæˆ–è€…finallyç»“æŸçš„æ—¶å€™ï¼Œä¼šè‡ªåŠ¨å…³é—­
+ * 		è¿™ç§ç¼–å†™ä»£ç çš„æ–¹å¼å«åš try-with-resourcesï¼Œ è¿™æ˜¯ä»JDK7å¼€å§‹æ”¯æŒçš„æŠ€æœ¯
  * 		
- * 		ËùÓĞµÄÁ÷£¬¶¼ÊµÏÖÁËÒ»¸ö½Ó¿Ú½Ğ×ö AutoCloseable£¬ÈÎºÎÀàÊµÏÖÁËÕâ¸ö½Ó¿Ú£¬¶¼¿ÉÒÔÔÚtry()ÖĞ½øĞĞÊµÀı»¯¡£ ²¢ÇÒÔÚtry, catch, finally½áÊøµÄÊ±ºò×Ô¶¯¹Ø±Õ£¬»ØÊÕÏà¹Ø×ÊÔ´¡£
+ * 		æ‰€æœ‰çš„æµï¼Œéƒ½å®ç°äº†ä¸€ä¸ªæ¥å£å«åš AutoCloseableï¼Œä»»ä½•ç±»å®ç°äº†è¿™ä¸ªæ¥å£ï¼Œéƒ½å¯ä»¥åœ¨try()ä¸­è¿›è¡Œå®ä¾‹åŒ–ã€‚ å¹¶ä¸”åœ¨try, catch, finallyç»“æŸçš„æ—¶å€™è‡ªåŠ¨å…³é—­ï¼Œå›æ”¶ç›¸å…³èµ„æºã€‚
  * @author New year
  *
  */
@@ -21,16 +21,16 @@ public class TestStream4_3 {
 		
 		File f = new File("f:demo/lol.txt");
 		
-		//°ÑÁ÷¶¨ÒåÔÚtry()Àï,try,catch»òÕßfinally½áÊøµÄÊ±ºò£¬»á×Ô¶¯¹Ø±Õ
+		//æŠŠæµå®šä¹‰åœ¨try()é‡Œ,try,catchæˆ–è€…finallyç»“æŸçš„æ—¶å€™ï¼Œä¼šè‡ªåŠ¨å…³é—­
 		try (FileInputStream fis = new FileInputStream(f)) {
-			byte[] all = new byte[(int) f.length()];//ÕâÀïµÄlengthÕâ¸ö·½·¨ÊÇÖ»ÓĞÔÚÊı×éÀï²ÅÄÜÊ¹ÓÃÂğ£¿¶¼ÊÇ»ñÈ¡¶ÔÏóµÄ³¤¶È    £¬£¬Êı×éµÄ³¤¶È£¬ÎÄ¼şµÄ³¤¶È
+			byte[] all = new byte[(int) f.length()];//è¿™é‡Œçš„lengthè¿™ä¸ªæ–¹æ³•æ˜¯åªæœ‰åœ¨æ•°ç»„é‡Œæ‰èƒ½ä½¿ç”¨å—ï¼Ÿéƒ½æ˜¯è·å–å¯¹è±¡çš„é•¿åº¦    ï¼Œï¼Œæ•°ç»„çš„é•¿åº¦ï¼Œæ–‡ä»¶çš„é•¿åº¦
 			fis.read(all);
 			for (byte b : all) {
 				System.out.println(b);
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();		//ËùÓĞµÄ´¦ÀíÒì³£µÄÒ»°ã·½·¨¶¼ÊÇ´òÓ¡¶ÑÕ»ºÛ¼£Âğ£¿
+			e.printStackTrace();		//æ‰€æœ‰çš„å¤„ç†å¼‚å¸¸çš„ä¸€èˆ¬æ–¹æ³•éƒ½æ˜¯æ‰“å°å †æ ˆç—•è¿¹å—ï¼Ÿ
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
