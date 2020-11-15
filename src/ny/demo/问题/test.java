@@ -8,4 +8,10 @@ package ny.demo.问题;
  */
 public class test {
 
+    String num ;    // 全局变量会自动赋值
+    public void test(){
+        // 局部变量不会自动赋值。
+        num.charAt(1);
+        num.toCharArray();
+    }
 }
