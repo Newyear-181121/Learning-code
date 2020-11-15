@@ -20,36 +20,33 @@ import java.util.Date;
  */
 public class TestFile {
 
-    String current; //当前项目绝对路径。
+    String current; //保存当前项目绝对路径。
 
     File f ;
 
 
-
-    public TestFile(){
-        current = System.getProperty("user.dir");
-        f = new File(current);
-    }
     /**
-     * 输出当前项目绝对路径。
+     * 构造。
      */
-    private void outDir() {
+    public TestFile(){
+        current = System.getProperty("user.dir");   // 获取当前了当前文件的绝对路径。
+        f = new File(current);
         System.out.println("当前文件夹路径是："+current);
     }
 
     /**
      * file 类常用方法测试。
      */
+    @Test
     public void test1()  {
-        outDir();
-        Out.out("文件是否存在：",f.exists());
-        Out.out("File是否是目录：",f.isDirectory());
-        Out.out("File是否是文件：",f.isFile());
-        Out.out("File最后修改时间：",new Date(f.lastModified()));
-        Out.out("File(文件）的大小：",f.length());
-        Out.out("File的文件名：",f.getName());
-        Out.out("File的目录路径:",f.getPath());
-        Out.out("File的绝对路径是：",f.getAbsolutePath());
+        Out.out("文件是否存在：           ",f.exists());
+        Out.out("File是否是目录：        ",f.isDirectory());
+        Out.out("File是否是文件：        ",f.isFile());
+        Out.out("File最后修改时间：      ",new Date(f.lastModified()));
+        Out.out("File(文件）的大小：     ",f.length());
+        Out.out("File的文件名：         ",f.getName());
+        Out.out("File的目录路径:        ",f.getPath());
+        Out.out("File的绝对路径是：      ",f.getAbsolutePath());
 
         try {
             Out.out("File的标准路径是：",f.getCanonicalPath());
@@ -82,7 +79,6 @@ public class TestFile {
             }
         }
     }
-
     /**
      * 打印 文件夹 中所有的文件和子文件
      * @param file
@@ -99,7 +95,8 @@ public class TestFile {
     /**
      * 测试 遍历子文件夹
      */
-    private void test2() {
+    @Test
+    public void test2() {
         printFiles(f,0,3);
     }
 
@@ -133,17 +130,5 @@ public class TestFile {
         for ( File f: files ) {
             Out.out(f);
         }
-    }
-
-
-    public static void main(String[] args)  {
-        TestFile tf = new TestFile();
-
-
-        tf.test1();
-
-        tf.test2();
-
-        //tf.test03();
     }
 }
