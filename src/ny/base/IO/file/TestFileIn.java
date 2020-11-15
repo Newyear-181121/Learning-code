@@ -20,14 +20,14 @@ import java.io.IOException;
  *      3. 读写操作   增加分段读取（缓存）
  *      4. 释放资源
  */
-public class TestIO {
+public class TestFileIn {
 
     private File file;  // 1. 声明数据源
     private FileInputStream infile;
 
 
 
-    public TestIO(){
+    public TestFileIn(){
         file = new File(System.getProperty("user.dir")+"/" + ".gitignore" );  // 2. 声明 操作的数据流
     }
 
@@ -40,10 +40,10 @@ public class TestIO {
             byte[] flush = new byte[1024*10]; // 缓冲容器
             int len = -1;
 
-                if ((len = infile.read(flush)) != -1) {
-                    String str = new String(flush,0,len);// 从字符串数组 声明 字符串，从 flush 的 0 开始，长度是流的长度。
-                    Out.out(str);
-                }
+            while ((len = infile.read(flush)) != -1) {
+                String str = new String(flush,0,len);   // 从字符串数组 声明 字符串，从 flush 的 0 开始，长度是流的长度。
+                Out.out(str);
+            }
 
             
 
