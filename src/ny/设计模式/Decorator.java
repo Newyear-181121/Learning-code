@@ -17,44 +17,124 @@ import ny.base.常用类.myUtil.Out;
  */
 public class Decorator {
     public static void main(String[] args) {
-        Persion p = new Persion();
-        p.say();
+        Drink coffee = new Coffee();
+        coffee.outSelf();
+        Drink suger = new Suger(coffee);
+        suger.outSelf();
+        Drink milk = new Milk(coffee);
+        milk.outSelf();
 
-        Amplifier am = new Amplifier(p);
-        am.say();
     }
 
 }
 
-interface Say{
-    void say();
+/**
+ * 抽象组件
+ * 需要装饰的抽象对象（接口或抽象父类）
+ */
+interface Drink{
+    double cost();//费用
+    String info();//说明
+    void outSelf(); // 输出自己的信息。
 }
 
+/**
+ * 具体组件
+ * 需要装饰的对象
+ */
+class Coffee implements Drink{
+    private String name = "Coffee";
 
-
-class Persion implements Say{
-    private int voice = 10;
     @Override
-    public void say() {
-        Out.out("Persion 的生音属性是：",this.getVoice());
+    public double cost() {
+        return 10;
     }
-    public int getVoice() {
-        return voice;
+
+    @Override
+    public String info() {
+        return name;
     }
-    public void setVoice(int voice) {
-        this.voice = voice;
+
+    @Override
+    public void outSelf() {
+        Out.out(info()+"-->"+cost());
     }
 }
 
-// 放大器
-class Amplifier implements Say{
-    private Persion p;
-    Amplifier(Persion p){
-        this.p = p;
+/**
+ * 抽象装饰类
+ * 包含了对抽象组件的引用及装饰者共有的方法
+ */
+abstract class Decorate implements Drink{
+    //对抽象组件的引用
+    private Drink drink;
+    public Decorate(Drink drink){
+        this.drink = drink;
     }
+
     @Override
-    public void say(){
-        Out.out("放大后的声音是：",p.getVoice()*100);
-        Out.out("放大过的声音");
+    public double cost() {
+        return this.drink.cost();
+    }
+
+    @Override
+    public String info() {
+        return this.drink.info();
+    }
+
+    @Override
+    public void outSelf() {
+        Out.out(info()+"-->"+cost());
     }
 }
+
+/**
+ * 具体装饰类1 Mikl
+ * 被装饰的对象   装饰品
+ */
+class Milk extends Decorate{
+    public Milk(Drink drink){
+        super(drink);
+    }
+
+    @Override
+    public double cost() {
+        return super.cost()*5;
+    }
+
+    @Override
+    public String info() {
+        return super.info()+"添加了Milk";
+    }
+
+    @Override
+    public void outSelf() {
+        Out.out(info()+"-->"+cost());
+    }
+}
+
+/**
+ * 具体装饰类2 Suger
+ * 被装饰的对象 装饰品
+ */
+class Suger extends Decorate{
+    public Suger(Drink drink){
+        super(drink);
+    }
+
+    @Override
+    public double cost() {
+        return super.cost()*2;
+    }
+
+    @Override
+    public String info() {
+        return super.info()+"添加了Suger";
+    }
+
+    @Override
+    public void outSelf() {
+        Out.out(info()+"-->"+cost());
+    }
+}
+
