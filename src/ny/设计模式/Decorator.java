@@ -7,7 +7,13 @@ import ny.base.常用类.myUtil.Out;
  * @Date: 2020-11-17 21:09
  * @version: 0.0.1
  * @description: 装饰器模式
- *  学习 处理流之前简单了解下 设计模式： 装饰器模式  Decorator mode
+ *  设计模式： 装饰器模式  Decorator mode
+ *  四大组件：
+ *      1. 抽象组件：需要装饰的抽象对象（接口或抽象父类）
+ *      2. 具体组件： 需要装饰的对象
+ *      3. 抽象装饰类： 包含了对抽象组件的引用及装饰者共有的方法
+ *      4. 具体装饰类： 被装饰的对象。
+ *
  */
 public class Decorator {
     public static void main(String[] args) {
