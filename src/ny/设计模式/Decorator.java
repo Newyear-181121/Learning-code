@@ -1,6 +1,7 @@
 package ny.设计模式;
 
 import ny.base.常用类.myUtil.Out;
+import org.junit.Test;
 
 /**
  * @auther: NewYear
@@ -14,15 +15,45 @@ import ny.base.常用类.myUtil.Out;
  *      3. 抽象装饰类： 包含了对抽象组件的引用及装饰者共有的方法
  *      4. 具体装饰类： 被装饰的对象。
  *
+ *
+ *    具体组件 和 抽象装饰类  实现 抽象组件 接口
+ *              具体装饰类继承 抽象装饰了。
+ *
+ *    具体 组件 和具体装饰类 都可以有多个。
+ *
+ *    具体装饰类 是装饰品，，用来装饰 具体组件的。
+ *
+ *        new 装饰类（具体类）   装饰品都是在外面的，，   就像手机壳 是手机的装饰品，在手机外面一样。
+ *
+ *    具体组件 可以 有多个装饰类，
+ *
  */
 public class Decorator {
     public static void main(String[] args) {
         Drink coffee = new Coffee();
         coffee.outSelf();
+
         Drink suger = new Suger(coffee);
         suger.outSelf();
+
         Drink milk = new Milk(coffee);
         milk.outSelf();
+
+        Drink milk2 = new Milk(suger);
+        milk2.outSelf();
+
+        milk = new Milk(milk);
+        milk.outSelf();
+
+        suger = new Suger(new Milk(suger));
+        suger.outSelf();
+    }
+
+    @Test
+    public void  testTea(){
+        Drink tea = new Tea();
+        Drink suger = new Suger(tea);
+        suger.outSelf();
 
     }
 
@@ -57,7 +88,25 @@ class Coffee implements Drink{
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost());
+        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
+    }
+}
+
+class Tea implements Drink{
+    private String name = "tea";
+    @Override
+    public double cost() {
+        return 8;
+    }
+
+    @Override
+    public String info() {
+        return name;
+    }
+
+    @Override
+    public void outSelf() {
+        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
     }
 }
 
@@ -84,7 +133,7 @@ abstract class Decorate implements Drink{
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost());
+        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
     }
 }
 
@@ -104,12 +153,13 @@ class Milk extends Decorate{
 
     @Override
     public String info() {
-        return super.info()+"添加了Milk";
+        return super.info()+"添加了Milk ";
     }
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost());
+        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
+        Out.out("\t子类继承父类的方法，只要不重写方法就是一样的。\n\t是子类自己有一个跟父类相同的方法");
     }
 }
 
@@ -129,12 +179,12 @@ class Suger extends Decorate{
 
     @Override
     public String info() {
-        return super.info()+"添加了Suger";
+        return super.info()+"添加了Suger ";
     }
 
-    @Override
-    public void outSelf() {
-        Out.out(info()+"-->"+cost());
-    }
+//    @Override
+//    public void outSelf() {
+//        Out.out(info()+"-->"+cost());
+//    }
 }
 
