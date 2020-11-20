@@ -12,18 +12,11 @@ import java.io.*;
  * @description: TestCopyFile
  */
 public class TestCopyFile {
-    File fi = null;
-    File fo = null;
-    InputStream is = null;
-    OutputStream os = null;
 
     public void copy(String srcPath,String destPath){
-        fi = new File(srcPath);
-        fo = new File(destPath);
 
-        try {
-            is = new FileInputStream(fi);
-            os = new FileOutputStream(fo);
+        try(InputStream is = new FileInputStream(new File(srcPath));
+            OutputStream os = new FileOutputStream(new File(destPath)) ) {
 
             byte[] flush = new byte[1024];
 
@@ -32,27 +25,10 @@ public class TestCopyFile {
                 os.write(flush);
             }
             os.flush();
-
-
         } catch (FileNotFoundException e){
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (os != null){
-                try {
-                    os.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (is != null) {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 

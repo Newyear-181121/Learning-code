@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.Date;
 
 /**
@@ -20,46 +19,15 @@ import java.util.Date;
  */
 public class TestFile {
 
-    String current; //保存当前项目绝对路径。
+    String current = System.getProperty("user.dir"); //保存当前项目绝对路径。
+    File f = new File(current);
 
-    File f ;
-
-
-    /**
-     * 构造。
-     */
     public TestFile(){
-        current = System.getProperty("user.dir");   // 获取当前了当前文件的绝对路径。
-        f = new File(current);
         System.out.println("当前文件夹路径是："+current);
     }
 
     /**
-     * file 类常用方法测试。
-     */
-    @Test
-    public void test1()  {
-        Out.out("文件是否存在：           ",f.exists());
-        Out.out("File是否是目录：        ",f.isDirectory());
-        Out.out("File是否是文件：        ",f.isFile());
-        Out.out("File最后修改时间：      ",new Date(f.lastModified()));
-        Out.out("File(文件）的大小：     ",f.length());
-        Out.out("File的文件名：         ",f.getName());
-        Out.out("File的目录路径:        ",f.getPath());
-        Out.out("File的绝对路径是：      ",f.getAbsolutePath());
-
-        try {
-            Out.out("File的标准路径是：",f.getCanonicalPath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
-
-    /**
-     *
+     *  遍历文件加中指定深度的文件
      * @param file
      * @param level 临时
      * @param max  最大层数
@@ -89,6 +57,33 @@ public class TestFile {
 
     public void printFiles(File file){
         printFiles(file,0,0);
+    }
+
+
+
+
+
+
+    /**
+     * file 类常用方法测试。
+     */
+    @Test
+    public void test1()  {
+        Out.out("文件是否存在：           ",f.exists());
+        Out.out("File是否是目录：        ",f.isDirectory());
+        Out.out("File是否是文件：        ",f.isFile());
+        Out.out("File最后修改时间：      ",new Date(f.lastModified()));
+        Out.out("File(文件）的大小：     ",f.length());
+        Out.out("File的文件名：         ",f.getName());
+        Out.out("File的目录路径:        ",f.getPath());
+        Out.out("File的绝对路径是：      ",f.getAbsolutePath());
+
+        try {
+            Out.out("File的标准路径是：",f.getCanonicalPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 

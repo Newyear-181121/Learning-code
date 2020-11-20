@@ -22,20 +22,16 @@ import java.io.IOException;
  */
 public class TestFileIn {
 
-    private File file;  // 1. 声明数据源
-    private FileInputStream infile;
+    private File file =  new File(System.getProperty("user.dir")+"/" + ".gitignore" );  // 1. 声明数据源
 
 
-
-    public TestFileIn(){
-        file = new File(System.getProperty("user.dir")+"/" + ".gitignore" );  // 2. 声明 操作的数据流
-    }
-
-
+    /**
+     * 只要修改传入参数，就可以改成可以使用的方法。
+     */
     @Test
     public void test(){
-        try {
-            infile = new FileInputStream(file);
+        try (FileInputStream infile = new FileInputStream(file);) {
+
 
             byte[] flush = new byte[1024*10]; // 缓冲容器
             int len = -1;
@@ -45,21 +41,11 @@ public class TestFileIn {
                 Out.out(str);
             }
 
-            
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             Out.out("声明流 异常");
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (infile != null){
-                try {
-                    infile.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 

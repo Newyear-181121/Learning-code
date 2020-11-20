@@ -25,9 +25,7 @@ public class TestFileOut {
     @Test
     public void Outfile(){
         File f = new File("C:/Demo/testFileOut-test01.txt");
-        OutputStream os = null ;
-        try {
-            os = new FileOutputStream(f,true);       // 没有文件时可以创建文件，没有父文件夹时会抛出异常。
+        try (OutputStream os = new FileOutputStream(f,true);) {       // 没有文件时可以创建文件，没有父文件夹时会抛出异常。
             /**
              * 声明时，不带Boolean 值时 默认时 false  ， true 表示追加 字符串到文件。
              */
@@ -44,14 +42,6 @@ public class TestFileOut {
             e.printStackTrace();
         } catch (IOException e){
             e.printStackTrace();
-        } finally {
-            if (os != null){
-                try {
-                    os.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 
@@ -61,26 +51,14 @@ public class TestFileOut {
      */
     public void write(String str){
         File f = new File("C:/Demo/testFileOut-test02.txt");
-        Writer writer = null;
 
-        try {
-            writer = new FileWriter(f);
-
+        try(Writer writer = new FileWriter(f)) {
             char[] ch = str.toCharArray();      //使用字符数组
-
             writer.write(ch);
             writer.flush();
 
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (writer != null ){
-                try {
-                    writer.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 
@@ -102,14 +80,12 @@ public class TestFileOut {
      *      这个流的用处就是保存 文件输入流中的字节内容。
      *
      */
-    public void byteArrayOut(){
+    public ByteArrayOutputStream byteArrayOut(){
 
         File f = new File(System.getProperty("user.dir")+"/README.md");
 
-        ByteArrayOutputStream baos = null;
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
         // InputStream is;      // 如果要在 try 的括号中声明流，就不能在前面再 声明了。
-
-        baos = new ByteArrayOutputStream();
 
         try ( InputStream is = new FileInputStream(f)){ // 在括号中声明，是会自动关闭的。
             byte[] flush = new byte[1024*10];
@@ -122,5 +98,6 @@ public class TestFileOut {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return baos;
     }
 }
