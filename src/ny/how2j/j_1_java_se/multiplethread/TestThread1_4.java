@@ -39,7 +39,7 @@ public class TestThread1_4 {
 			public void run() {
 				//匿名类中用到外部的局部变量teemo，必须把teemo声明为final
                 //但是在JDK7以后，就不是必须加final的了
-				while(!teemo.isDead()){
+				while(!teemo.isDead()){		// 如果没死就一直打 。_ 。
 					gareen.attackHero(teemo);
 				}
 			}
