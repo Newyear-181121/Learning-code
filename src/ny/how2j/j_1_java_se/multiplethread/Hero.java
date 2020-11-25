@@ -11,7 +11,7 @@ public class Hero {
 	public String name;
 	public float hp;
 	
-	public int damage;
+	public int damage;	//伤害
 	
 	public void attackHero(Hero h) {
 		
