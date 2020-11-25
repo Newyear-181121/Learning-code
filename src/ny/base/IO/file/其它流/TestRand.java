@@ -24,12 +24,23 @@ public class TestRand {
     public void test01() {
         try (RandomAccessFile raf = new RandomAccessFile(new File("src\\ny\\base\\IO\\file\\TestFileOut.java"),"r");) {
 
-            raf.seek(10);
+            int benginPos = 2;      // 起始位置的偏移量。
+            int actualSize = 1024;      // 实际要读取的字符块的大小
+
+            raf.seek(benginPos);
 
             byte[] flush = new byte[1024*10];
             int len = -1 ;
             while( (len = raf.read(flush)) != -1 ){
-                Out.out(new String(flush,0,len));
+
+                // 如果需要的大小，大于本次读取的大小，
+                if(actualSize>len){
+                    Out.out(new String(flush,0,len));   //输出这次读取的所有长度
+                    actualSize -=len;
+                }else {
+                    Out.out(new String(flush,0,actualSize));//输出实际需要的大小。
+                }
+
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
