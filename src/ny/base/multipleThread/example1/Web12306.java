@@ -18,6 +18,11 @@ public class Web12306 implements Runnable{
             if (ticketNums < 0 ){
                 break;
             }
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Out.out(Thread.currentThread().getName()+"---->"+ticketNums--);
         }
     }
