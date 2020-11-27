@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * ÒıÓÃ¾²Ì¬·½·¨
+ * å¼•ç”¨é™æ€æ–¹æ³•
  * @author New year
  *
  */
@@ -18,23 +18,23 @@ public class TestLambda2_1 {
 			heros.add(new Hero("hero " + i, r.nextInt(1000),r.nextInt(100)));
 			
 		}
-		System.out.println("³õÊ¼»¯ºóµÄ¼¯ºÏ£º");
+		System.out.println("åˆå§‹åŒ–åçš„é›†åˆï¼š");
 		System.out.println(heros);
 		
 		HeroChecker c = new HeroChecker() {
 			public boolean test(Hero h) {
 				return h.hp>100 && h.damage<50;
 			}
-		};		//ÕâÀïÊÇÄäÃûÀà½áÊø
+		};		//è¿™é‡Œæ˜¯åŒ¿åç±»ç»“æŸ
 		
-		System.out.println("Ê¹ÓÃÄäÃûÀà¹ıÂË");
+		System.out.println("ä½¿ç”¨åŒ¿åç±»è¿‡æ»¤");
 		filter(heros,c);
-		System.out.println("Ê¹ÓÃLambda±í´ïÊ½");
+		System.out.println("ä½¿ç”¨Lambdaè¡¨è¾¾å¼");
 		filter(heros, h -> h.hp > 100 && h.damage < 50 );
-		System.out.println("ÔÚLambda±í´ïÊ½ÖĞÊ¹ÓÃ¾²Ì¬·½·¨");
+		System.out.println("åœ¨Lambdaè¡¨è¾¾å¼ä¸­ä½¿ç”¨é™æ€æ–¹æ³•");
 		filter(heros, h -> TestLambda2_1.testHero(h));
-		//Ö±½ÓÒıÓÃ¾²Ì¬·½·¨
-		System.out.println("Ö±½ÓÒıÓÃ¾²Ì¬·½·¨");
+		//ç›´æ¥å¼•ç”¨é™æ€æ–¹æ³•
+		System.out.println("ç›´æ¥å¼•ç”¨é™æ€æ–¹æ³•");
 		filter(heros, TestLambda2_1::testHero);
 		
 	}

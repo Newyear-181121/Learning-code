@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * ÒıÓÃÈİÆ÷ÖĞµÄ¶ÔÏóµÄ·½·¨
+ * å¼•ç”¨å®¹å™¨ä¸­çš„å¯¹è±¡çš„æ–¹æ³•
  * @author New year
  *
  */
@@ -16,11 +16,11 @@ public class TestLambda2_3 {
 		for (int i = 0; i < 5 ; i++) {
 			heros.add(new Hero("hero" + i, r.nextInt(1000),r.nextInt(100)));
 		}
-		System.out.println("³õÊ¼»¯ºóµÄ¼¯ºÏ£º");
+		System.out.println("åˆå§‹åŒ–åçš„é›†åˆï¼š");
 		System.out.println(heros);
 		
-		System.out.println("Ê¹ÓÃÒıÓÃ¶ÔÏó·½·¨  µÄ¹ıÂË½á¹û£º");
-		//Ê¹ÓÃÀàµÄ¶ÔÏó·½·¨
+		System.out.println("ä½¿ç”¨å¼•ç”¨å¯¹è±¡æ–¹æ³•  çš„è¿‡æ»¤ç»“æœï¼š");
+		//ä½¿ç”¨ç±»çš„å¯¹è±¡æ–¹æ³•
 		TestLambda2_3 testLambda = new TestLambda2_3();
 		filter(heros, testLambda::testHero);
 	}

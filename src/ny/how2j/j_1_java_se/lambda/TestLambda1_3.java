@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Lambda方式
+ * Lambda鏂瑰紡
  * @author New year
  *
  */
@@ -19,9 +19,9 @@ public class TestLambda1_3 {
 		for (int i = 0; i < 5 ; i++) {
 			heros.add(new Hero("hero " + i,r.nextInt(1000),r.nextInt(100)));
 		}
-		System.out.println("初始化后的集合：");
+		System.out.println("鍒濆鍖栧悗鐨勯泦鍚堬細");
 		System.out.println(heros);
-		System.out.println("使用Lanbda的方法，筛选出 ");
+		System.out.println("浣跨敤Lanbda鐨勬柟娉曪紝绛涢�夊嚭 ");
 		filter(heros,h->h.hp>100 && h.damage<50);
 	}
 	

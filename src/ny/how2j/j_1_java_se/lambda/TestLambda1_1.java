@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * ÆÕÍ¨·½·¨
+ * æ™®é€šæ–¹æ³•
  * @author New year
  *
- *		Ê¹ÓÃÒ»¸öÆÕÍ¨·½·¨£¬ÔÚforÑ­»·±éÀúÖÐ½øÐÐÌõ¼þÅÐ¶Ï£¬É¸Ñ¡³öÂú×ãÌõ¼þµÄÊý¾Ý
+ *		ä½¿ç”¨ä¸€ä¸ªæ™®é€šæ–¹æ³•ï¼Œåœ¨forå¾ªçŽ¯éåŽ†ä¸­è¿›è¡Œæ¡ä»¶åˆ¤æ–­ï¼Œç­›é€‰å‡ºæ»¡è¶³æ¡ä»¶çš„æ•°æ®
  *
  *		hp>100 && damage<50
  */
@@ -18,18 +18,18 @@ public class TestLambda1_1 {
 		
 		Random r = new Random();
 		
-		//ÕâÀïÉùÃ÷ÁËÒ»¸öHero·ºÐÍµÄÈÝÆ÷  
+		//è¿™é‡Œå£°æ˜Žäº†ä¸€ä¸ªHeroæ³›åž‹çš„å®¹å™¨  
 		List<Hero> heros = new ArrayList<Hero>();
 		for (int i = 0; i < 10; i++){
-			//¸øÈÝÆ÷Ôö¼ÓÄÚÈÝ
+			//ç»™å®¹å™¨å¢žåŠ å†…å®¹
 			heros.add(new Hero("hero " + i, r.nextInt(10000),r.nextInt(100)));	
-			//Ã¿Ôö¼ÓÒ»¸ö¾Í´òÓ¡Ò»¸ö
+			//æ¯å¢žåŠ ä¸€ä¸ªå°±æ‰“å°ä¸€ä¸ª
 			//System.out.println(heros);
-			//ÕâÀï»¹²»¼ÓµÃºÃ¡£
+			//è¿™é‡Œè¿˜ä¸åŠ å¾—å¥½ã€‚
 		}
-		System.out.println("³õÊ¼»¯ºóµÄ¼¯ºÏ£º");
+		System.out.println("åˆå§‹åŒ–åŽçš„é›†åˆï¼š");
 		System.out.println(heros);
-		System.out.println("É¸Ñ¡³ö hp>100 && damange<50µÄÓ¢ÐÛ");
+		System.out.println("ç­›é€‰å‡º hp>100 && damange<50çš„è‹±é›„");
 		filter(heros);
 	}
 	
