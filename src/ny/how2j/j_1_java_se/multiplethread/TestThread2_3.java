@@ -12,34 +12,14 @@ package multiplethread;
  *
  *在Hero2_3  中将暂停时间去掉了。
  */
-public class TestThread2_3 {
+public class TestThread2_3 extends FatherForHero {
 
 	public static void main(String[] args) {
-		
-		final Hero2_3 gareen = new Hero2_3();
-        gareen.name = "盖伦";
-        gareen.hp = 6160;
-        gareen.damage = 1;
-  
-        final Hero2_3 teemo = new Hero2_3();
-        teemo.name = "提--莫";
-        teemo.hp = 300;
-        teemo.damage = 1;
-          
-        final Hero2_3 bh = new Hero2_3();
-        bh.name = "赏金猎人";
-        bh.hp = 5000;
-        bh.damage = 1;
-          
-        final Hero2_3 leesin = new Hero2_3();
-        leesin.name = "盲&僧";
-        leesin.hp = 455;
-        leesin.damage = 1;
-        
+
         Thread t1 = new Thread(){
         	public void run(){
         		
-        		while (!teemo.isDead2_3()){
+        		while (!teemo.isDead()){
         			bh.attackHero(teemo);
         		}
         	}
@@ -47,7 +27,7 @@ public class TestThread2_3 {
         
         Thread t2 = new Thread(){
         	public void run(){
-        		while(!leesin.isDead2_3()){
+        		while(!leesin.isDead()){
         			bh.attackHero(leesin);
         		}
         	}

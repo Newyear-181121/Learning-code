@@ -10,29 +10,10 @@ package multiplethread;
  *在42行执行t.join，即表明在主线程中加入该线程。
  *主线程会等待该线程结束完毕， 才会往下运行。
  */
-public class TestThread2_2 {
+public class TestThread2_2 extends FatherForHero {
 
 	public static void main(String[] args) {
-		
-		final Hero gareen = new Hero();
-		gareen.name = "盖伦";
-        gareen.hp = 616;
-        gareen.damage = 50;
-  
-        final Hero teemo = new Hero();
-        teemo.name = "提莫";
-        teemo.hp = 300;
-        teemo.damage = 30;
-          
-        final Hero bh = new Hero();
-        bh.name = "赏金猎人";
-        bh.hp = 500;
-        bh.damage = 65;
-          
-        final Hero leesin = new Hero();
-        leesin.name = "盲僧";
-        leesin.hp = 455;
-        leesin.damage = 80;
+
         
         //创建类型的时候都使用了匿名内部类
         Thread t1 = new Thread(){

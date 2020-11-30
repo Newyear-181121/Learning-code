@@ -1,7 +1,5 @@
 package multiplethread;
 
-import java.util.Map;
-
 /**
  * 线程概念
  * @author New year
@@ -11,19 +9,12 @@ import java.util.Map;
  *线程：线程是在进程内部同时做的事情，比如在LOL里，有很多事情要同时做，比如"盖伦” 击杀“提莫”，同时“赏金猎人”又在击杀“盲僧”，这就是由多线程来实现的。 
  *
  *
- *此处代码演示的是不使用多线程的情况： 
- *只有在盖伦杀掉提莫后，赏金猎人才开始杀盲僧
+ *  此处代码演示的是不使用多线程的情况：
+ *  	只有在盖伦杀掉提莫后，赏金猎人才开始杀盲僧
  */
-public class TestThread1_1 {
+public class TestThread1_1 extends FatherForHero {
 
 	public static void main(String[] args) {
-
-		Map<String,Hero> map = FactoryHero.getHerosToMap();
-
-		Hero teemo = map.get("提莫");
-		Hero gareen = map.get("盖伦");
-		Hero leesin = map.get("盲僧");
-		Hero bh = map.get("赏金猎人");
 
 		//盖伦攻击提莫		//只要不死一直打
 		while(!teemo.isDead()){

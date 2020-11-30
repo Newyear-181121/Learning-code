@@ -9,31 +9,10 @@ package multiplethread;
  *匿名类的一个好处是可以很方便的访问外部的局部变量。
  *前提是外部的局部变量需要被声明为final。(JDK7以后就不需要了)
  */
-public class TestThread1_4 {
+public class TestThread1_4 extends FatherForHero {
 
 	public static void main(String[] args) {
-		
-		Hero gareen = new Hero();
-		gareen.name = "盖伦";
-		gareen.hp = 300;
-		gareen.damage = 30;
-		
-		Hero teemo = new  Hero();
-		teemo.name = "提莫";
-		teemo.hp = 300;
-		teemo.damage = 30;
-		
-		Hero bh = new Hero();
-		bh.name = "赏金猎人";
-		bh.hp = 500;
-		bh.damage = 65;
-		
-		Hero leesin = new Hero();
-		leesin.name = "盲僧";
-		leesin.hp = 455;
-		leesin.damage = 80;
-		
-		
+
 		//匿名类
 		Thread t1 = new Thread() {
 			public void run() {
