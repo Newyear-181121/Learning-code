@@ -12,7 +12,7 @@ package multiplethread;
  *  此处代码演示的是不使用多线程的情况：
  *  	只有在盖伦杀掉提莫后，赏金猎人才开始杀盲僧
  */
-public class TestThread1_1 extends FatherForHero {
+public class TestThread1_1_不使用多线程 extends FatherForHero {
 
 	public static void main(String[] args) {
 

@@ -6,7 +6,7 @@ package multiplethread;
  * @author New year
  *		//look  Battle.java
  */
-public class TestThread1_3 extends FatherForHero {
+public class TestThread1_3_方式二实现 extends FatherForHero {
 
 	public static void main(String[] args) {
 
@@ -16,11 +16,7 @@ public class TestThread1_3 extends FatherForHero {
         Battle battle2 = new Battle(gareen,teemo);
         new Thread(battle2).start();
 
-        int x =50;
-        while (x>0){
-                System.out.println(x);
-                x--;
-        }
+        Utils.mySleep();
 
 	}
 

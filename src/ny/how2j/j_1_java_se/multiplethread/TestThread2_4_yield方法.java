@@ -7,7 +7,7 @@ package multiplethread;
  *
  *当前线程，临时暂停，使得其他线程可以有更多的机会占用CPU资源
  */
-public class TestThread2_4 extends FatherForHero {
+public class TestThread2_4_yield方法 extends FatherForHero {
 
 	public static void main(String[] args) {
 

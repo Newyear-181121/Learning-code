@@ -8,8 +8,10 @@ package multiplethread;
  *使用匿名类，继承Thread,重写run方法，直接在run方法中写业务代码
  *匿名类的一个好处是可以很方便的访问外部的局部变量。
  *前提是外部的局部变量需要被声明为final。(JDK7以后就不需要了)
+ *
+ *  lamdba 表达是推导：@see(ny.base.lambda)包
  */
-public class TestThread1_4 extends FatherForHero {
+public class TestThread1_4_使用匿名类和lambda表达式 extends FatherForHero {
 
 	public static void main(String[] args) {
 

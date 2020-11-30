@@ -11,7 +11,7 @@ package multiplethread;
  *
  * FatherForHero 在这里声明的 Hero对象。 还是这种方法 简单。
  */
-public class TestThread1_2 extends FatherForHero{
+public class TestThread1_2_方式一实现 extends FatherForHero{
 
 	public static void main(String[] args) {
         

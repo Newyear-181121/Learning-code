@@ -17,7 +17,7 @@ package multiplethread;
  *
  *守护线程通常会被用来做日志，性能统计等工作。
  */
-public class TestThread2_5 {
+public class TestThread2_5_守护进程 {
 
 	public static void main(String[] args) {
 		
@@ -26,17 +26,25 @@ public class TestThread2_5 {
 				int seconds = 0;
 				
 				while(true){
-					try {
-						Thread.sleep(1000);		//线程暂停1000毫秒
-					} catch (InterruptedException e){
-						e.printStackTrace();
-					}
+					Utils.sysSleep();
 					System.out.printf("已经玩了LOL %d 秒%n", seconds++);
 				}
 			}
 		};
 		t1.setDaemon(true);	//这就是守护进程吗？//有这句的时候进程不能运行。
 		t1.start();
+
+		Thread t2 = new Thread(){
+			public void run(){
+				int seconds = 0;
+
+				while(true){
+					Utils.sysSleep();
+					System.out.printf("已经玩了LOL %d 秒%n", seconds++);
+				}
+			}
+		};
+		t2.start();
 	}
 
 }

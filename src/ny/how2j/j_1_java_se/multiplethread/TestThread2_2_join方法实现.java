@@ -10,7 +10,7 @@ package multiplethread;
  *在42行执行t.join，即表明在主线程中加入该线程。
  *主线程会等待该线程结束完毕， 才会往下运行。
  */
-public class TestThread2_2 extends FatherForHero {
+public class TestThread2_2_join方法实现 extends FatherForHero {
 
 	public static void main(String[] args) {
 

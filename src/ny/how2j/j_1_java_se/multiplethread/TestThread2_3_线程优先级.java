@@ -12,7 +12,7 @@ package multiplethread;
  *
  *在Hero2_3  中将暂停时间去掉了。
  */
-public class TestThread2_3 extends FatherForHero {
+public class TestThread2_3_线程优先级 extends FatherForHero {
 
 	public static void main(String[] args) {
 
