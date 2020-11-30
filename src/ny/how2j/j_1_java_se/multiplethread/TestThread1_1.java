@@ -1,5 +1,6 @@
 package multiplethread;
 
+import java.util.Map;
 
 /**
  * 线程概念
@@ -16,27 +17,14 @@ package multiplethread;
 public class TestThread1_1 {
 
 	public static void main(String[] args) {
-//  /*
-		Hero gareen = new Hero();
-		gareen.name = "盖伦";
-		gareen.hp = 616;
-		gareen.damage = 50;
-		
-		Hero teemo = new Hero();
-		teemo.name = "提莫";
-		teemo.hp = 300;
-		teemo.damage = 30;
-		
-		Hero bh = new Hero();
-        bh.name = "赏金猎人";
-        bh.hp = 500;
-        bh.damage = 65;
-		
-		Hero leesin = new Hero();
-		leesin.name = "盲僧";
-		leesin.hp = 455;
-		leesin.damage = 80;
-//  */		
+
+		Map<String,Hero> map = FactoryHero.getHerosToMap();
+
+		Hero teemo = map.get("提莫");
+		Hero gareen = map.get("盖伦");
+		Hero leesin = map.get("盲僧");
+		Hero bh = map.get("赏金猎人");
+
 		//盖伦攻击提莫		//只要不死一直打
 		while(!teemo.isDead()){
 			gareen.attackHero(teemo);
