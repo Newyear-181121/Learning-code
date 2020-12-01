@@ -5,6 +5,8 @@ package multiplethread_3;
  * 演示同步问题
  * @author New year
  *
+ *	没有使用同步方法，与
+ *	@see (TestThread3_5_使用synchronized解决同步问题) 对比
  */
 public class TestThread3_1 {
 

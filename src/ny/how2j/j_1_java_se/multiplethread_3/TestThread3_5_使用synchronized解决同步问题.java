@@ -12,11 +12,22 @@ import java.util.TimerTask;
  *
  *所有需要修改hp的地方，有要建立在占有someObject的基础上。 
  *而对象 someObject在同一时间，只能被一个线程占有。 间接地，导致同一时间，hp只能被一个线程修改。
+ *
+ *
+ * 	使用了同步方法，与
+ * 	@see (multiplethread_3.TestThread3_1) 对比
  */
 public class TestThread3_5_使用synchronized解决同步问题 {
 
 	public static void main(String[] args) {
-		
+
+		/**
+		 * 这个方法中实验中，通过在线程方法中锁定一个常量对象， 来保证同时只有一个线程能操作 真正的资源对象。
+		 *
+		 * 相当于新建了一个锁对象。 获取到锁对象的线程才能操作资源对象，而不是在资源对象上直接加锁。
+		 *
+		 * 	这样的好处是，  任何时候都能读取资源对象，要操作资源对象的时候必须等前个线程释放锁才行。
+		 */
 		final Object someObject = new Object();
 		
 		final Hero gareen = new Hero();
@@ -47,7 +58,7 @@ public class TestThread3_5_使用synchronized解决同步问题 {
 			}
 		};
 		thread.setDaemon(true);	//设置成守护进程，其他两个线程听了之后他会自动停止。
-		thread.start();
+		thread.start();	// 这个线程就是后台输出时间和实时血量。
 
 		
 		for(int i = 0;i< n; i++) {
@@ -88,7 +99,9 @@ public class TestThread3_5_使用synchronized解决同步问题 {
 			t.start();
 			reduceThreads[i] = t;
 		}
-		
+
+
+		/*  这两个 join 方法 是保证 所有的加血 和减血的线程都执行完毕  */
 		for (Thread t : addThreads) {
 			try {
 				t.join();
@@ -99,7 +112,7 @@ public class TestThread3_5_使用synchronized解决同步问题 {
 		for (Thread t : reduceThreads) {
 			try {
 				t.join();		//是把什么线程加入主线程
-				
+
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
