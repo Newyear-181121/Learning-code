@@ -1,6 +1,9 @@
 package multiplethread_3;
 
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * 使用hero对象作为同步对象
  * @author New year
@@ -12,7 +15,7 @@ package multiplethread_3;
  *表示当期对象为同步对象，即也是gareen为同步对象
  *
  */
-public class TestThread3_6 {
+public class TestThread3_6_对要操作的对象直接使用锁 {
 
 	public static void main(String[] args) {
 		
@@ -25,24 +28,21 @@ public class TestThread3_6 {
 		//这里是创建了两个数组，分别用来存放加血和掉血的一万个线程。
 		Thread[] addThreads = new Thread[n];
 		Thread[] reduceThreads = new Thread[n];
-		
+
+
 		for (int i = 0 ; i < n ; i++) {
 			Thread t = new Thread() {		//这里是内部类，实现线程
-				public void run() {			//内部类的方法重写
-					
-					//使用gareen作为synchronized
-					synchronized (gareen) {
-						gareen.recover();
-					}
-					
-					
-						try {
-							Thread.sleep(100);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					
+				public void run() {			//Lambda 表达式，函数式编程，只要使用一次的线程方法，的线程声明。
+				//使用gareen作为synchronized
+				synchronized (gareen) {
+					gareen.recover();
+				}
+
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				}
 			};
 			t.start();
@@ -66,21 +66,21 @@ public class TestThread3_6 {
 			t.start();
 			reduceThreads[i] = t;
 		}
-		
+
+		Utils.outDaemo(gareen.hp);
+
+
 		for (Thread t : addThreads) {
 			try {
 				t.join();
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
 		for (Thread t : reduceThreads) {
 			try {
 				t.join();
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
