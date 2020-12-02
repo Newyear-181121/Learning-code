@@ -23,4 +23,11 @@ public class Out {
         System.out.print(str);
         System.out.println(object);
     }
+
+    /**
+     * 输出现在的时间
+     */
+    public static void outNow(){
+        out(Now.now());
+    }
 }
