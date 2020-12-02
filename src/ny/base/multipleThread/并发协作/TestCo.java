@@ -39,7 +39,7 @@ class Productor extends Thread{
      * 生产
      */
     public void run(){
-        for (int i = 0 ; i < 100; i++){
+        for (int i = 0 ; i < 1000; i++){
             Out.out("生产-->"+i+"个数据");
             container.push(new Date(i));
         }
@@ -70,7 +70,7 @@ class Consumer extends Thread{
  * 缓冲区
  */
 class SynContainer{
-    Date[] dates = new Date[50];  // 存储数据的容器
+    Date[] dates = new Date[10];  // 存储数据的容器
     int count = 0 ; // 计数器
 
     /**
@@ -78,11 +78,20 @@ class SynContainer{
      * 生产
      */
     public synchronized void push(Date date){
+        // 1. 何时生产 判断容器中是否有空间
+        // 2.1 没有空间 不能生产
+        if()
+        // 2.2 存在空间 可以生产
         dates[count] = date;
         count++;
     }
 
     public synchronized Date pop(){
+        // 1. 何时消费 判断容器中是否有数据。
+        // 2.1 没有数据  只能等待
+        if (count == 0){
+            Utils.myWait(this); // 线程阻塞  生产者通知消费解除阻塞
+        }
         count--;
         return dates[count];
     }

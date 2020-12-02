@@ -7,5 +7,12 @@ package ny.base.multipleThread.并发协作;
  * @description: Utils
  */
 public class Utils {
+    public static void myWait(Object obj){
+        try {
+            obj.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+    }
 }
