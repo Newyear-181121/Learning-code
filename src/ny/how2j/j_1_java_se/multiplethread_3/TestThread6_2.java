@@ -22,7 +22,6 @@ public class TestThread6_2 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		final Hero6_2 gareen = new Hero6_2();
 		gareen.name = "盖伦";
@@ -38,11 +37,7 @@ public class TestThread6_2 {
 					
 					gareen.hurt();
 					
-					try {
-						Thread.sleep(10);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+					Utils.sysSleep(100);
 				}
 			}
 		};
@@ -52,12 +47,8 @@ public class TestThread6_2 {
 			public void run() {
 				while (true) {
 					gareen.recover();
-					
-					try {
-						Thread.sleep(100);
-					} catch (InterruptedException e ) {
-						e.printStackTrace();
-					}
+
+					Utils.sysSleep(100);
 				}
 			}
 		};
@@ -66,7 +57,7 @@ public class TestThread6_2 {
 
 }
 /**
- * 关于wait、notify和notifyAll 顶 折 纠 问
+ * 关于wait、notify和notifyAll
 留意wait()和notify() 这两个方法是什么对象上的？
 
  

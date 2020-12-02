@@ -9,7 +9,7 @@ package multiplethread_3;
  *和hurt方法达到的效果是一样
  *外部线程访问gareen的方法，就不需要额外使用synchronized 了
  */
-public class TestThread3_7 {
+public class TestThread3_7_方法上使用synchronized {
 
 	public static void main(String[] args) {
 
@@ -21,19 +21,15 @@ public class TestThread3_7 {
 		
 		Thread[] addThreads = new Thread[n];
 		Thread[] reduceThreads = new Thread[n];
-		
+
+		/* 声明多个线程 */
 		for (int i = 0; i < n ; i++) {
 			Thread t = new Thread( ){
 				public void run() {
 					
 					//recover自带synchronized
 					gareen.recover();
-					
-					try {
-						Thread.sleep(100);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
+					Utils.sysSleep(100);
 				}
 			};
 			t.start();
@@ -42,16 +38,9 @@ public class TestThread3_7 {
 		for (int i = 0; i < n ; i++) {
 			Thread  t = new Thread(){
 				public void run() {
-					
 					 //hurt自带synchronized
 					gareen.hurt();
-					
-					try {
-						Thread.sleep(100);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Utils.sysSleep(100);
 				}
 			};
 			t.start();
@@ -84,7 +73,7 @@ public class TestThread3_7 {
 }
 
 /*
-线程安全的类 顶 折
+线程安全的类
 如果一个类，其方法都是有synchronized修饰的，那么该类就叫做线程安全的类
 
 同一时间，只有一个线程能够进入 这种类的一个实例 的去修改数据，进而保证了这个实例中的数据的安全(不会同时被多线程修改而变成脏数据)
@@ -95,7 +84,7 @@ StringBuffer的方法都是有synchronized修饰的，StringBuffer就叫做线�
 */
 
 /**
-把非线程安全的集合转换为线程安全 顶 折
+把非线程安全的集合转换为线程安全
 ArrayList是非线程安全的，换句话说，多个线程可以同时进入一个ArrayList对象的add方法
 
 借助Collections.synchronizedList，可以把ArrayList转换为线程安全的List。

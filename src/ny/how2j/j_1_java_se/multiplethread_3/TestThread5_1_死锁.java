@@ -26,13 +26,8 @@ public class TestThread5_1_死锁 {
 				//占有九尾妖狐
 				synchronized (ahri) {
 					System.out.println("t1 已占有九尾妖狐");
-					try {
-						//停顿1000毫秒，另一个线程有足够的时间占有安妮
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					//停顿1000毫秒，另一个线程有足够的时间占有安妮
+					Utils.sysSleep();
 					
 					System.out.println("t1 试图占有安妮");
 					System.out.println("t1 等待中 。。。。");
@@ -50,13 +45,8 @@ public class TestThread5_1_死锁 {
 				//占有安妮
 				synchronized (annie) {
 					System.out.println("t2 已占有安妮");
-					try {
-						//停顿1000秒，另一个线程有足够的时间占有暂用九尾妖狐
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					//停顿1000毫秒，另一个线程有足够的时间占有安妮
+					Utils.sysSleep();
 					System.out.println("t2 试图占有九尾妖狐");
 					System.out.println("t2 等待中 。。。。");
 					synchronized (ahri) {

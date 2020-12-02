@@ -17,7 +17,7 @@ public class Utils {
     /**
      * 使用系统的sleep 方法。
      * 这里就是把 try catch 封装了一下。
-     * @param millis
+     * @param millis 休眠的毫秒数
      */
     public static void sysSleep(int millis){
         try {

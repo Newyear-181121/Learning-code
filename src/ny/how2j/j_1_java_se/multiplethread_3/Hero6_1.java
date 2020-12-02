@@ -30,11 +30,11 @@ public  class Hero6_1 {
 	}
 	
 	public boolean isDead() {
-		return 0>hp?true : false ;
+		return 0>=hp?true : false ;
 	}
 	
 	public boolean isHealth(){
-		return 600==hp?true: false;
+		return 600<=hp?true: false;
 	}
 	
 }
