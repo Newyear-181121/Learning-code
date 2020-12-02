@@ -4,6 +4,7 @@ import ny.base.常用类.myUtil.Out;
 
 /**
  * 协作模型：生产者消费者实现方式一：管程法
+ *      借助缓冲区
  * @auther: NewYear
  * @Date: 2020-12-02 15:25
  * @version: 0.0.1
@@ -40,7 +41,7 @@ class Productor extends Thread{
      */
     public void run(){
         for (int i = 0 ; i < 1000; i++){
-            Out.out("生产-->"+i+"个数据");
+            Out.out("生产第-->"+i+"个数据，此时容器容量是："+container.count);
             container.push(new Date(i));
         }
     }
@@ -60,7 +61,7 @@ class Consumer extends Thread{
      */
     public void run(){
         for (int i = 0 ; i < 1000; i++){
-            Out.out("消费-->"+container.pop().id +"个数据");
+            Out.out("消费第-->"+container.pop().id +"个数据，此时容器容量是："+container.count);
             container.pop();
         }
     }
@@ -80,10 +81,13 @@ class SynContainer{
     public synchronized void push(Date date){
         // 1. 何时生产 判断容器中是否有空间
         // 2.1 没有空间 不能生产
-        if()
+        if(count == dates.length){
+            Utils.myWait(this); // 线程阻塞  消费者通知生产解除阻塞
+        }
         // 2.2 存在空间 可以生产
         dates[count] = date;
         count++;
+        this.notifyAll();       //生产数据后通知 消费者可以消费数据了。
     }
 
     public synchronized Date pop(){
@@ -93,7 +97,9 @@ class SynContainer{
             Utils.myWait(this); // 线程阻塞  生产者通知消费解除阻塞
         }
         count--;
-        return dates[count];
+        Date date = dates[count];
+        this.notifyAll();       // 消费数据后通知 生产者可以生产数据了。
+        return date;
     }
 
 }
