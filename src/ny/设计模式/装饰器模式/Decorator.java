@@ -1,4 +1,4 @@
-package ny.设计模式;
+package ny.设计模式.装饰器模式;
 
 import ny.base.常用类.myUtil.Out;
 import org.junit.Test;
