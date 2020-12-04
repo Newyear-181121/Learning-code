@@ -1,5 +1,7 @@
 package ny.base.net.udp;
 
+import ny.base.net.udp.talk.TalkReceive;
+import ny.base.net.udp.talk.TalkSend;
 import ny.base.常用类.myUtil.Out;
 
 import java.io.IOException;
@@ -27,8 +29,12 @@ import java.net.SocketException;
 public class UDPServer {
     public static void main(String[] args) throws IOException {
         UDPServer server = new UDPServer();
-        //server.server(6666);
-        server.serverTalk(6666);
+        //server.server(6666);  // 简单流程
+        //server.serverTalk(6666);  // 多次接收
+
+
+        // 多线程交流
+        server.talk();
     }
 
 
@@ -80,5 +86,13 @@ public class UDPServer {
         }
         //5
         server.close();
+    }
+
+    /**
+     * 使用多线程进行双向交流
+     */
+    public void talk(){
+        new Thread(new TalkSend(8888,"localhost",8890)).start();    // 发送线程
+        new Thread(new TalkReceive(8889)).start();  // 接收线程
     }
 }

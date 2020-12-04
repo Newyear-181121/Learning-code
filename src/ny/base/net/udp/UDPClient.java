@@ -1,5 +1,7 @@
 package ny.base.net.udp;
 
+import ny.base.net.udp.talk.TalkReceive;
+import ny.base.net.udp.talk.TalkSend;
 import ny.base.常用类.myUtil.Out;
 
 import java.io.BufferedReader;
@@ -8,7 +10,6 @@ import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
-import java.net.SocketException;
 
 /**
  *
@@ -29,10 +30,15 @@ public class UDPClient {
     public static void main(String[] args) throws IOException{
         UDPClient client = new UDPClient();
 
+        // 简单流程
         //String data = "想要发送什么数据，就发送什么数据";
         //client.client(8888,"localhost",6666,data);
 
-        client.clientTalk(8888,"localhost",6666);
+        // 多次交流
+        //client.clientTalk(8888,"localhost",6666);
+
+        // 多线程交流
+        client.talk();
     }
 
     /**
@@ -84,6 +90,15 @@ public class UDPClient {
         }
         // 5
         client.close();
+    }
+
+
+    /**
+     * 使用多线程进行双向交流
+     */
+    public void talk(){
+        new Thread(new TalkSend(7777,"localhost",8889)).start();    // 发送线程
+        new Thread(new TalkReceive(8890)).start();  // 接收线程
     }
 
 }
