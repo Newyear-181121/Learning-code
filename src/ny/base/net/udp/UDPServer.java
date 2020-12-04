@@ -27,7 +27,8 @@ import java.net.SocketException;
 public class UDPServer {
     public static void main(String[] args) throws IOException {
         UDPServer server = new UDPServer();
-        server.server(6666);
+        //server.server(6666);
+        server.serverTalk(6666);
     }
 
 
@@ -49,6 +50,34 @@ public class UDPServer {
         byte[] datas = packet.getData();
         int len = packet.getLength();
         Out.out(new String(datas,0,len));
+        //5
+        server.close();
+    }
+
+    /**
+     * 多次接收数据
+     * @param serverPort
+     * @throws IOException
+     */
+    public void serverTalk(int serverPort) throws IOException{
+        Out.out("接收方启动");
+        //1
+        DatagramSocket server = new DatagramSocket(serverPort);
+        // 2.
+        while(true) {
+            byte[] container = new byte[1024 * 60];
+            DatagramPacket packet = new DatagramPacket(container, 0, container.length);
+            //3.
+            server.receive(packet);// 阻塞式
+            //4.
+            byte[] datas = packet.getData();
+            int len = packet.getLength();
+            String data = new String(datas,0,len);
+            Out.out(new String(data));
+            if (data.equals("quit")){
+                break;
+            }
+        }
         //5
         server.close();
     }
