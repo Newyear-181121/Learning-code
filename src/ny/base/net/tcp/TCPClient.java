@@ -1,7 +1,6 @@
 package ny.base.net.tcp;
 
 import ny.base.net.tcp.talk.Client;
-import ny.base.net.tcp.talk.TalkReceive;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -27,9 +26,9 @@ public class TCPClient {
         TCPClient client = new TCPClient();
 
         //client.client("localhost",8888);
-        //client.clientTalk("localhost",8888);
+        client.clientTalk("localhost",8888);
 
-        client.talk();
+
     }
 
     /**
@@ -78,12 +77,6 @@ public class TCPClient {
         client.close();
     }
 
-    /**
-     * 使用多线程，tcp交互
-     */
-    public void talk(){
-        new Thread(new Client()).start();
-        new Thread(new TalkReceive(8889)).start();
-    }
+
 
 }
