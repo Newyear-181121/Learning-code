@@ -15,10 +15,16 @@ public class TestClient {
 
     public static void main(String[] args) {
         TestClient c = new TestClient();
+
+        //c.test01();
+
+
         //c.test02();
 
-        c.test03();
+        //c.test03();
 
+
+        c.test04();
     }
 
     /**
@@ -65,5 +71,22 @@ public class TestClient {
         client.receiveFile("D:/demo/words_client_receice.txt");
 
         client.close();
+    }
+
+    /**
+     * 这样做的多线程好像有顶问题。
+     */
+    public void test04(){
+        Client client = new Client(9996);
+
+        Thread tr = new Thread(() -> {
+            client.sendOnConsole();
+        });
+        Thread ts = new Thread(() -> {
+            client.receiveOnConsole();
+        });
+
+        tr.start();
+        ts.start();
     }
 }

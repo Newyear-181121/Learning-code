@@ -18,17 +18,34 @@ public class Service {
     private ServerSocket server;
     private Socket socket;
 
-    private DataOutputStream dos; // 数据输入流
+    private DataOutputStream dos;
     private DataInputStream dis;
 
+    private boolean isRunning = true;
+
     public Service(int serverPort) {
+        this(serverPort,false);
+    }
+
+    public Service(int serverPort,boolean isThread){
         try {
             server = new ServerSocket(serverPort);
-            getsocket();        // 在构造其中执行了就直接使用就是了。
-            this.dos = new DataOutputStream(socket.getOutputStream());
-            this.dis = new DataInputStream(socket.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        if (isThread){
+            while (isRunning){
+                Socket csocket = getsocket();
+                new Thread(new Channel(csocket)).start();
+            }
+        } else {
+            try {
+                getsocket();
+                this.dos = new DataOutputStream(socket.getOutputStream());
+                this.dis = new DataInputStream(socket.getInputStream());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -36,7 +53,7 @@ public class Service {
      * 从监听的端口获取 socket 连接。
      * @return socket 连接
      */
-    public void getsocket(){
+    public Socket getsocket(){
         try {
             Out.out("在没有客户端连接的情况下，下面的方法会阻塞主线程，直到有client端来建立连接生成了新的socket连接");
             socket  =  this.server.accept();
@@ -44,6 +61,7 @@ public class Service {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return socket;
     }
 
     //-------------------------------------------------------------------------------- socket & Console
@@ -55,7 +73,6 @@ public class Service {
         String data = null;
         try {
             while(true) {
-                dis = new DataInputStream(socket.getInputStream()); // 从socket获取输入流。
                 data = dis.readUTF();
                 Out.out(data);          // 输出到控制台
                 if (data.equals("quit") | data.equals("exit")) {
@@ -180,4 +197,68 @@ public class Service {
         }
     }
 
+    /**
+     *  数据 管道  一个
+     */
+    class Channel implements Runnable{
+
+        private DataOutputStream cdos;
+        private DataInputStream cdis;
+
+        public Channel(Socket csocket) {
+            try {
+                cdos = new DataOutputStream(csocket.getOutputStream());
+                cdis = new DataInputStream(csocket.getInputStream());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        /**
+         * 接收socket中的数据，输出到控制台
+         */
+        public void receiveOnConsole(){
+            String data = null;
+            try {
+                while(true) {
+                    data = cdis.readUTF();
+                    Out.out(data);          // 输出到控制台
+                    if (data.equals("quit") | data.equals("exit")) {
+                        break;
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        /**
+         * 发送控制台的字符串到 socket
+         */
+        public void sendOnConsole(){
+            String data = null;
+            try {
+                while (true) {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));   // 从控制台获取数据
+                    data = reader.readLine(); // 从缓冲流中读取一行数据。
+                    cdos.writeUTF(data); // 把控制台获取到的数据输入到 套接字。
+                    cdos.flush();        // 刷新输出流，把缓冲流中的字符强制输出到流中。
+                    if (data.equals("quit") | data.equals("exit")) {
+                        break;
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        /**
+         * service 可以收到多个 client端的消息
+         *  但是目前还不能往 client 发消息，控制台只有一个，但是可以程序自动处理收到的消息并返回处理的数据。
+         *  只需要在 run方法中 编写逻辑代码即可。
+         */
+        @Override
+        public void run() {
+                this.receiveOnConsole();
+        }
+    }
 }

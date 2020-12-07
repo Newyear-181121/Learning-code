@@ -17,7 +17,9 @@ public class TestService {
         TestService s = new TestService();
 
         //s.test02();
-        s.test03();
+        //s.test03();
+
+        s.test04();
     }
 
 
@@ -62,5 +64,12 @@ public class TestService {
         service.sendFile("D:/demo/words.txt");
 
         service.close();
+    }
+
+    /**
+     * service 可以接收多个客户端连接,这个测试失败。
+     */
+    public void test04(){
+        Service service = new Service(9996,true);
     }
 }
