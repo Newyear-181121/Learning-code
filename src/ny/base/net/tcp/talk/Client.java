@@ -108,7 +108,7 @@ public class Client {
      */
     public void send(String str){
         try {
-            dos.writeUTF(str); // 把控制台获取到的数据输入到 套接字。
+            dos.writeUTF(str);
             dos.flush();        // 刷新输出流，把缓冲流中的字符强制输出到流中。
         } catch (IOException e) {
             e.printStackTrace();
