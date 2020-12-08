@@ -22,7 +22,7 @@ public class PHandler extends DefaultHandler {
     }
 
     public void characters (char ch[], int start, int length) throws SAXException {
-        String contents = new String(ch,start,length);
+        String contents = new String(ch,start,length).trim();
         if (contents.length()>0) {
             Out.out("内容为:" + contents);
         }else {
