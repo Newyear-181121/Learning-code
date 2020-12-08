@@ -1,11 +1,13 @@
 package ny.advanced.xml解析.sax;
 
+import ny.base.常用类.myUtil.Out;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
+import java.util.List;
 
 /**
  *
@@ -27,5 +29,12 @@ public class TestXML01 {
         // 4. 编写处理器
         PHandler hander = new PHandler();
         parser.parse(Thread.currentThread().getContextClassLoader().getResourceAsStream("ny/advanced/xml解析/sax/p.xml"),hander);
+
+        // 获取数据。
+        List<Person> persons = hander.getPersons();
+        Out.out(persons.size() + "---> size");
+        for (Person p : persons){
+            Out.out(p.getName()+"----" + p.getAge());
+        }
     }
 }
