@@ -38,4 +38,13 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public Student() {
+    }
+
+    public Student(int id, String studentName, int age) {
+        this.id = id;
+        this.studentName = studentName;
+        this.age = age;
+    }
 }
