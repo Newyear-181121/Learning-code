@@ -30,4 +30,10 @@ public class Out {
     public static void outNow(){
         out(Now.now());
     }
+
+    public static void out(Object s, Object b, Object s1) {
+        System.out.print(s);
+        System.out.print(b);
+        System.out.println(s1);
+    }
 }
