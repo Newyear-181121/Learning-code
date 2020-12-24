@@ -36,4 +36,27 @@ public class Out {
         System.out.print(b);
         System.out.println(s1);
     }
+
+    /**
+     * 遍历输出泛型类数组中的值。
+     * @param ts 一维数组
+     * @param <T> 泛型，可以试任何类型。
+     */
+    public static <T> void out(T[] ts){
+        for (T t : ts){
+            out(t);
+        }
+    }
+
+    /**
+     * 遍历输出泛型类数组中的值。 并且每次输出前添加字符
+     * @param ts 泛型数组
+     * @param strName 要输出的字符
+     * @param <T> 类型。
+     */
+    public static <T> void out(T[] ts,String strName){
+        for (T t : ts){
+            out(strName + " : ",t);
+        }
+    }
 }
