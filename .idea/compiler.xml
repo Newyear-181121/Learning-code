@@ -7,10 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="f_12_springboot" />
+        <module name="ioc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="f_12_springboot" target="1.8" />
+      <module name="ioc" target="8" />
+      <module name="spring" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
