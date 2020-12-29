@@ -8,9 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_2_struts/f_2_struts.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_2_struts/f_2_struts.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_7_ssh/f_7_ssh.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_7_ssh/f_7_ssh.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_9_Mybatis/f_9_Mybatis.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_4_java_frameworks/f_9_Mybatis/f_9_Mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/ny/frameworks/spring/ioc/ioc.iml" filepath="$PROJECT_DIR$/src/ny/frameworks/spring/ioc/ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ny/frameworks/spring/ioc/ioc.iml" filepath="$PROJECT_DIR$/src/ny/frameworks/spring/ioc/ioc.iml" group="spring和模块" />
       <module fileurl="file://$PROJECT_DIR$/src/ny/how2j/j_3_java_ee/e_2_Servlet/s_2_动态Web项目/servlet_创建/servlet_创建.iml" filepath="$PROJECT_DIR$/src/ny/how2j/j_3_java_ee/e_2_Servlet/s_2_动态Web项目/servlet_创建/servlet_创建.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/ny/frameworks/spring/spring.iml" filepath="$PROJECT_DIR$/src/ny/frameworks/spring/spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/ny/frameworks/spring/spring.iml" filepath="$PROJECT_DIR$/src/ny/frameworks/spring/spring.iml" group="spring和模块" />
     </modules>
   </component>
 </project>
