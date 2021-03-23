@@ -12,7 +12,7 @@ import ny.base.常用类.myUtil.Out;
  * @auther: NewYear
  * @Date: 2020-12-03 13:29
  * @version: 0.0.1
- * @description: DoubleCheckedLock
+ * @description: DoubleCheckedLock  双重检测     懒汉模式 : 可以延时加载，
  */
 public class DoubleCheckedLock {
 
@@ -62,6 +62,11 @@ public class DoubleCheckedLock {
         return instance;
     }
 
+
+    /**
+     * 测试懒汉式单例模式
+     * @param args
+     */
     public static void main(String[] args) {
 
 
