@@ -21,7 +21,7 @@ git branch -f origin/learn/设计模式 learn/summary
 
 # 从远程仓库获取所有分支
 
-```shell
+```bash
 git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
 git fetch --all
 git pull --all
