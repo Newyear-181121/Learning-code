@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="hibernate.cfg.xml" />
+          <unit-entry name="ny:how2j:hibernate1_基础:hibernate1_1_hello_hibernate:hibernate.cfg.xml" />
+          <unit-entry name="ny:how2j:hibernate1_基础:hibernate1_2_save:hibernate.cfg.xml" />
+          <unit-entry name="ny:how2j:hibernate2_关系:h2_1_多对一:hibernate.cfg.xml" value="0dbfa9ae-ee43-41e1-917c-ddc44ff9265b" />
+          <unit-entry name="ny:how2j:hibernate2_关系:h2_2_一对多:hibernate.cfg.xml" value="9285f510-938a-48d8-8975-e458427ef1fc" />
+          <unit-entry name="ny:how2j:hibernate2_关系:h2_3_多对多:hibernate.cfg.xml" value="11a58463-cc69-4c19-ba41-82a5387b05ab" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ny/how2j/hibernate1_基础/hibernate1_1_hello_hibernate/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ny/how2j/hibernate1_基础/hibernate1_2_save/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ny/how2j/hibernate2_关系/h2_1_多对一/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ny/how2j/hibernate2_关系/h2_2_一对多/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ny/how2j/hibernate2_关系/h2_3_多对多/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../../../../out/hibernate" />
+    <output-test url="file://$MODULE_DIR$/../../../../../../../out/hibernate/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="1_hibernate">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
