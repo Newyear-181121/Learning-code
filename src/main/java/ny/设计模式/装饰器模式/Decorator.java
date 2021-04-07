@@ -1,6 +1,5 @@
 package ny.设计模式.装饰器模式;
 
-import ny.base.常用类.myUtil.Out;
 import org.junit.Test;
 
 /**
@@ -88,7 +87,7 @@ class Coffee implements Drink{
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
+        System.out.println(info()+"-->"+cost()+"------"+this.getClass().getName());
     }
 }
 
@@ -106,7 +105,7 @@ class Tea implements Drink{
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
+        System.out.println(info()+"-->"+cost()+"------"+this.getClass().getName());
     }
 }
 
@@ -133,7 +132,7 @@ abstract class Decorate implements Drink{
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
+        System.out.println(info()+"-->"+cost()+"------"+this.getClass().getName());
     }
 }
 
@@ -158,8 +157,8 @@ class Milk extends Decorate{
 
     @Override
     public void outSelf() {
-        Out.out(info()+"-->"+cost()+"------"+this.getClass().getName());
-        Out.out("\t子类继承父类的方法，只要不重写方法就是一样的。\n\t是子类自己有一个跟父类相同的方法");
+        System.out.println(info()+"-->"+cost()+"------"+this.getClass().getName());
+        System.out.println("\t子类继承父类的方法，只要不重写方法就是一样的。\n\t是子类自己有一个跟父类相同的方法");
     }
 }
 
@@ -184,7 +183,7 @@ class Suger extends Decorate{
 
 //    @Override
 //    public void outSelf() {
-//        Out.out(info()+"-->"+cost());
+//        System.out.println(info()+"-->"+cost());
 //    }
 }
 

@@ -1,6 +1,5 @@
 package ny.设计模式.静态代理模式;
 
-import ny.base.常用类.myUtil.Out;
 
 /**
  * @auther: NewYear
@@ -36,7 +35,7 @@ interface Marry{
 class You implements Marry{
     @Override
     public void happyMarry() {
-        Out.out("真实方法执行了。");
+        System.out.println("真实方法执行了。");
     }
 
 }
@@ -64,14 +63,14 @@ class Proxy implements Marry{
      * 执行实际方法器执行的准备方法。
      */
     private void read() {
-        Out.out("准备方法执行");
+        System.out.println("准备方法执行");
     }
 
     /**
      * 指定实际方法后收尾的方法。
      */
     private void after(){
-        Out.out("收尾结束");
+        System.out.println("收尾结束");
     }
 
 

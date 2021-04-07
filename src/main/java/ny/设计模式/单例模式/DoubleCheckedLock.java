@@ -1,7 +1,7 @@
 package ny.设计模式.单例模式;
 
-import multiplethread.Utils;
-import ny.base.常用类.myUtil.Out;
+
+import static java.lang.Thread.sleep;
 
 /**
  *  单例模式： 在懒汉式套路基础上加上并发控制，保证在多线程环境下，对外只提供一个对象。
@@ -56,7 +56,11 @@ public class DoubleCheckedLock {
     public static DoubleCheckedLock getInstance01(int time){
 
             if (null == instance) {
-                Utils.sysSleep(time);   // 结果：当一个线程在这里延时的时候，另一个线程，获取到的 instance 值 还是空，也会通过判断进入到这里来。
+                try {
+                    sleep(time);// 结果：当一个线程在这里延时的时候，另一个线程，获取到的 instance 值 还是空，也会通过判断进入到这里来。
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 instance = new DoubleCheckedLock();
             }
         return instance;
@@ -74,17 +78,17 @@ public class DoubleCheckedLock {
     }
     public static void test(){
         Thread t = new Thread(() -> {
-            Out.out(DoubleCheckedLock.getInstance());
+            System.out.println(DoubleCheckedLock.getInstance());
         });
         t.start();
-        Out.out(DoubleCheckedLock.getInstance());
+        System.out.println(DoubleCheckedLock.getInstance());
     }
 
     public static void test01(){
         Thread t = new Thread(() -> {
-            Out.out(DoubleCheckedLock.getInstance01(500));
+            System.out.println(DoubleCheckedLock.getInstance01(500));
         });
         t.start();
-        Out.out(DoubleCheckedLock.getInstance01(1000));
+        System.out.println(DoubleCheckedLock.getInstance01(1000));
     }
 }
