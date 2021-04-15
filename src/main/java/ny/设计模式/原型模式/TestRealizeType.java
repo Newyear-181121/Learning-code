@@ -1,6 +1,6 @@
 package ny.设计模式.原型模式;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * @auther: NewYear
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
  * @Version: 0.0.1
  * @Description: RealizeType 原型模式基础实现
  */
-public class RealizeType implements Cloneable {
+class RealizeType implements Cloneable {
 
     RealizeType(){
         System.out.println("原型模式实现类实例创建");
@@ -25,9 +25,10 @@ public class RealizeType implements Cloneable {
 /**
  * 测试类
  */
-class TestRealizeType{
+public class TestRealizeType{
+
     @Test
-    public void test(){
+    public void test_main(){
          RealizeType realize1 = new RealizeType();
         RealizeType realize2 = null;
         try {
